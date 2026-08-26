@@ -217,11 +217,6 @@ export function validateUnit(unit: Unit): Violation[] {
   if (unit.voice !== 'mother' && unit.voice !== 'father' && unit.voice !== 'shared') {
     v.push(err(unit, 'voice.unknown', 'invariant 9', `Unknown voice ${String(unit.voice)}.`));
   }
-  if (unit.soloVariantOf && unit.voice === 'shared') {
-    v.push(
-      warn(unit, 'solo.on-shared', 'section 16b', 'A solo variant of a shared unit is redundant; shared units already serve every household.'),
-    );
-  }
 
   // ---- The action test (section 2) ----------------------------------------
   if (unit.claimType === 'normative' && (!unit.actions || unit.actions.length === 0)) {
@@ -289,14 +284,25 @@ export function validateCorpus(units: readonly Unit[]): CorpusReport {
         message: `pairedWith names ${unit.pairedWith}, which is not in the corpus.`,
       });
     }
-    if (unit.soloVariantOf && !ids.has(unit.soloVariantOf)) {
-      violations.push({
-        unit: unitKey(unit),
-        rule: 'corpus.solo-missing',
-        enforces: 'section 16b',
-        severity: 'error',
-        message: `soloVariantOf names ${unit.soloVariantOf}, which is not in the corpus.`,
-      });
+    if (unit.soloVariantOf) {
+      const parent = units.find((u) => u.id === unit.soloVariantOf);
+      if (!parent) {
+        violations.push({
+          unit: unitKey(unit),
+          rule: 'corpus.solo-missing',
+          enforces: 'section 16b',
+          severity: 'error',
+          message: `soloVariantOf names ${unit.soloVariantOf}, which is not in the corpus.`,
+        });
+      } else if (parent.voice === 'shared') {
+        violations.push({
+          unit: unitKey(unit),
+          rule: 'corpus.solo-of-shared',
+          enforces: 'section 16b',
+          severity: 'warning',
+          message: 'A solo variant of a shared unit is redundant; shared units already serve every household.',
+        });
+      }
     }
     if (unit.supersedes && !units.some((u) => unitKey(u) === unit.supersedes)) {
       violations.push({

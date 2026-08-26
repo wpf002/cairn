@@ -1,10 +1,25 @@
 import type { Unit } from '../types.js';
+import { PREGNANCY_DEVELOPMENT_UNITS } from './pregnancy.development.js';
+import { PREGNANCY_FORMATION_UNITS } from './pregnancy.formation.js';
+import { PREGNANCY_CARE_UNITS } from './pregnancy.care.js';
+import { CHILDHOOD_DEVELOPMENT_UNITS } from './childhood.development.js';
+import { CHILDHOOD_SEE_UNITS } from './childhood.see.js';
+import { CHILDHOOD_RECEIVE_UNITS } from './childhood.receive.js';
+import { CHILDHOOD_FORMATION_UNITS } from './childhood.formation.js';
 
 /**
- * The corpus. Populated in Phase 2.
+ * Substrate v1 — the Phase 2 corpus.
  *
- * Phase 0 ships the schema, the validators and the gates with an empty corpus
- * on purpose: the gate has to be provably able to fail before there is any
- * content whose failure would be expensive.
+ * Scope per section 35: pregnancy weeks 4–40 and ages 0–5, all seven
+ * categories, both voices (voiced pairs where the split is heavy, shared
+ * elsewhere), with solo variants where a unit assumes a second adult.
  */
-export const UNITS: readonly Unit[] = [];
+export const UNITS: readonly Unit[] = [
+  ...PREGNANCY_DEVELOPMENT_UNITS,
+  ...PREGNANCY_FORMATION_UNITS,
+  ...PREGNANCY_CARE_UNITS,
+  ...CHILDHOOD_DEVELOPMENT_UNITS,
+  ...CHILDHOOD_SEE_UNITS,
+  ...CHILDHOOD_RECEIVE_UNITS,
+  ...CHILDHOOD_FORMATION_UNITS,
+];
