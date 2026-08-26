@@ -1,0 +1,21 @@
+{
+  "name": "@cairn/stages",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Birthdate to developmental stage; role curve resolution; pregnancy weeks",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "files": ["src", "dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit"
+  },
+  "dependencies": {}
+}

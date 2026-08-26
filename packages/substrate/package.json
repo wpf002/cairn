@@ -1,0 +1,25 @@
+{
+  "name": "@cairn/substrate",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Curated content units + provenance. The retrieval corpus.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "files": ["src", "dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit"
+  },
+  "dependencies": {
+    "@cairn/canon": "workspace:*",
+    "@cairn/framework": "workspace:*",
+    "@cairn/stages": "workspace:*"
+  }
+}

@@ -1,0 +1,55 @@
+#!/usr/bin/env tsx
+/**
+ * Substrate validator, run in CI.
+ *
+ * Exits non-zero on any error-severity violation, which is what makes
+ * invariant 1 ("no unprovenanced content ships") a fact about the build rather
+ * than a note in a document.
+ */
+import { allUnits } from '../corpus.js';
+import { coverage, formatCoverage, MVP_SCOPE } from '../coverage.js';
+import { validateCorpus } from '../validate.js';
+
+const RESET = '\u001b[0m';
+const RED = '\u001b[31m';
+const YELLOW = '\u001b[33m';
+const GREEN = '\u001b[32m';
+const DIM = '\u001b[2m';
+
+function main(): void {
+  const units = allUnits();
+  const report = validateCorpus(units);
+
+  console.log(`${DIM}cairn substrate validator${RESET}`);
+  console.log(`  units:    ${report.unitCount}`);
+  console.log(`  errors:   ${report.errors}`);
+  console.log(`  warnings: ${report.warnings}`);
+
+  for (const v of report.violations) {
+    const colour = v.severity === 'error' ? RED : YELLOW;
+    console.log(`\n${colour}${v.severity.toUpperCase()}${RESET} ${v.unit}  ${DIM}[${v.rule} - ${v.enforces}]${RESET}`);
+    console.log(`  ${v.message}`);
+  }
+
+  const cov = coverage(units, MVP_SCOPE);
+  console.log(`\n${DIM}MVP coverage (section 35 scope)${RESET}`);
+  console.log(`  ${formatCoverage(cov)}`);
+  if (!cov.complete && units.length > 0) {
+    const sample = cov.missing.slice(0, 10);
+    for (const slot of sample) {
+      const where = slot.kind === 'stage' ? slot.stage : `week ${slot.week}`;
+      console.log(`  ${DIM}missing${RESET} ${where} - ${slot.category} - ${slot.voice}`);
+    }
+    if (cov.missing.length > sample.length) {
+      console.log(`  ${DIM}... and ${cov.missing.length - sample.length} more${RESET}`);
+    }
+  }
+
+  if (report.errors > 0) {
+    console.log(`\n${RED}Substrate gate failed.${RESET} ${report.errors} error(s).`);
+    process.exit(1);
+  }
+  console.log(`\n${GREEN}Substrate gate passed.${RESET}`);
+}
+
+main();

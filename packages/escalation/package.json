@@ -1,0 +1,23 @@
+{
+  "name": "@cairn/escalation",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic medical and safety triggers",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "files": ["src", "dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit"
+  },
+  "dependencies": {
+    "@cairn/stages": "workspace:*"
+  }
+}
