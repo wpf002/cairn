@@ -45,6 +45,9 @@
       ],
       "@cairn/ai": [
         "./packages/ai/src/index.ts"
+      ],
+      "@cairn/trackers": [
+        "./packages/trackers/src/index.ts"
       ]
     },
     "baseUrl": "."

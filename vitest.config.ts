@@ -13,6 +13,8 @@ export default defineConfig({
       '@cairn/canon': pkg('canon'),
       '@cairn/crypto': pkg('crypto'),
       '@cairn/ai': pkg('ai'),
+      '@cairn/trackers': pkg('trackers'),
+      '@cairn/db': pkg('db'),
     },
   },
   test: {
