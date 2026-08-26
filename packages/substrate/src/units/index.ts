@@ -6,6 +6,7 @@ import { CHILDHOOD_DEVELOPMENT_UNITS } from './childhood.development.js';
 import { CHILDHOOD_SEE_UNITS } from './childhood.see.js';
 import { CHILDHOOD_RECEIVE_UNITS } from './childhood.receive.js';
 import { CHILDHOOD_FORMATION_UNITS } from './childhood.formation.js';
+import { PARENT_FORMATION_UNITS } from './parent.formation.js';
 
 /**
  * Substrate v1 — the Phase 2 corpus.
@@ -22,4 +23,5 @@ export const UNITS: readonly Unit[] = [
   ...CHILDHOOD_SEE_UNITS,
   ...CHILDHOOD_RECEIVE_UNITS,
   ...CHILDHOOD_FORMATION_UNITS,
+  ...PARENT_FORMATION_UNITS,
 ];

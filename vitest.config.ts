@@ -14,6 +14,7 @@ export default defineConfig({
       '@cairn/crypto': pkg('crypto'),
       '@cairn/ai': pkg('ai'),
       '@cairn/trackers': pkg('trackers'),
+      '@cairn/dashboard': pkg('dashboard'),
       '@cairn/db': pkg('db'),
     },
   },

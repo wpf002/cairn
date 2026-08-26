@@ -48,6 +48,9 @@
       ],
       "@cairn/trackers": [
         "./packages/trackers/src/index.ts"
+      ],
+      "@cairn/dashboard": [
+        "./packages/dashboard/src/index.ts"
       ]
     },
     "baseUrl": "."
