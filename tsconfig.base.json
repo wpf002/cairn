@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022"],
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "declaration": true,
@@ -17,7 +20,37 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@cairn/stages": [
+        "./packages/stages/src/index.ts"
+      ],
+      "@cairn/framework": [
+        "./packages/framework/src/index.ts"
+      ],
+      "@cairn/canon": [
+        "./packages/canon/src/index.ts"
+      ],
+      "@cairn/substrate": [
+        "./packages/substrate/src/index.ts"
+      ],
+      "@cairn/escalation": [
+        "./packages/escalation/src/index.ts"
+      ],
+      "@cairn/crypto": [
+        "./packages/crypto/src/index.ts"
+      ],
+      "@cairn/db": [
+        "./packages/db/src/index.ts"
+      ],
+      "@cairn/ai": [
+        "./packages/ai/src/index.ts"
+      ]
+    },
+    "baseUrl": "."
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

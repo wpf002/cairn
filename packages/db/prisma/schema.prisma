@@ -1,0 +1,126 @@
+// Cairn data schema — Supabase Postgres via Prisma.
+//
+// Invariant 5 in table form: every personal field about a child lives inside
+// sealed_record ciphertext. The plaintext columns are routing and gating only.
+// Invariant 7: person is one row per human; relationship_edge carries roles.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Person {
+  id        String   @id @default(uuid())
+  kind      String // 'adult' | 'child'
+  createdAt DateTime @default(now())
+
+  account        Account?
+  childRow       Child?
+  adultEdges     RelationshipEdge[] @relation("AdultEdges")
+  childEdges     RelationshipEdge[] @relation("ChildEdges")
+  grantedEdges   RelationshipEdge[] @relation("GrantedEdges")
+  pregnancies    Pregnancy[]
+  wrappedKeys    WrappedKey[]
+
+  @@map("person")
+}
+
+model Account {
+  personId       String  @id
+  authUserId     String  @unique // Supabase auth.users id
+  voice          String // 'mother' | 'father' | 'shared'
+  householdShape String // 'two-parent' | 'single-mother' | 'single-father' | 'blended' | 'guardian'
+  createdAt      DateTime @default(now())
+
+  person Person @relation(fields: [personId], references: [id])
+
+  @@map("account")
+}
+
+model Child {
+  personId   String @id
+  // Stage as an opaque integer (section 33a). Nullable until the client first
+  // computes it from the encrypted birthdate.
+  stageIndex Int?
+
+  // The sealed record: name, birthdate, gender, notes, challenges, memories.
+  // AES-256-GCM under a per-child key derived from the Family Key. The server
+  // can neither read nor need these.
+  sealedIv         String?
+  sealedCiphertext String?
+  sealedKeyId      String?
+
+  person Person @relation(fields: [personId], references: [id])
+
+  @@map("child")
+}
+
+model RelationshipEdge {
+  id        String    @id @default(uuid())
+  adultId   String
+  childId   String
+  role      String // 'mother' | 'father' | 'guardian' | 'step-parent' | 'grandparent' | 'mentor' | 'godparent'
+  scope     String // 'full' | 'contribute' | 'view'
+  from      DateTime
+  until     DateTime?
+  grantedBy String
+
+  adult   Person @relation("AdultEdges", fields: [adultId], references: [id])
+  child   Person @relation("ChildEdges", fields: [childId], references: [id])
+  granter Person @relation("GrantedEdges", fields: [grantedBy], references: [id])
+
+  @@index([childId, until])
+  @@index([adultId, until])
+  @@map("relationship_edge")
+}
+
+model Pregnancy {
+  id              String    @id @default(uuid())
+  accountPersonId String
+  // Plaintext by decision: needed for server-side notification scheduling,
+  // does not identify a born child, deleted on conversion.
+  dueDate         DateTime
+  createdAt       DateTime  @default(now())
+  closedAt        DateTime?
+
+  account Person @relation(fields: [accountPersonId], references: [id])
+
+  @@map("pregnancy")
+}
+
+// Wrapped copies of the Family Key. The server stores these and can decrypt
+// none of them: passphrase-wrapped, recovery-phrase-wrapped, escrow-wrapped
+// (spouse), and device-keychain-wrapped copies all require material only the
+// family holds.
+model WrappedKey {
+  id         String   @id @default(uuid())
+  personId   String
+  wrappedBy  String // 'passphrase' | 'recovery-phrase' | 'escrow' | 'device-keychain'
+  wrapperId  String?
+  iv         String
+  ciphertext String
+  salt       String?
+  kdfParams  Json?
+  createdAt  DateTime @default(now())
+
+  person Person @relation(fields: [personId], references: [id])
+
+  @@index([personId])
+  @@map("wrapped_key")
+}
+
+// Substrate units are versioned and immutable (invariant 6). Content rows are
+// append-only; the (id, version) pair is the identity.
+model SubstrateUnit {
+  id       String
+  version  Int
+  document Json // the full Unit, validated by @cairn/substrate before insert
+  shippedAt DateTime @default(now())
+
+  @@id([id, version])
+  @@map("substrate_unit")
+}
