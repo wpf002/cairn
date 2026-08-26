@@ -23,6 +23,9 @@ importers:
 
   apps/mobile:
     dependencies:
+      '@cairn/ai':
+        specifier: workspace:*
+        version: link:../../packages/ai
       '@cairn/canon':
         specifier: workspace:*
         version: link:../../packages/canon
@@ -63,6 +66,21 @@ importers:
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
+
+  packages/ai:
+    dependencies:
+      '@cairn/escalation':
+        specifier: workspace:*
+        version: link:../escalation
+      '@cairn/framework':
+        specifier: workspace:*
+        version: link:../framework
+      '@cairn/stages':
+        specifier: workspace:*
+        version: link:../stages
+      '@cairn/substrate':
+        specifier: workspace:*
+        version: link:../substrate
 
   packages/canon: {}
 
