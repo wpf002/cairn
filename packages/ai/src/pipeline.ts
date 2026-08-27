@@ -4,7 +4,7 @@ import { monthsBetween, stageForMonths, type CalendarDate } from '@cairn/stages'
 import { checkDoctrine, selectUnits, unitKey, type ResolvedUnit, type Unit } from '@cairn/substrate';
 import { parseDraft, type DraftProblem, type HelpResponse, type ModelDraft } from './contract.js';
 import { buildRepairPrompt, buildSystemPrompt } from './prompt.js';
-import { MAX_REPAIR_ATTEMPTS, type FlintAdapter } from './flint.js';
+import { MAX_REPAIR_ATTEMPTS, type ModelAdapter } from './model.js';
 
 /**
  * Help Me Parent This. Roadmap section 25 and Phase 5's gate, as one pipeline:
@@ -133,7 +133,7 @@ export function auditDraft(
 export async function helpMeParentThis(
   query: HelpQuery,
   units: readonly Unit[],
-  flint: FlintAdapter,
+  adapter: ModelAdapter,
 ): Promise<HelpResult> {
   const enforcement: string[] = [];
 
@@ -165,7 +165,7 @@ export async function helpMeParentThis(
     ...(query.gestationalWeek !== undefined ? { gestationalWeek: query.gestationalWeek } : {}),
   });
 
-  let raw = await flint.complete({ system, user: query.situation, responseFormat: 'json' });
+  let raw = await adapter.complete({ system, user: query.situation, responseFormat: 'json' });
   let attempt = 0;
   let draft: ModelDraft | null = null;
   let problems: DraftProblem[] = [];
@@ -185,7 +185,7 @@ export async function helpMeParentThis(
     }
     if (attempt >= MAX_REPAIR_ATTEMPTS) break;
     attempt += 1;
-    raw = await flint.complete({
+    raw = await adapter.complete({
       system: `${system}\n\n${buildRepairPrompt(problems)}`,
       user: query.situation,
       responseFormat: 'json',

@@ -30,7 +30,7 @@ pnpm workspace, TypeScript throughout.
 | `@cairn/escalation` | Deterministic medical + safety triggers. Evaluated before any model call; the model can add, never remove |
 | `@cairn/crypto` | Client-side envelope encryption, key derivation, recovery (Phase 1) |
 | `@cairn/db` | Prisma / Supabase Postgres (Phase 1) |
-| `@cairn/ai` | Flint adapter, retrieval-bound generation, response contracts (Phase 5) |
+| `@cairn/ai` | Anthropic SDK adapter, retrieval-bound generation, response contracts (Phase 5) |
 | `apps/mobile` | Expo / React Native (Phase 3+) |
 
 ## Invariants (enforced in CI, not in process)

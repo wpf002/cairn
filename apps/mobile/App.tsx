@@ -11,6 +11,7 @@ import { RoadmapScreen } from './src/screens/RoadmapScreen';
 import { AskScreen } from './src/screens/AskScreen';
 import { JourneyScreen } from './src/screens/JourneyScreen';
 import { PremiumScreen } from './src/screens/PremiumScreen';
+import type { ModelAdapter } from '@cairn/ai';
 import { colors, spacing, type } from './src/theme';
 
 /**
@@ -30,6 +31,13 @@ const TABS: { id: Tab; label: string }[] = [
 ];
 
 type PregnancySub = 'week' | 'trackers' | 'prepare';
+
+/**
+ * The Anthropic adapter for ASK. Null in the dev shell: the API key must
+ * never ship in the app bundle, so release builds construct anthropicAdapter()
+ * against Cairn's backend proxy and inject it here.
+ */
+const anthropic: ModelAdapter | null = null;
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('today');
@@ -91,7 +99,7 @@ export default function App() {
               {pregnancySub === 'prepare' && <PrepareScreen />}
             </View>
           )}
-          {tab === 'ask' && <AskScreen flint={null} />}
+          {tab === 'ask' && <AskScreen adapter={anthropic} />}
           {tab === 'journey' && <JourneyScreen />}
           {tab === 'roadmap' && <RoadmapScreen />}
           {tab === 'premium' && <PremiumScreen />}

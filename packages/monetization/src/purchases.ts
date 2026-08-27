@@ -2,7 +2,7 @@ import type { EntitlementState } from './entitlements.js';
 
 /**
  * The RevenueCat seam. Section 31: RevenueCat abstracts App Store and Play
- * billing. Like Flint, the concrete client is injected at the app boundary;
+ * billing. Like the Anthropic adapter, the concrete client is injected at the app boundary;
  * this interface is everything the app is allowed to know about billing.
  */
 export interface OfferingProduct {

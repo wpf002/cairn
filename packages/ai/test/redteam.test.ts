@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { helpMeParentThis, UngroundedResponseError, type FlintAdapter, type ModelDraft } from '@cairn/ai';
+import { helpMeParentThis, UngroundedResponseError, type ModelAdapter, type ModelDraft } from '@cairn/ai';
 import { allUnits, unitKey } from '@cairn/substrate';
 import type { Audience } from '@cairn/framework';
 
@@ -37,7 +37,7 @@ function goodDraftFor(system: string): ModelDraft {
   };
 }
 
-const goodAdapter: FlintAdapter = {
+const goodAdapter: ModelAdapter = {
   complete: async ({ system }) => JSON.stringify(goodDraftFor(system)),
 };
 
@@ -79,7 +79,7 @@ describe('red team: escalation suppression', () => {
   });
 
   it('model additions append to, never replace, the deterministic set', async () => {
-    const addingAdapter: FlintAdapter = {
+    const addingAdapter: ModelAdapter = {
       complete: async ({ system }) =>
         JSON.stringify({
           ...goodDraftFor(system),
@@ -105,7 +105,7 @@ describe('red team: escalation suppression', () => {
 
 describe('red team: fabricated grounding', () => {
   it('rejects citations of units that were never retrieved', async () => {
-    const fabricating: FlintAdapter = {
+    const fabricating: ModelAdapter = {
       complete: async ({ system }) =>
         JSON.stringify({ ...goodDraftFor(system), citations: ['made.up.unit@1'] }),
     };
@@ -119,7 +119,7 @@ describe('red team: fabricated grounding', () => {
   });
 
   it('rejects scripture not carried by any cited warrant — no fabricated warrant', async () => {
-    const proofTexting: FlintAdapter = {
+    const proofTexting: ModelAdapter = {
       complete: async ({ system }) => {
         const d = goodDraftFor(system);
         return JSON.stringify({
@@ -138,7 +138,7 @@ describe('red team: fabricated grounding', () => {
   });
 
   it('rejects an answer with no citations at all', async () => {
-    const uncited: FlintAdapter = {
+    const uncited: ModelAdapter = {
       complete: async ({ system }) => JSON.stringify({ ...goodDraftFor(system), citations: [] }),
     };
     await expect(
@@ -153,7 +153,7 @@ describe('red team: fabricated grounding', () => {
 
 describe('red team: diagnosis', () => {
   it('rejects a draft that diagnoses', async () => {
-    const diagnosing: FlintAdapter = {
+    const diagnosing: ModelAdapter = {
       complete: async ({ system }) => {
         const d = goodDraftFor(system);
         return JSON.stringify({
@@ -174,7 +174,7 @@ describe('red team: diagnosis', () => {
 
 describe('red team: doctrine in generated prose', () => {
   it('rejects guilt-lever language', async () => {
-    const guilting: FlintAdapter = {
+    const guilting: ModelAdapter = {
       complete: async ({ system }) => {
         const d = goodDraftFor(system);
         return JSON.stringify({
@@ -210,7 +210,7 @@ describe('red team: voice leaks', () => {
 describe('validate-then-repair', () => {
   it('repairs a first response that is not JSON', async () => {
     let calls = 0;
-    const flaky: FlintAdapter = {
+    const flaky: ModelAdapter = {
       complete: async ({ system }) => {
         calls += 1;
         if (calls === 1) return 'Here is my advice: be patient with your toddler!';
@@ -227,7 +227,7 @@ describe('validate-then-repair', () => {
   });
 
   it('gives up after one repair and fails closed', async () => {
-    const alwaysBroken: FlintAdapter = { complete: async () => 'not json, ever' };
+    const alwaysBroken: ModelAdapter = { complete: async () => 'not json, ever' };
     await expect(
       helpMeParentThis(
         { situation: 'Toddler tantrums.', audience: mother, child: { birthdate: '2024-02-10' }, on: ON },

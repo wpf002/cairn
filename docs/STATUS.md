@@ -10,14 +10,15 @@ validator green at full scope, mobile app typechecks clean.
 | 2 — Substrate v1 | 98→133 units: weeks 4–40 (37 weekly dev + 21 formation + care/practical), ages 0–5 all categories, voiced pairs + solo variants | ✅ 602/602 MVP slots |
 | 3 — Pregnancy surface | `@cairn/trackers` (kicks w/ baseline flags, 5-1-1, IOM weight, symptoms w/ prevalence, bag, birth plan, ICS appointments, 21-year album, thank-you-only notifications), Expo app shell | ✅ Forbes parity table (docs/PHASE-3-GATE.md) |
 | 4 — Home + dashboards | `@cairn/dashboard` (TODAY, 10-section child dashboard, roadmap visual), voiced parent-formation units, 4 screens | ✅ mother/father same account render differently; single mother: zero father-voice leaks |
-| 5 — Help Me Parent This | `@cairn/ai` (Flint seam, 7-block contract, pipeline enforcement in code) | ✅ red-team suite: suppression, fabrication, diagnosis, guilt, voice leak, fail-closed |
+| 5 — Help Me Parent This | `@cairn/ai` (Anthropic SDK adapter — claude-opus-5, streaming, prompt caching — 7-block contract, pipeline enforcement in code) | ✅ red-team suite: suppression, fabrication, diagnosis, guilt, voice leak, fail-closed |
 | 6 — Journey | `@cairn/journey` (voice-threaded entries, 4 ceremonies to Recognize@21, sealed letters, encrypted store, export, Story renderer) | ✅ ciphertext-only rows; export survives deletion; recovery rehydrates |
 | 7 — Monetization | `@cairn/monetization` (entitlements, RevenueCat seam, annual-first paywall). Amendment recorded: multi-child + export free | ✅ tests |
 | 8 — Expansion | Ages 5–21: 8 descriptive stage units + 3 formation bands (coach years, consultant years incl. cross-voiced pornography briefs, counselor years to the Recognize ceremony) | ✅ 714/714 full-scope slots, gate now enforced in CI |
 
 ## Deliberately not built (release-time wiring)
 
-- **Live service keys**: Supabase project, RevenueCat products, Flint client,
+- **Live service keys**: Supabase project, RevenueCat products, the backend
+  proxy holding the Anthropic API key (never in the app bundle),
   expo-notifications / image-picker wiring. All seams exist and are typed.
 - **Native Argon2id**: injected interface; mobile supplies react-native-argon2
   or libsodium at release. Parameter floor enforced regardless.

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { helpMeParentThis, type FlintAdapter, type HelpResult } from '@cairn/ai';
+import { helpMeParentThis, type ModelAdapter, type HelpResult } from '@cairn/ai';
 import { allUnits } from '@cairn/substrate';
 import { Card } from '../components/Card';
 import { EscalationBanner } from '../components/EscalationBanner';
@@ -13,11 +13,12 @@ import { colors, spacing, type } from '../theme';
  * the trackers use. Citations render at the bottom: every answer shows its
  * grounding, because invariant 3 is a UI feature, not just a pipeline rule.
  *
- * The Flint adapter is injected; until the production Flint client is wired
- * in the release build, the screen surfaces the not-configured state honestly
- * rather than pretending (section 35: gaps are explicit in the UI).
+ * The model adapter is injected — anthropicAdapter() in release builds, where
+ * the API key lives behind Cairn's own backend proxy rather than in the app
+ * bundle. When no adapter is configured, the screen says so honestly rather
+ * than pretending (section 35: gaps are explicit in the UI).
  */
-export function AskScreen({ flint }: { flint: FlintAdapter | null }) {
+export function AskScreen({ adapter }: { adapter: ModelAdapter | null }) {
   const family = useFamily();
   const [situation, setSituation] = useState('');
   const [childId, setChildId] = useState(family.children[0]?.id ?? null);
@@ -26,7 +27,7 @@ export function AskScreen({ flint }: { flint: FlintAdapter | null }) {
   const [error, setError] = useState<string | null>(null);
 
   const ask = async () => {
-    if (!flint || !situation.trim()) return;
+    if (!adapter || !situation.trim()) return;
     const child = family.children.find((c) => c.id === childId);
     setBusy(true);
     setError(null);
@@ -39,7 +40,7 @@ export function AskScreen({ flint }: { flint: FlintAdapter | null }) {
           on: family.today,
         },
         allUnits(),
-        flint,
+        adapter,
       );
       setResult(r);
     } catch {
@@ -70,10 +71,10 @@ export function AskScreen({ flint }: { flint: FlintAdapter | null }) {
           value={situation}
           onChangeText={setSituation}
         />
-        <Pressable style={[styles.primary, (!flint || busy) && styles.disabled]} onPress={ask} disabled={!flint || busy}>
+        <Pressable style={[styles.primary, (!adapter || busy) && styles.disabled]} onPress={ask} disabled={!adapter || busy}>
           {busy ? <ActivityIndicator color="#fff" /> : <Text style={styles.primaryText}>Ask</Text>}
         </Pressable>
-        {!flint ? (
+        {!adapter ? (
           <Text style={type.soft}>
             The AI assistant is not configured in this build. Everything else in Cairn works without it.
           </Text>
