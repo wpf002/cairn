@@ -44,13 +44,52 @@ describe('BIP39 recovery phrase', () => {
     expect(Array.from(back)).toEqual(Array.from(entropy));
   });
 
-  it('rejects a wrong word and a swapped word', async () => {
-    const { words } = await generateMnemonic();
-    await expect(mnemonicToEntropy([...words.slice(0, 23), 'notaword'])).rejects.toThrow(InvalidMnemonicError);
-    const swapped = [...words];
-    if (swapped[0] !== swapped[1]) {
-      [swapped[0], swapped[1]] = [swapped[1] as string, swapped[0] as string];
-      await expect(mnemonicToEntropy(swapped)).rejects.toThrow(InvalidMnemonicError);
+  /*
+   * A fixed vector, not a generated one.
+   *
+   * The earlier version of this test generated a mnemonic and asserted that
+   * swapping its first two words failed the checksum. That is flaky by
+   * construction: a 24-word BIP39 phrase carries an 8-bit checksum, so a
+   * corrupted phrase still validates roughly one time in 256, and the test
+   * failed in CI exactly that often. The swap case is now pinned to a phrase
+   * verified to fail, and the general property — corruption must never
+   * silently yield the original entropy — is asserted separately below, where
+   * it holds for every phrase rather than most of them.
+   */
+  const FIXED_PHRASE = [
+    'high', 'peanut', 'pen', 'silent', 'outside', 'boss', 'misery', 'hurt',
+    'grace', 'raven', 'manage', 'craft', 'enlist', 'group', 'room', 'follow',
+    'balance', 'negative', 'label', 'debris', 'museum', 'intact', 'load', 'donor',
+  ];
+
+  it('rejects a word outside the wordlist', async () => {
+    await expect(
+      mnemonicToEntropy([...FIXED_PHRASE.slice(0, 23), 'notaword']),
+    ).rejects.toThrow(InvalidMnemonicError);
+  });
+
+  it('rejects a swapped pair that breaks the checksum', async () => {
+    const swapped = [...FIXED_PHRASE];
+    [swapped[0], swapped[1]] = [swapped[1] as string, swapped[0] as string];
+    await expect(mnemonicToEntropy(swapped)).rejects.toThrow(InvalidMnemonicError);
+  });
+
+  it('never yields the original entropy from a corrupted phrase', async () => {
+    // The security-relevant property, and it holds unconditionally: a phrase
+    // that survives the checksum by luck must still decode to something else,
+    // so a mistyped phrase can never silently unlock the real Family Key.
+    const original = await mnemonicToEntropy(FIXED_PHRASE);
+    for (let i = 0; i < FIXED_PHRASE.length - 1; i += 1) {
+      const corrupted = [...FIXED_PHRASE];
+      [corrupted[i], corrupted[i + 1]] = [corrupted[i + 1] as string, corrupted[i] as string];
+      if (corrupted[i] === corrupted[i + 1]) continue;
+      let decoded: Uint8Array | null = null;
+      try {
+        decoded = await mnemonicToEntropy(corrupted);
+      } catch {
+        continue; // rejected outright, which is the common and preferred case
+      }
+      expect(Buffer.from(decoded).equals(Buffer.from(original))).toBe(false);
     }
   });
 
