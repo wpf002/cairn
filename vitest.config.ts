@@ -16,6 +16,7 @@ export default defineConfig({
       '@cairn/trackers': pkg('trackers'),
       '@cairn/dashboard': pkg('dashboard'),
       '@cairn/journey': pkg('journey'),
+      '@cairn/monetization': pkg('monetization'),
       '@cairn/db': pkg('db'),
     },
   },

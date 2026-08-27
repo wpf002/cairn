@@ -41,6 +41,9 @@ importers:
       '@cairn/journey':
         specifier: workspace:*
         version: link:../../packages/journey
+      '@cairn/monetization':
+        specifier: workspace:*
+        version: link:../../packages/monetization
       '@cairn/stages':
         specifier: workspace:*
         version: link:../../packages/stages
@@ -133,6 +136,8 @@ importers:
       '@cairn/stages':
         specifier: workspace:*
         version: link:../stages
+
+  packages/monetization: {}
 
   packages/stages: {}
 

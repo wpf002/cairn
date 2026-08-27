@@ -54,6 +54,9 @@
       ],
       "@cairn/journey": [
         "./packages/journey/src/index.ts"
+      ],
+      "@cairn/monetization": [
+        "./packages/monetization/src/index.ts"
       ]
     },
     "baseUrl": "."
