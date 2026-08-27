@@ -3,6 +3,7 @@ import {
   fromBase64,
   hkdf,
   importAesKey,
+  type AesKey,
   open,
   randomBytes,
   seal,
@@ -203,11 +204,11 @@ export class CryptoEnvelope {
 
   // ---- Record encryption ---------------------------------------------------
 
-  private async childKey(childId: string): Promise<CryptoKey> {
+  private async childKey(childId: string): Promise<AesKey> {
     return importAesKey(await hkdf(this.familyKeyRaw, utf8(childId), CHILD_INFO + childId));
   }
 
-  private async mediaKey(assetId: string): Promise<CryptoKey> {
+  private async mediaKey(assetId: string): Promise<AesKey> {
     return importAesKey(await hkdf(this.familyKeyRaw, utf8(assetId), MEDIA_INFO + assetId));
   }
 

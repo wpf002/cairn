@@ -1,17 +1,29 @@
 /**
- * Cryptographic primitives, bound to WebCrypto.
+ * Cryptographic primitives, bound to @noble.
  *
- * Roadmap section 33a. The app runs on Expo, where `crypto.subtle` is
- * available via polyfill, and in tests on Node, where it is native. Everything
- * here is written against the standard so the same code runs in both — and so
- * no home-rolled cryptography exists anywhere in this repository.
+ * Roadmap section 33a. This was originally written against WebCrypto on the
+ * assumption that Expo supplied `crypto.subtle` via polyfill. It does not:
+ * Hermes has no WebCrypto, and the first launch on a simulator crashed at
+ * module load reading `globalThis.crypto.subtle`. The assumption had never
+ * been executed, only typechecked.
  *
- * Argon2id is specified for passphrase derivation (never PBKDF2, section 33a).
- * WebCrypto does not ship Argon2id, so the KDF is injected: the mobile app
- * provides a native Argon2id (react-native-argon2 or libsodium), and tests
- * provide a deterministic stand-in. The parameter floor is enforced here
- * regardless of which implementation arrives.
+ * The audited @noble libraries implement exactly the algorithms section 33a
+ * specifies — AES-256-GCM for content, XChaCha20-Poly1305 for media streams,
+ * HKDF-SHA-256 for subkey derivation, Argon2id for the passphrase — in pure
+ * JavaScript, so one implementation now runs identically on device, in Node
+ * and in CI. No home-rolled cryptography exists anywhere in this repository,
+ * and nothing here depends on a host polyfill being present.
+ *
+ * Argon2id stays injected rather than imported here: the app and the tests
+ * pass different implementations (the real KDF and a fast deterministic
+ * stand-in), and the parameter floor is enforced regardless of which arrives.
  */
+
+import { gcm } from '@noble/ciphers/aes.js';
+import { xchacha20poly1305 } from '@noble/ciphers/chacha.js';
+import { randomBytes as nobleRandomBytes } from '@noble/ciphers/utils.js';
+import { hkdf as nobleHkdf } from '@noble/hashes/hkdf.js';
+import { sha256 as sha256Hash } from '@noble/hashes/sha2.js';
 
 export interface Argon2idParams {
   /** Memory cost in KiB. Section 33a floor: 64 MB. */
@@ -57,12 +69,8 @@ export function assertKdfParams(params: Argon2idParams): void {
   }
 }
 
-const subtle = globalThis.crypto.subtle;
-
 export function randomBytes(length: number): Uint8Array {
-  const out = new Uint8Array(length);
-  globalThis.crypto.getRandomValues(out);
-  return out;
+  return nobleRandomBytes(length);
 }
 
 /** AES-256-GCM encrypt. Fresh 12-byte IV per call, never reused. */
@@ -71,23 +79,47 @@ export interface Sealed {
   readonly ciphertext: Uint8Array;
 }
 
-export async function importAesKey(raw: Uint8Array, usages: KeyUsage[] = ['encrypt', 'decrypt']): Promise<CryptoKey> {
-  if (raw.length !== 32) throw new Error('AES-256 key must be 32 bytes');
-  return subtle.importKey('raw', raw as BufferSource, { name: 'AES-GCM' }, false, usages);
+/**
+ * An AES-256 key. Previously a WebCrypto `CryptoKey`, which was opaque and
+ * non-extractable; @noble takes raw bytes, so the wrapper keeps the same
+ * shape and the same one-way discipline at the call sites.
+ */
+export interface AesKey {
+  readonly raw: Uint8Array;
 }
 
-export async function seal(key: CryptoKey, plaintext: Uint8Array, aad?: Uint8Array): Promise<Sealed> {
+export async function importAesKey(raw: Uint8Array): Promise<AesKey> {
+  if (raw.length !== 32) throw new Error('AES-256 key must be 32 bytes');
+  return { raw };
+}
+
+export async function seal(key: AesKey, plaintext: Uint8Array, aad?: Uint8Array): Promise<Sealed> {
   const iv = randomBytes(12);
-  const params: AesGcmParams = { name: 'AES-GCM', iv: iv as BufferSource };
-  if (aad) params.additionalData = aad as BufferSource;
-  const ciphertext = new Uint8Array(await subtle.encrypt(params, key, plaintext as BufferSource));
+  const ciphertext = gcm(key.raw, iv, aad).encrypt(plaintext);
   return { iv, ciphertext };
 }
 
-export async function open(key: CryptoKey, sealed: Sealed, aad?: Uint8Array): Promise<Uint8Array> {
-  const params: AesGcmParams = { name: 'AES-GCM', iv: sealed.iv as BufferSource };
-  if (aad) params.additionalData = aad as BufferSource;
-  return new Uint8Array(await subtle.decrypt(params, key, sealed.ciphertext as BufferSource));
+export async function open(key: AesKey, sealed: Sealed, aad?: Uint8Array): Promise<Uint8Array> {
+  return gcm(key.raw, sealed.iv, aad).decrypt(sealed.ciphertext);
+}
+
+/**
+ * XChaCha20-Poly1305, specified in section 33a for media streams: its 24-byte
+ * nonce can be generated randomly for every photo without birthday-bound
+ * concerns, which AES-GCM's 12-byte IV cannot promise across a 21-year album.
+ */
+export interface SealedMedia {
+  readonly nonce: Uint8Array;
+  readonly ciphertext: Uint8Array;
+}
+
+export async function sealMedia(key: AesKey, plaintext: Uint8Array, aad?: Uint8Array): Promise<SealedMedia> {
+  const nonce = randomBytes(24);
+  return { nonce, ciphertext: xchacha20poly1305(key.raw, nonce, aad).encrypt(plaintext) };
+}
+
+export async function openMedia(key: AesKey, sealed: SealedMedia, aad?: Uint8Array): Promise<Uint8Array> {
+  return xchacha20poly1305(key.raw, sealed.nonce, aad).decrypt(sealed.ciphertext);
 }
 
 /** HKDF-SHA-256, for deriving purpose-bound subkeys from a root secret. */
@@ -97,22 +129,11 @@ export async function hkdf(
   info: string,
   length = 32,
 ): Promise<Uint8Array> {
-  const key = await subtle.importKey('raw', secret as BufferSource, 'HKDF', false, ['deriveBits']);
-  const bits = await subtle.deriveBits(
-    {
-      name: 'HKDF',
-      hash: 'SHA-256',
-      salt: salt as BufferSource,
-      info: new TextEncoder().encode(info) as BufferSource,
-    },
-    key,
-    length * 8,
-  );
-  return new Uint8Array(bits);
+  return nobleHkdf(sha256Hash, secret, salt, new TextEncoder().encode(info), length);
 }
 
 export async function sha256(data: Uint8Array): Promise<Uint8Array> {
-  return new Uint8Array(await subtle.digest('SHA-256', data as BufferSource));
+  return sha256Hash(data);
 }
 
 export function toBase64(bytes: Uint8Array): string {

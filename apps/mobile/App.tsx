@@ -23,7 +23,7 @@ type Tab = 'today' | 'children' | 'pregnancy' | 'ask' | 'journey' | 'roadmap' | 
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'today', label: 'Today' },
-  { id: 'children', label: 'My Children' },
+  { id: 'children', label: 'Children' },
   { id: 'pregnancy', label: 'Pregnancy' },
   { id: 'ask', label: 'Ask' },
   { id: 'journey', label: 'Journey' },
@@ -107,7 +107,14 @@ export default function App() {
         <View style={styles.tabs}>
           {TABS.map((t) => (
             <Pressable key={t.id} style={styles.tab} onPress={() => setTab(t.id)}>
-              <Text style={[styles.tabText, tab === t.id && styles.tabActive]}>{t.label}</Text>
+              <Text
+                style={[styles.tabText, tab === t.id && styles.tabActive]}
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                minimumFontScale={0.8}
+              >
+                {t.label}
+              </Text>
             </Pressable>
           ))}
         </View>
@@ -132,8 +139,20 @@ const styles = StyleSheet.create({
     borderTopColor: colors.line,
     backgroundColor: colors.card,
   },
-  tab: { flex: 1, alignItems: 'center', paddingVertical: spacing.md },
-  tabText: { ...type.soft, fontWeight: '600' },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: spacing.md,
+    paddingHorizontal: 2,
+  },
+  /*
+   * numberOfLines={1} plus adjustsFontSizeToFit on the label: six tabs across
+   * a 402pt bar leaves about 67pt each, and without this "Pregnancy" wrapped
+   * mid-word to "Pregnanc / y" on an iPhone 17. Shrinking beats wrapping for
+   * a fixed-height bar.
+   */
+  tabText: { ...type.soft, fontWeight: '600', textAlign: 'center' },
   tabActive: { color: colors.accent },
   subTabs: {
     flexDirection: 'row',

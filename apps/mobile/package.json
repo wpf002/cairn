@@ -5,11 +5,12 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "ios": "expo start --ios",
-    "android": "expo start --android",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@babel/runtime": "^8.0.0",
     "@cairn/ai": "workspace:*",
     "@cairn/canon": "workspace:*",
     "@cairn/dashboard": "workspace:*",
@@ -20,6 +21,7 @@
     "@cairn/stages": "workspace:*",
     "@cairn/substrate": "workspace:*",
     "@cairn/trackers": "workspace:*",
+    "@noble/hashes": "^2.4.0",
     "@react-native-async-storage/async-storage": "^3.1.1",
     "@supabase/supabase-js": "^2.112.4",
     "expo": "~52.0.0",
@@ -28,7 +30,6 @@
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
     "react-native": "0.76.5",
-    "react-native-argon2": "4.0.0",
     "react-native-purchases": "^10.8.0",
     "react-native-url-polyfill": "^4.0.0"
   },

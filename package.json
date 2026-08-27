@@ -5,7 +5,9 @@
   "description": "Christian family formation platform — conception through age 21",
   "license": "UNLICENSED",
   "packageManager": "pnpm@9.15.0",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "pnpm -r --filter \"./packages/*\" build",
     "typecheck": "pnpm -r typecheck",
@@ -20,5 +22,8 @@
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0"
   }
 }
