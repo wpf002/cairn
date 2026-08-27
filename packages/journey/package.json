@@ -1,0 +1,19 @@
+{
+  "name": "@cairn/journey",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Family memory: journey entries, milestone ceremonies, encrypted media, export, and the Story of Your Childhood",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": { ".": { "types": "./src/index.ts", "default": "./src/index.ts" } },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit"
+  },
+  "dependencies": {
+    "@cairn/crypto": "workspace:*",
+    "@cairn/framework": "workspace:*",
+    "@cairn/stages": "workspace:*"
+  }
+}

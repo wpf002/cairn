@@ -51,6 +51,9 @@
       ],
       "@cairn/dashboard": [
         "./packages/dashboard/src/index.ts"
+      ],
+      "@cairn/journey": [
+        "./packages/journey/src/index.ts"
       ]
     },
     "baseUrl": "."

@@ -9,6 +9,7 @@ import { TrackersScreen } from './src/screens/TrackersScreen';
 import { PrepareScreen } from './src/screens/PrepareScreen';
 import { RoadmapScreen } from './src/screens/RoadmapScreen';
 import { AskScreen } from './src/screens/AskScreen';
+import { JourneyScreen } from './src/screens/JourneyScreen';
 import { colors, spacing, type } from './src/theme';
 
 /**
@@ -16,13 +17,14 @@ import { colors, spacing, type } from './src/theme';
  * PREGNANCY (week card + trackers + prepare), ROADMAP. ASK arrives with
  * Phase 5, BIBLE/PROFILE later.
  */
-type Tab = 'today' | 'children' | 'pregnancy' | 'ask' | 'roadmap';
+type Tab = 'today' | 'children' | 'pregnancy' | 'ask' | 'journey' | 'roadmap';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'today', label: 'Today' },
   { id: 'children', label: 'My Children' },
   { id: 'pregnancy', label: 'Pregnancy' },
   { id: 'ask', label: 'Ask' },
+  { id: 'journey', label: 'Journey' },
   { id: 'roadmap', label: 'Roadmap' },
 ];
 
@@ -86,6 +88,7 @@ export default function App() {
             </View>
           )}
           {tab === 'ask' && <AskScreen flint={null} />}
+          {tab === 'journey' && <JourneyScreen />}
           {tab === 'roadmap' && <RoadmapScreen />}
         </View>
 

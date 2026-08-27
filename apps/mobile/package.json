@@ -21,7 +21,8 @@
     "react": "18.3.1",
     "react-native": "0.76.5",
     "@cairn/dashboard": "workspace:*",
-    "@cairn/ai": "workspace:*"
+    "@cairn/ai": "workspace:*",
+    "@cairn/journey": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "~18.3.12",

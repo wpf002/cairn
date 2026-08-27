@@ -15,6 +15,7 @@ export default defineConfig({
       '@cairn/ai': pkg('ai'),
       '@cairn/trackers': pkg('trackers'),
       '@cairn/dashboard': pkg('dashboard'),
+      '@cairn/journey': pkg('journey'),
       '@cairn/db': pkg('db'),
     },
   },

@@ -38,6 +38,9 @@ importers:
       '@cairn/framework':
         specifier: workspace:*
         version: link:../../packages/framework
+      '@cairn/journey':
+        specifier: workspace:*
+        version: link:../../packages/journey
       '@cairn/stages':
         specifier: workspace:*
         version: link:../../packages/stages
@@ -115,6 +118,18 @@ importers:
 
   packages/framework:
     dependencies:
+      '@cairn/stages':
+        specifier: workspace:*
+        version: link:../stages
+
+  packages/journey:
+    dependencies:
+      '@cairn/crypto':
+        specifier: workspace:*
+        version: link:../crypto
+      '@cairn/framework':
+        specifier: workspace:*
+        version: link:../framework
       '@cairn/stages':
         specifier: workspace:*
         version: link:../stages
