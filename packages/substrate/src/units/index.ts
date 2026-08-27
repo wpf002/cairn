@@ -12,6 +12,10 @@ import { EXPANSION_CHILDHOOD_UNITS } from './expansion.childhood.js';
 import { EXPANSION_ADOLESCENCE_UNITS } from './expansion.adolescence.js';
 import { EXPANSION_ADULT_UNITS } from './expansion.adult.js';
 import { DEPTH_HEAR_UNITS } from './depth.hear.js';
+import { DEPTH_SEE_UNITS } from './depth.see.js';
+import { DEPTH_EXPERIENCE_UNITS } from './depth.experience.js';
+import { DEPTH_BELIEVE_UNITS } from './depth.believe.js';
+import { DEPTH_BECOME_UNITS } from './depth.become.js';
 
 /**
  * Substrate v1 — the Phase 2 corpus.
@@ -34,4 +38,8 @@ export const UNITS: readonly Unit[] = [
   ...EXPANSION_ADOLESCENCE_UNITS,
   ...EXPANSION_ADULT_UNITS,
   ...DEPTH_HEAR_UNITS,
+  ...DEPTH_SEE_UNITS,
+  ...DEPTH_EXPERIENCE_UNITS,
+  ...DEPTH_BELIEVE_UNITS,
+  ...DEPTH_BECOME_UNITS,
 ];
