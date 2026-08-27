@@ -29,6 +29,11 @@ export function proxyAdapter(): ModelAdapter | null {
           maxTokens: request.maxTokens,
         }),
       });
+      if (response.status === 429) {
+        throw new Error(
+          "You've used this month's free questions. Premium removes the limit.",
+        );
+      }
       if (!response.ok) throw new Error(`Assistant unavailable (${response.status}).`);
 
       const payload: { text?: string } = await response.json();

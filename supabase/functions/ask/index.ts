@@ -12,8 +12,17 @@
  * Set key: supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
  */
 import Anthropic from 'npm:@anthropic-ai/sdk@0.71.0';
+import { createClient } from 'npm:@supabase/supabase-js@2';
 
 const anthropic = new Anthropic({ apiKey: Deno.env.get('ANTHROPIC_API_KEY') });
+
+/**
+ * Free-tier ASK cap, mirroring FREE_HELP_QUERIES_PER_MONTH in
+ * @cairn/monetization. The client enforces it for UX; this is the enforcement
+ * that actually holds, because a modified client would otherwise spend the
+ * operator's model budget without limit.
+ */
+const FREE_MONTHLY_LIMIT = 3;
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -37,6 +46,33 @@ Deno.serve(async (req: Request): Promise<Response> => {
       status: 503,
       headers: CORS,
     });
+  }
+
+  // Metering runs before the model call, as the caller, so RLS and auth.uid()
+  // apply. consume_ask_quota is atomic: two concurrent requests cannot both
+  // pass a limit of one.
+  const authHeader = req.headers.get('Authorization') ?? '';
+  const supabase = createClient(
+    Deno.env.get('SUPABASE_URL')!,
+    Deno.env.get('SUPABASE_ANON_KEY')!,
+    { global: { headers: { Authorization: authHeader } } },
+  );
+  const { data: quota, error: quotaError } = await supabase
+    .rpc('consume_ask_quota', { monthly_limit: FREE_MONTHLY_LIMIT })
+    .single<{ allowed: boolean; used: number; remaining: number }>();
+
+  if (quotaError) {
+    console.error('quota check failed', quotaError);
+    return Response.json({ error: 'Could not verify your usage allowance.' }, {
+      status: 503,
+      headers: CORS,
+    });
+  }
+  if (!quota?.allowed) {
+    return Response.json(
+      { error: 'monthly_limit_reached', remaining: 0 },
+      { status: 429, headers: CORS },
+    );
   }
 
   let body: AskBody;
@@ -73,7 +109,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
             .map((b) => b.text)
             .join('');
 
-    return Response.json({ text }, { headers: CORS });
+    return Response.json({ text, remaining: quota.remaining }, { headers: CORS });
   } catch (error) {
     console.error('anthropic call failed', error);
     return Response.json({ error: 'Upstream model call failed.' }, { status: 502, headers: CORS });

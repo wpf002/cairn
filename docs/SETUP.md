@@ -50,10 +50,16 @@ Then put the printed function URL in `EXPO_PUBLIC_AI_PROXY_URL`. Supabase
 verifies the caller's JWT before the function runs, so only signed-in Cairn
 accounts can spend your quota.
 
-**Not yet built:** a server-side per-user rate limit. The free-tier ASK cap is
-enforced client-side in `@cairn/monetization` today, which is fine against
-honest use and useless against a modified client. Worth adding before launch,
-not before first run.
+**Server-side rate limit: built.** `supabase/migrations/20260827000002_ask_usage.sql`
+adds an atomic `consume_ask_quota()` the function calls before the model, so a
+modified client cannot spend your Anthropic budget. Verified locally: free tier
+denies on the 4th call in a month, premium is uncapped, and a user cannot write
+their own counter. The table stores no question text and no child reference.
+
+**Still open:** the RevenueCat webhook that marks an account premium. Until it
+exists, `account_entitlement` defaults everyone to `free`, so the cap applies
+even to a genuine subscriber. That is the safe direction to be wrong in, and
+it is Phase 7 work.
 
 ### 3. RevenueCat — free at your stage
 Free until **$2,500/month tracked revenue**, then 1% of revenue above that. No

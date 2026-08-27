@@ -16,6 +16,7 @@ import { DEPTH_SEE_UNITS } from './depth.see.js';
 import { DEPTH_EXPERIENCE_UNITS } from './depth.experience.js';
 import { DEPTH_BELIEVE_UNITS } from './depth.believe.js';
 import { DEPTH_BECOME_UNITS } from './depth.become.js';
+import { DEPTH_RECEIVE_UNITS } from './depth.receive.js';
 
 /**
  * Substrate v1 — the Phase 2 corpus.
@@ -42,4 +43,5 @@ export const UNITS: readonly Unit[] = [
   ...DEPTH_EXPERIENCE_UNITS,
   ...DEPTH_BELIEVE_UNITS,
   ...DEPTH_BECOME_UNITS,
+  ...DEPTH_RECEIVE_UNITS,
 ];
