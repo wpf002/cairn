@@ -1,7 +1,7 @@
 # Build status — Phases 0–8
 
-All eight phases of the roadmap are built and gated. 190 tests, substrate
-validator green at full scope, mobile app typechecks clean.
+All eight phases of the roadmap are built and gated. 200 tests, 199 substrate
+units, validator green at full scope, mobile app typechecks clean.
 
 | Phase | Delivered | Gate |
 |---|---|---|
@@ -14,17 +14,27 @@ validator green at full scope, mobile app typechecks clean.
 | 6 — Journey | `@cairn/journey` (voice-threaded entries, 4 ceremonies to Recognize@21, sealed letters, encrypted store, export, Story renderer) | ✅ ciphertext-only rows; export survives deletion; recovery rehydrates |
 | 7 — Monetization | `@cairn/monetization` (entitlements, RevenueCat seam, annual-first paywall). Amendment recorded: multi-child + export free | ✅ tests |
 | 8 — Expansion | Ages 5–21: 8 descriptive stage units + 3 formation bands (coach years, consultant years incl. cross-voiced pornography briefs, counselor years to the Recognize ceremony) | ✅ 714/714 full-scope slots, gate now enforced in CI |
+| Depth pass | 133→199 units. Per-stage, per-voice coverage past age 5 for SEE (16 voiced), HEAR (16 voiced), RECEIVE (10 incl. 4 cross-voiced), EXPERIENCE (8), BELIEVE (8), BECOME (8) | ✅ split depth follows §16b per category rather than uniformly |
 
 ## Deliberately not built (release-time wiring)
 
-- **Live service keys**: Supabase project, RevenueCat products, the backend
-  proxy holding the Anthropic API key (never in the app bundle),
-  expo-notifications / image-picker wiring. All seams exist and are typed.
-- **Native Argon2id**: injected interface; mobile supplies react-native-argon2
-  or libsodium at release. Parameter floor enforced regardless.
+- **Hosted Supabase project**: schema, RLS and ASK metering migrations exist
+  and are verified against a local stack. Needs a project ref and `db push`.
+- **RevenueCat products**: adapter written; blocked on the Apple and Google
+  developer accounts, since products must exist in the stores first.
+- **RevenueCat webhook**: `account_entitlement` defaults everyone to `free`,
+  so the server ASK cap currently applies to subscribers too. Safe direction
+  to be wrong in; still a gap.
 - **Named reviewers**: `doc-gate` / `tobias-gate` are role placeholders. The
   competitive analysis is blunt that named humans are the trust — hiring, not
   code.
+
+## Never verified on a device
+
+Native Argon2id, notifications and the image picker typecheck and are wired,
+but no native module in this repo has ever executed — Expo Go cannot load
+them, and a dev build needs the Apple account. Treat that whole layer as
+unproven until `expo prebuild && expo run:ios` has been run once.
 
 ## Deferred by roadmap decision (§28, revisit post-launch)
 
