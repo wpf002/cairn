@@ -31,7 +31,7 @@ export function WeekScreen() {
   return (
     <ScrollView style={styles.screen} contentContainerStyle={{ padding: spacing.md }}>
       <Text style={type.label}>WEEK {status.week} · {formatGestationalAge(status)} · TRIMESTER {status.trimester}</Text>
-      <Text style={[type.title, { marginBottom: spacing.md }]}>
+      <Text style={[type.display, { marginBottom: spacing.md }]}>
         {status.daysUntilDue > 0 ? `${status.daysUntilDue} days until your due date` : 'Due — any day now'}
       </Text>
 

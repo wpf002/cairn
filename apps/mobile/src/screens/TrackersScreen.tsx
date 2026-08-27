@@ -71,7 +71,7 @@ export function TrackersScreen() {
           </Pressable>
         ) : (
           <View>
-            <Text style={type.title}>{kickSession.kicks.length} / {kickSession.targetCount}</Text>
+            <Text style={type.display}>{kickSession.kicks.length} / {kickSession.targetCount}</Text>
             <Pressable
               style={styles.primary}
               onPress={() => {

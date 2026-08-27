@@ -20,7 +20,7 @@ export function ChildScreen({ childId }: { childId: string }) {
       <Text style={type.label}>
         {view.stage ? view.stage.label.toUpperCase() : 'GROWN'} · {view.stage?.range ?? ''}
       </Text>
-      <Text style={type.title}>{view.childName}</Text>
+      <Text style={type.display}>{view.childName}</Text>
       {view.transitionBanner ? <Text style={styles.transition}>{view.transitionBanner}</Text> : null}
       <Text style={styles.role}>YOUR ROLE: {view.roleLabel}</Text>
 

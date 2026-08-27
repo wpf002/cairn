@@ -24,7 +24,7 @@ export function RoadmapScreen() {
     <ScrollView style={styles.screen} contentContainerStyle={{ padding: spacing.md }}>
       <Text style={type.label}>THE 21-YEAR ROADMAP</Text>
       {child ? (
-        <Text style={[type.title, { marginBottom: spacing.md }]}>
+        <Text style={[type.display, { marginBottom: spacing.md }]}>
           {child.name}: week {rm.weeksElapsed.toLocaleString('en-US')} of {rm.weeksTotal.toLocaleString('en-US')}
         </Text>
       ) : null}

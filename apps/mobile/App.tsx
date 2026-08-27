@@ -48,7 +48,7 @@ export default function App() {
       <SafeAreaView style={styles.root}>
         <StatusBar style="dark" />
         <View style={styles.header}>
-          <Text style={type.title}>Cairn</Text>
+          <Text style={type.display}>Cairn</Text>
           <Pressable onPress={() => setTab('premium')}>
             <Text style={styles.premiumLink}>Premium</Text>
           </Pressable>

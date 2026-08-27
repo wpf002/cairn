@@ -13,7 +13,7 @@ export function PremiumScreen() {
   return (
     <ScrollView style={styles.screen} contentContainerStyle={{ padding: spacing.md }}>
       <Text style={type.label}>CAIRN PREMIUM</Text>
-      <Text style={[type.title, { marginBottom: spacing.sm }]}>{p.valueLine}</Text>
+      <Text style={[type.display, { marginBottom: spacing.sm }]}>{p.valueLine}</Text>
 
       {p.options.map((o) => (
         <Pressable key={o.productId} style={[styles.option, o.preselected && styles.optionSelected]}>
