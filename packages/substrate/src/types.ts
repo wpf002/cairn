@@ -104,6 +104,15 @@ export interface Unit {
   /** Section 16b cross-voice pairing: the other parent's counterpart. */
   readonly pairedWith?: string;
   readonly title: string;
+  /**
+   * One sentence that can carry a card on its own.
+   *
+   * TODAY and the dashboards show title + lede + one action; `body` is the
+   * depth behind a tap. Before this existed, every card rendered the full
+   * body — a median of 82 words — which is what made the app read as a wall
+   * of text rather than something a parent finishes at 6am.
+   */
+  readonly lede?: string;
   readonly body: string;
   /**
    * Section 2's fourth question, "what can I actually do today". A unit with a
