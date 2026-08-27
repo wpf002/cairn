@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkDoctrine, coverage, validateCorpus, validateUnit, type Unit } from '@cairn/substrate';
+import { allUnits, checkDoctrine, coverage, FULL_SCOPE, MVP_SCOPE, validateCorpus, validateUnit, type Unit } from '@cairn/substrate';
 import { validDescriptive, validNormative, validPrudential } from './fixtures.js';
 
 function errors(unit: Unit): string[] {
@@ -168,5 +168,24 @@ describe('coverage (section 16a countable gate)', () => {
     });
     expect(report.covered).toBe(1);
     expect(report.missing[0]?.voice).toBe('father');
+  });
+});
+
+
+describe('the shipped corpus', () => {
+  it('passes the full validator with zero errors', () => {
+    const report = validateCorpus(allUnits());
+    expect(report.errors).toBe(0);
+    expect(report.unitCount).toBeGreaterThanOrEqual(130);
+  });
+
+  it('covers the MVP scope completely (Phase 2 gate)', () => {
+    expect(coverage(allUnits(), MVP_SCOPE).complete).toBe(true);
+  });
+
+  it('covers conception through 21, both voices (Phase 8 gate)', () => {
+    const report = coverage(allUnits(), FULL_SCOPE);
+    expect(report.complete).toBe(true);
+    expect(report.required).toBe(714);
   });
 });

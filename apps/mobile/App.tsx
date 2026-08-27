@@ -10,6 +10,7 @@ import { PrepareScreen } from './src/screens/PrepareScreen';
 import { RoadmapScreen } from './src/screens/RoadmapScreen';
 import { AskScreen } from './src/screens/AskScreen';
 import { JourneyScreen } from './src/screens/JourneyScreen';
+import { PremiumScreen } from './src/screens/PremiumScreen';
 import { colors, spacing, type } from './src/theme';
 
 /**
@@ -17,7 +18,7 @@ import { colors, spacing, type } from './src/theme';
  * PREGNANCY (week card + trackers + prepare), ROADMAP. ASK arrives with
  * Phase 5, BIBLE/PROFILE later.
  */
-type Tab = 'today' | 'children' | 'pregnancy' | 'ask' | 'journey' | 'roadmap';
+type Tab = 'today' | 'children' | 'pregnancy' | 'ask' | 'journey' | 'roadmap' | 'premium';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'today', label: 'Today' },
@@ -41,6 +42,9 @@ export default function App() {
         <StatusBar style="dark" />
         <View style={styles.header}>
           <Text style={type.title}>Cairn</Text>
+          <Pressable onPress={() => setTab('premium')}>
+            <Text style={styles.premiumLink}>Premium</Text>
+          </Pressable>
         </View>
 
         <View style={{ flex: 1 }}>
@@ -90,6 +94,7 @@ export default function App() {
           {tab === 'ask' && <AskScreen flint={null} />}
           {tab === 'journey' && <JourneyScreen />}
           {tab === 'roadmap' && <RoadmapScreen />}
+          {tab === 'premium' && <PremiumScreen />}
         </View>
 
         <View style={styles.tabs}>
@@ -106,7 +111,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
-  header: { paddingHorizontal: spacing.md, paddingVertical: spacing.sm },
+  header: {
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  premiumLink: { ...type.soft, color: colors.accent, fontWeight: '600' },
   tabs: {
     flexDirection: 'row',
     borderTopWidth: 1,

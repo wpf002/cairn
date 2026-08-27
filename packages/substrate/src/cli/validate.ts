@@ -7,7 +7,7 @@
  * than a note in a document.
  */
 import { allUnits } from '../corpus.js';
-import { coverage, formatCoverage, MVP_SCOPE } from '../coverage.js';
+import { coverage, formatCoverage, FULL_SCOPE, MVP_SCOPE } from '../coverage.js';
 import { validateCorpus } from '../validate.js';
 
 const RESET = '\u001b[0m';
@@ -34,6 +34,18 @@ function main(): void {
   const cov = coverage(units, MVP_SCOPE);
   console.log(`\n${DIM}MVP coverage (section 35 scope)${RESET}`);
   console.log(`  ${formatCoverage(cov)}`);
+
+  const full = coverage(units, FULL_SCOPE);
+  console.log(`${DIM}Full coverage (conception through 21, both voices)${RESET}`);
+  console.log(`  ${formatCoverage(full)}`);
+  if (!full.complete) {
+    for (const slot of full.missing.slice(0, 10)) {
+      const where = slot.kind === 'stage' ? slot.stage : `week ${slot.week}`;
+      console.log(`  ${DIM}missing${RESET} ${where} - ${slot.category} - ${slot.voice}`);
+    }
+    console.log(`\n${RED}Full-scope coverage gate failed.${RESET}`);
+    process.exit(1);
+  }
   if (!cov.complete && units.length > 0) {
     const sample = cov.missing.slice(0, 10);
     for (const slot of sample) {

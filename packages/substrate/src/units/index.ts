@@ -7,6 +7,10 @@ import { CHILDHOOD_SEE_UNITS } from './childhood.see.js';
 import { CHILDHOOD_RECEIVE_UNITS } from './childhood.receive.js';
 import { CHILDHOOD_FORMATION_UNITS } from './childhood.formation.js';
 import { PARENT_FORMATION_UNITS } from './parent.formation.js';
+import { EXPANSION_DEVELOPMENT_UNITS } from './expansion.development.js';
+import { EXPANSION_CHILDHOOD_UNITS } from './expansion.childhood.js';
+import { EXPANSION_ADOLESCENCE_UNITS } from './expansion.adolescence.js';
+import { EXPANSION_ADULT_UNITS } from './expansion.adult.js';
 
 /**
  * Substrate v1 — the Phase 2 corpus.
@@ -24,4 +28,8 @@ export const UNITS: readonly Unit[] = [
   ...CHILDHOOD_RECEIVE_UNITS,
   ...CHILDHOOD_FORMATION_UNITS,
   ...PARENT_FORMATION_UNITS,
+  ...EXPANSION_DEVELOPMENT_UNITS,
+  ...EXPANSION_CHILDHOOD_UNITS,
+  ...EXPANSION_ADOLESCENCE_UNITS,
+  ...EXPANSION_ADULT_UNITS,
 ];
