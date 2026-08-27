@@ -1,13 +1,23 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { buildToday } from '@cairn/dashboard';
-import { allUnits } from '@cairn/substrate';
-import { Card } from '../components/Card';
+import { allUnits, ledeFor, readingMinutes } from '@cairn/substrate';
+import { Action, Card, CardTitle, Counter, Expandable, Lede, Meta, Screen, SectionLabel } from '../components/ui';
 import { useFamily } from '../state/family';
 import { colors, spacing, type } from '../theme';
 
 /**
- * TODAY — the product surface (sections 20, 29). One block per pregnancy and
- * child; a focus, an action, a counter. Readable in under a minute.
+ * TODAY — the product surface (sections 20, 29).
+ *
+ * Rebuilt against how Glorify actually composes its Today screen, which is the
+ * one UX repeatedly called best-in-class in this category: no body copy at
+ * all. A date line, the title as the big line, a duration on every item, and
+ * the prose one tap down. Cairn was rendering an 82-word body flat here, which
+ * is what made the app read as a wall of text on the first screen a parent
+ * sees.
+ *
+ * The counter is a figure, not a sentence. Parent Cue's entire brand is "936
+ * weeks" as a number a parent looks at; Cairn's runs to twenty-one and was
+ * buried in grey body text.
  */
 export function TodayScreen({ onOpenChild }: { onOpenChild: (id: string) => void }) {
   const family = useFamily();
@@ -24,42 +34,62 @@ export function TodayScreen({ onOpenChild }: { onOpenChild: (id: string) => void
   );
 
   return (
-    <ScrollView style={styles.screen} contentContainerStyle={{ padding: spacing.md }}>
-      <Text style={type.label}>TODAY</Text>
-      {today.blocks.map((block) => (
-        <Card key={block.id}>
-          <Text
-            style={type.heading}
-            onPress={block.kind === 'child' ? () => onOpenChild(block.id) : undefined}
-          >
-            {block.headline}
-          </Text>
-          <Text style={type.soft}>{block.subline}</Text>
-          {block.focus ? (
-            <View style={{ marginTop: spacing.sm }}>
-              <Text style={[type.body, { fontWeight: '600' }]}>{block.focus.unit.title}</Text>
-              {block.action ? <Text style={styles.action}>Today: {block.action}</Text> : null}
-            </View>
-          ) : null}
-          <Text style={styles.counter}>{block.counterLine}</Text>
-        </Card>
-      ))}
+    <Screen>
+      {today.blocks.map((block) => {
+        const focus = block.focus?.unit;
+        const counter = splitCounter(block.counterLine);
+        return (
+          <Card key={block.id} onPress={block.kind === 'child' ? () => onOpenChild(block.id) : undefined}>
+            <Text style={styles.eyebrow}>{block.headline.toUpperCase()}</Text>
+            <Text style={styles.subline}>{block.subline}</Text>
+
+            {focus ? (
+              <View style={styles.focus}>
+                <CardTitle>{focus.title}</CardTitle>
+                <Lede>{ledeFor(focus)}</Lede>
+                {block.action ? <Action>{block.action}</Action> : null}
+              </View>
+            ) : null}
+
+            {counter ? <Counter value={counter.value} unit={counter.unit} /> : <Meta>{block.counterLine}</Meta>}
+          </Card>
+        );
+      })}
 
       {today.parentFocus ? (
-        <Card label="BECOMING THE PARENT THEY NEED">
-          <Text style={type.heading}>{today.parentFocus.unit.title}</Text>
-          <Text style={[type.body, { marginTop: spacing.xs }]}>{today.parentFocus.unit.body}</Text>
-          {today.parentFocus.unit.actions?.[0] ? (
-            <Text style={styles.action}>· {today.parentFocus.unit.actions[0]}</Text>
-          ) : null}
-        </Card>
+        <>
+          <SectionLabel>BECOMING THE PARENT THEY NEED</SectionLabel>
+          <Card tone="quiet">
+            <CardTitle>{today.parentFocus.unit.title}</CardTitle>
+            <Expandable
+              summary={<Lede>{ledeFor(today.parentFocus.unit)}</Lede>}
+              openLabel={`Read more · ${readingMinutes(today.parentFocus.unit.body)} min`}
+            >
+              <Text style={type.body}>{today.parentFocus.unit.body}</Text>
+            </Expandable>
+            {today.parentFocus.unit.actions?.[0] ? (
+              <Action>{today.parentFocus.unit.actions[0]}</Action>
+            ) : null}
+          </Card>
+        </>
       ) : null}
-    </ScrollView>
+    </Screen>
   );
 }
 
+/**
+ * Pull the number out of a counter line so it can be set as a figure.
+ * "772 weeks until 21" becomes 772 / "weeks until 21".
+ */
+function splitCounter(line: string | undefined): { value: string; unit: string } | null {
+  if (!line) return null;
+  const m = /^([\d,]+)\s+(.*)$/.exec(line.trim());
+  if (!m || !m[1] || !m[2]) return null;
+  return { value: m[1], unit: m[2] };
+}
+
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.bg },
-  action: { ...type.body, color: colors.accent, marginTop: spacing.xs },
-  counter: { ...type.soft, marginTop: spacing.sm, letterSpacing: 0.4 },
+  eyebrow: { ...type.label, color: colors.accent },
+  subline: { ...type.meta, marginTop: spacing.xs },
+  focus: { marginTop: spacing.md },
 });

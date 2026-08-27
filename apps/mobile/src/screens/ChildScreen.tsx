@@ -1,12 +1,29 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { buildChildDashboard } from '@cairn/dashboard';
-import { allUnits } from '@cairn/substrate';
-import { Card } from '../components/Card';
+import { allUnits, ledeFor, readingMinutes } from '@cairn/substrate';
+import type { Unit } from '@cairn/substrate';
+import {
+  Action,
+  Card,
+  CardTitle,
+  Divider,
+  Expandable,
+  Lede,
+  PageTitle,
+  Screen,
+  SectionLabel,
+  Source,
+} from '../components/ui';
 import { useFamily } from '../state/family';
 import { colors, spacing, type } from '../theme';
 
 /**
  * The per-child age dashboard — section 21's ten sections, voice-resolved.
+ *
+ * Every section previously printed each unit's full body inline, so a single
+ * stage produced several thousand words on one scroll. Now each unit shows its
+ * headline and one sentence, with the body and its scriptural warrant behind a
+ * tap that states the reading time up front.
  */
 export function ChildScreen({ childId }: { childId: string }) {
   const family = useFamily();
@@ -16,88 +33,123 @@ export function ChildScreen({ childId }: { childId: string }) {
   const view = buildChildDashboard(child, family.audience, allUnits(), family.today);
 
   return (
-    <ScrollView style={styles.screen} contentContainerStyle={{ padding: spacing.md }}>
-      <Text style={type.label}>
-        {view.stage ? view.stage.label.toUpperCase() : 'GROWN'} · {view.stage?.range ?? ''}
-      </Text>
-      <Text style={type.display}>{view.childName}</Text>
-      {view.transitionBanner ? <Text style={styles.transition}>{view.transitionBanner}</Text> : null}
-      <Text style={styles.role}>YOUR ROLE: {view.roleLabel}</Text>
+    <Screen>
+      <PageTitle sub={`${view.stage ? view.stage.label : 'Grown'}${view.stage ? ` · ${view.stage.range}` : ''}`}>
+        {view.childName}
+      </PageTitle>
+
+      <View style={styles.roleRow}>
+        <Text style={styles.rolePill}>{view.roleLabel}</Text>
+        {view.transitionBanner ? <Text style={styles.transition}>{view.transitionBanner}</Text> : null}
+      </View>
 
       {view.development.length > 0 ? (
-        <Card label="UNDERSTAND YOUR CHILD">
+        <>
+          <SectionLabel>UNDERSTAND YOUR CHILD</SectionLabel>
           {view.development.map(({ unit }) => (
-            <View key={unit.id} style={styles.unit}>
-              <Text style={type.heading}>{unit.title}</Text>
-              <Text style={[type.body, { marginTop: spacing.xs }]}>{unit.body}</Text>
-              {unit.evidence?.length ? (
-                <Text style={styles.provenance}>Source: {unit.evidence.map((e) => e.org).join(', ')}</Text>
-              ) : null}
-            </View>
+            <Card key={unit.id}>
+              <UnitBlock unit={unit} />
+            </Card>
           ))}
-        </Card>
+        </>
       ) : null}
 
       {view.categories.map((section) =>
         section.units.length === 0 ? null : (
-          <Card key={section.category} label={section.heading}>
-            {section.units.map(({ unit, decision }) => (
-              <View key={unit.id} style={styles.unit}>
-                <Text style={type.heading}>{unit.title}</Text>
-                {decision === 'paired' ? (
-                  <Text style={styles.paired}>What your spouse is carrying</Text>
-                ) : null}
-                {decision === 'solo' ? (
-                  <Text style={styles.paired}>Written for a parent carrying both roles</Text>
-                ) : null}
-                <Text style={[type.body, { marginTop: spacing.xs }]}>{unit.body}</Text>
-                {unit.warrant ? (
-                  <Text style={styles.provenance}>{unit.warrant.passages.join(' · ')}</Text>
-                ) : null}
-              </View>
-            ))}
-          </Card>
+          <View key={section.category}>
+            <SectionLabel>{section.heading}</SectionLabel>
+            <Card>
+              {section.units.map(({ unit, decision }, i) => (
+                <View key={unit.id}>
+                  {i > 0 ? <Divider /> : null}
+                  {decision === 'paired' ? <Text style={styles.tag}>What your spouse is carrying</Text> : null}
+                  {decision === 'solo' ? <Text style={styles.tag}>For a parent carrying both roles</Text> : null}
+                  <UnitBlock unit={unit} />
+                </View>
+              ))}
+            </Card>
+          </View>
         ),
       )}
 
-      {view.watchFor.length > 0 ? (
-        <Card label="WATCH FOR">
-          {view.watchFor.map((w) => (
-            <Text key={w} style={[type.body, { marginBottom: spacing.xs }]}>· {w}</Text>
-          ))}
-          <Text style={type.soft}>
-            These are observations worth a conversation with your pediatrician — never a diagnosis.
-          </Text>
-        </Card>
-      ) : null}
-
       {view.thisMonth.length > 0 ? (
-        <Card label="THIS MONTH">
-          {view.thisMonth.map((a) => (
-            <Text key={a} style={styles.action}>· {a}</Text>
-          ))}
-        </Card>
+        <>
+          <SectionLabel>THIS MONTH</SectionLabel>
+          <Card tone="accent">
+            {view.thisMonth.map((a) => (
+              <Action key={a}>{a}</Action>
+            ))}
+          </Card>
+        </>
       ) : null}
 
       {view.closingWindows.length > 0 ? (
-        <Card label="WINDOWS CLOSING">
-          {view.closingWindows.map((w) => (
-            <Text key={w.item.id} style={type.body}>
-              {w.item.label} — about {w.yearsRemaining} year{w.yearsRemaining === 1 ? '' : 's'} left in this window.
-            </Text>
-          ))}
-        </Card>
+        <>
+          <SectionLabel>WINDOWS CLOSING</SectionLabel>
+          <Card tone="quiet">
+            {view.closingWindows.map((w, i) => (
+              <View key={w.item.id}>
+                {i > 0 ? <Divider /> : null}
+                <Text style={type.body}>{w.item.label}</Text>
+                <Text style={styles.windowMeta}>
+                  About {w.yearsRemaining} year{w.yearsRemaining === 1 ? '' : 's'} left.
+                </Text>
+              </View>
+            ))}
+          </Card>
+        </>
       ) : null}
-    </ScrollView>
+
+      {view.watchFor.length > 0 ? (
+        <>
+          <SectionLabel>WATCH FOR</SectionLabel>
+          <Card tone="quiet">
+            {view.watchFor.map((w) => (
+              <Text key={w} style={styles.watchItem}>
+                {w}
+              </Text>
+            ))}
+            <Text style={styles.watchNote}>
+              Worth a conversation with your pediatrician. Never a diagnosis.
+            </Text>
+          </Card>
+        </>
+      ) : null}
+    </Screen>
+  );
+}
+
+/** One unit: headline, one sentence, and the rest behind a tap. */
+function UnitBlock({ unit }: { unit: Unit }) {
+  const minutes = readingMinutes(unit.body);
+  return (
+    <View style={styles.unit}>
+      <CardTitle>{unit.title}</CardTitle>
+      <Expandable summary={<Lede>{ledeFor(unit)}</Lede>} openLabel={`Read more · ${minutes} min`}>
+        <Text style={type.body}>{unit.body}</Text>
+        {unit.actions?.[0] ? <Action>{unit.actions[0]}</Action> : null}
+        {unit.warrant ? <Source>{unit.warrant.passages.join(' · ')}</Source> : null}
+        {unit.evidence?.length ? <Source>Source: {unit.evidence.map((e) => e.org).join(', ')}</Source> : null}
+      </Expandable>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.bg },
-  transition: { ...type.label, color: colors.accent, marginTop: spacing.xs },
-  role: { ...type.label, marginTop: spacing.xs, marginBottom: spacing.md },
-  unit: { marginBottom: spacing.md },
-  action: { ...type.body, color: colors.accent, marginBottom: spacing.xs },
-  paired: { ...type.soft, color: colors.accent, marginTop: 2 },
-  provenance: { ...type.soft, marginTop: spacing.sm, fontStyle: 'italic' },
+  roleRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', marginBottom: spacing.md },
+  rolePill: {
+    ...type.label,
+    color: colors.accentInk,
+    backgroundColor: colors.accentSoft,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 5,
+    borderRadius: 999,
+    overflow: 'hidden',
+  },
+  transition: { ...type.meta, marginLeft: spacing.sm, flexShrink: 1 },
+  unit: { paddingVertical: spacing.xs },
+  tag: { ...type.meta, color: colors.accent, marginTop: spacing.sm, fontWeight: '600' },
+  windowMeta: { ...type.meta, marginTop: 2 },
+  watchItem: { ...type.body, marginBottom: spacing.xs },
+  watchNote: { ...type.meta, marginTop: spacing.sm },
 });
