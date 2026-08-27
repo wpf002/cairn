@@ -6,8 +6,29 @@
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "ios": { "supportsTablet": false, "bundleIdentifier": "app.cairn.family" },
-    "android": { "package": "app.cairn.family" },
-    "extra": { "distribution": "native-only" }
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.cairn.family"
+    },
+    "android": {
+      "package": "app.cairn.family"
+    },
+    "extra": {
+      "distribution": "native-only"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#2F4F4F"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Cairn uses photos only for your family's private album. Photos are encrypted on this device before they are stored \u2014 Cairn's servers cannot read them."
+        }
+      ]
+    ]
   }
 }

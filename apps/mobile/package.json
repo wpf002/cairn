@@ -10,20 +10,27 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@cairn/ai": "workspace:*",
     "@cairn/canon": "workspace:*",
+    "@cairn/dashboard": "workspace:*",
     "@cairn/escalation": "workspace:*",
     "@cairn/framework": "workspace:*",
+    "@cairn/journey": "workspace:*",
+    "@cairn/monetization": "workspace:*",
     "@cairn/stages": "workspace:*",
     "@cairn/substrate": "workspace:*",
     "@cairn/trackers": "workspace:*",
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "@supabase/supabase-js": "^2.112.4",
     "expo": "~52.0.0",
+    "expo-image-picker": "~16.0.6",
+    "expo-notifications": "~0.29.14",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
     "react-native": "0.76.5",
-    "@cairn/dashboard": "workspace:*",
-    "@cairn/ai": "workspace:*",
-    "@cairn/journey": "workspace:*",
-    "@cairn/monetization": "workspace:*"
+    "react-native-argon2": "4.0.0",
+    "react-native-purchases": "^10.8.0",
+    "react-native-url-polyfill": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "~18.3.12",
