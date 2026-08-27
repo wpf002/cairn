@@ -90,7 +90,7 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     title: 'Sleep position and movement',
     lede: 'From 28 weeks, settle to sleep on your side. Waking on your back is not a cause for alarm.',
     body:
-      'From about 28 weeks, settle to sleep on your side. That carries a lower stillbirth risk than lying flat on your back. Waking up on your back is common and fine. The position you fall asleep in is the one you hold longest. From the same point, learn your baby\'s daily movement pattern. The pattern is what matters. A clear drop from your baby's normal means calling your provider that day.',
+      'From about 28 weeks, settle to sleep on your side. That carries a lower stillbirth risk than lying flat on your back. Waking up on your back is common and fine. The position you fall asleep in is the one you hold longest. From the same point, learn your baby\'s daily movement pattern. The pattern is what matters. A clear drop from your baby\'s normal means calling your provider that day.',
     evidence: [ACOG_SLEEP, CDC_MOVEMENT],
     provenance: MEDICAL,
     tags: ['sleep', 'movement', 'third-trimester'],
