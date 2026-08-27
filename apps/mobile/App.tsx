@@ -11,7 +11,7 @@ import { RoadmapScreen } from './src/screens/RoadmapScreen';
 import { AskScreen } from './src/screens/AskScreen';
 import { JourneyScreen } from './src/screens/JourneyScreen';
 import { PremiumScreen } from './src/screens/PremiumScreen';
-import type { ModelAdapter } from '@cairn/ai';
+import { proxyAdapter } from './src/lib/ai';
 import { colors, spacing, type } from './src/theme';
 
 /**
@@ -33,11 +33,10 @@ const TABS: { id: Tab; label: string }[] = [
 type PregnancySub = 'week' | 'trackers' | 'prepare';
 
 /**
- * The Anthropic adapter for ASK. Null in the dev shell: the API key must
- * never ship in the app bundle, so release builds construct anthropicAdapter()
- * against Cairn's backend proxy and inject it here.
+ * ASK's model adapter. Routes through Cairn's Edge Function so the Anthropic
+ * key never enters the bundle; null until EXPO_PUBLIC_AI_PROXY_URL is set.
  */
-const anthropic: ModelAdapter | null = null;
+const anthropic = proxyAdapter();
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('today');

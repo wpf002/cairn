@@ -37,10 +37,23 @@ Accounts and payment details are yours to create — never mine.
 4. Push the schema: `supabase link --project-ref <ref>` then `supabase db push`.
 
 ### 2. Anthropic API key
-You said you'd get this. It must **never** go in `.env` — `EXPO_PUBLIC_*` vars
-are compiled into the app bundle and are trivially extractable. Put the key in
-a Supabase Edge Function that proxies to the Anthropic API, and set
-`EXPO_PUBLIC_AI_PROXY_URL` to that function's URL.
+The proxy is built: `supabase/functions/ask/index.ts`. The key goes into that
+function's server-side secrets, **never** into `.env` — `EXPO_PUBLIC_*` vars
+are compiled into the app bundle and are trivially extractable from an `.ipa`.
+
+```bash
+supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
+supabase functions deploy ask
+```
+
+Then put the printed function URL in `EXPO_PUBLIC_AI_PROXY_URL`. Supabase
+verifies the caller's JWT before the function runs, so only signed-in Cairn
+accounts can spend your quota.
+
+**Not yet built:** a server-side per-user rate limit. The free-tier ASK cap is
+enforced client-side in `@cairn/monetization` today, which is fine against
+honest use and useless against a modified client. Worth adding before launch,
+not before first run.
 
 ### 3. RevenueCat — free at your stage
 Free until **$2,500/month tracked revenue**, then 1% of revenue above that. No
