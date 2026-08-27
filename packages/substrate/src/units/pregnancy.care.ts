@@ -60,7 +60,7 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     voice: 'mother',
     title: 'Fatigue, nausea, and the invisible trimester',
     body:
-      'First-trimester fatigue and nausea are near-universal and typically peak around weeks 8–10, easing for most women early in the second trimester. Small frequent meals, fluids, and rest help; vitamin B6 and doxylamine are commonly recommended by providers when food strategies are not enough. About 7 in 10 pregnant women experience nausea in early pregnancy.',
+      'Fatigue and nausea are near-universal in the first trimester. They typically peak around weeks 8 to 10 and ease early in the second. Small frequent meals, fluids, and rest help; vitamin B6 and doxylamine are commonly recommended by providers when food strategies are not enough. About 7 in 10 pregnant women experience nausea in early pregnancy.',
     evidence: [ACOG_NUTRITION],
     provenance: MEDICAL,
     tags: ['symptoms', 'first-trimester', 'prevalence'],
@@ -72,9 +72,10 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'pregnancy', weeks: T2 },
     voice: 'mother',
-    title: 'The middle trimester: energy, appetite, and exercise',
+    title: 'Energy, appetite, and exercise',
+    lede: 'Most women feel best in the second trimester. Nausea fades and energy returns.',
     body:
-      'Most women feel best in the second trimester: nausea usually fades, energy returns, and appetite increases. Around 150 minutes of moderate activity per week — walking, swimming, prenatal classes — is recommended for most pregnancies without complications. Round ligament pain (sharp side twinges with position changes) is common and normal; persistent or severe pain is not, and belongs to your provider.',
+      'Most women feel best now. Nausea usually fades, energy returns, appetite increases. About 150 minutes of moderate activity a week is recommended for pregnancies without complications. Walking, swimming, prenatal classes. Round ligament pain is common and normal, the sharp side twinge when you change position. Pain that is severe or persistent is not, and belongs to your provider.',
     evidence: [ACOG_EXERCISE, ACOG_NUTRITION],
     provenance: MEDICAL,
     tags: ['exercise', 'second-trimester'],
@@ -86,9 +87,10 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'mother',
-    title: 'Why sleep position matters now, and daily movement awareness',
+    title: 'Sleep position and movement',
+    lede: 'From 28 weeks, settle to sleep on your side. Waking on your back is not a cause for alarm.',
     body:
-      'From around 28 weeks, settling to sleep on your side is associated with lower risk of stillbirth than lying flat on your back; waking up on your back is common and not a cause for alarm — the position you fall asleep in is the one you hold longest. From the same point, get to know your baby\'s daily movement pattern. It is the pattern that matters: a noticeable reduction from what is normal for your baby is a same-day call to your provider, every time.',
+      'From about 28 weeks, settle to sleep on your side. That carries a lower stillbirth risk than lying flat on your back. Waking up on your back is common and fine. The position you fall asleep in is the one you hold longest. From the same point, learn your baby\'s daily movement pattern. The pattern is what matters. A clear drop from your baby's normal means calling your provider that day.',
     evidence: [ACOG_SLEEP, CDC_MOVEMENT],
     provenance: MEDICAL,
     tags: ['sleep', 'movement', 'third-trimester'],
@@ -100,9 +102,10 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'father',
-    title: 'Her first trimester is your first assignment',
+    title: 'Her first trimester is your assignment',
+    lede: 'None of it shows yet, so the world keeps expecting full speed from her.',
     body:
-      'She is exhausted and possibly sick, and none of it shows yet, which means the world keeps expecting full speed from her. Your job this trimester is to be the one person who adjusts. Take over the smells that trigger her (cooking, trash, coffee). Guard her evenings. Learn the warning-signs list so she is not the only one carrying it. Nobody will see any of this, which is rather the point.',
+      'She is exhausted and probably sick, and none of it shows. So the world keeps expecting full speed from her. Your job this trimester is to be the one person who adjusts. Take over the smells that trigger her (cooking, trash, coffee). Guard her evenings. Learn the warning-signs list so she is not the only one carrying it. Nobody will see any of this, which is rather the point.',
     actions: [
       'Own the nausea triggers: cooking, dishes, trash — without commentary.',
       'Read the maternal warning signs yourself; know when a symptom means calling the provider.',
@@ -118,7 +121,7 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'father',
-    title: 'Know the birth plan cold, and be ready to speak it',
+    title: 'Know the birth plan cold',
     body:
       'In labour, she may not be able to advocate for herself, and you can. Know the birth plan well enough to state it without reading; know which preferences are strong and which are flexible; know the words she chose for pain relief decisions. Pack your own bag too — a support person who faints from hunger at hour fourteen is not supporting.',
     actions: [
@@ -136,9 +139,10 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'pregnancy', weeks: weeks(34, 40) },
     voice: 'shared',
-    title: 'Keep the hospital bag packed from week 36',
+    title: 'Bag packed from week 36',
+    lede: 'Keep it by the door. Documents, chargers, clothes, and the blessing you chose.',
     body:
-      'From week 36, keep a packed bag by the door: documents and phone chargers; comfortable clothes and toiletries for mom; a going-home outfit and blanket for the baby; the installed car seat checked before labour, not during it. The blessing you chose goes in the bag too.',
+      'Keep a packed bag by the door from week 36. Documents and phone chargers. Comfortable clothes and toiletries for mom. A going-home outfit and a blanket for the baby. Get the car seat installed and checked before labour rather than during it. The blessing you chose goes in the bag too.',
     actions: [
       'Pack three bags: mom, baby, support person. Done beats perfect.',
       'Have the car seat installation checked at a fitting station or by video guide before week 37.',
@@ -153,9 +157,10 @@ export const PREGNANCY_CARE_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'The appointment rhythm, so nothing surprises you',
+    title: 'The appointment rhythm',
+    lede: 'Every four weeks until 28, every two until 36, then weekly until birth.',
     body:
-      'A typical schedule: visits every four weeks until about 28 weeks, every two weeks until 36, then weekly until birth — with an anatomy scan around 20 weeks and glucose screening around 24–28. Put them in both calendars. Partners who attend the appointments they can are not spectating; they are learning the same information at the same time, which is what shared decisions are made of.',
+      'Visits run every four weeks until about 28 weeks. Every two weeks until 36. Then weekly until birth. An anatomy scan lands around 20 weeks and glucose screening around 24 to 28. Put all of it in both calendars. A partner who comes is not spectating. He is hearing the same information at the same time, and shared decisions are built out of that.',
     actions: [
       'Enter the full expected appointment rhythm into both phones now.',
       'Decide which appointments the partner attends — the anatomy scan at minimum.',

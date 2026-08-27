@@ -18,13 +18,14 @@ export const PARENT_FORMATION_UNITS: readonly Unit[] = [
     scope: { kind: 'parent', stages: 'all' },
     voice: 'father',
     pairedWith: 'parent.mother.anxiety',
-    title: 'The anger that shows up when the children do',
+    title: 'The anger you did not know about',
+    lede: 'Most men meet their own temper for the first time somewhere around the sixth refusal at bedtime.',
     body:
-      'Many men meet their own anger for the first time in fatherhood: the toy stepped on at midnight, the sixth refusal, the disrespect that lands somewhere old. The anger is information — usually about exhaustion, powerlessness, or a father being reenacted — and it is also the single most formative weather system in the house. James does not say "have no anger"; he gives its speed limit: slow. Slow is a skill, and skills are trained off the field, not during the game.',
+      'A brick of Lego at midnight. The sixth "no." A tone that lands somewhere much older than tonight. Most men meet their real temper in fatherhood, and it tells them something true: you are exhausted, you have no control here, and your own father is in the room. James sets a speed limit rather than a ban. Slow to anger. Slow is a skill, and nobody learns a skill during the game.',
     actions: [
-      'Learn your two earliest physical cues (jaw, heat, volume) and make one rehearsed move when they fire: hands down, voice lower, or leave the room with a stated return time.',
-      'Repair out loud within the hour, at their eye level: name it, own it, no "but you made me."',
-      'If anger is winning more weeks than it loses, tell one man who will actually ask you about it again — and consider talking to a counselor; wanting help is strength functioning.',
+      'Name your two earliest tells. Jaw, heat, volume. Pick one move for when they fire.',
+      'Repair within the hour, at their eye level. Name it. Own it. No "but you made me."',
+      'If anger is winning more weeks than it loses, tell one man who will ask you again.',
     ],
     warrant: {
       passages: ['James 1:19-20', 'Ephesians 4:26-27'],
@@ -48,13 +49,14 @@ export const PARENT_FORMATION_UNITS: readonly Unit[] = [
     scope: { kind: 'parent', stages: 'all' },
     voice: 'mother',
     pairedWith: 'parent.father.anger',
-    title: 'The anxiety that arrived with the love',
+    title: 'The worry that came with the love',
+    lede: 'You lie still at 2am listening for breathing. That is love with the volume stuck up.',
     body:
-      'Maternal anxiety is love with the volume stuck up: the 2am listening for breath, the mental inventory of every outlet and staircase, the catastrophes rehearsed in the school pickup line. Some of it is the design working — vigilance kept your ancestors\' babies alive. The question is who carries it. Peter\'s instruction is not "stop caring"; it is a transfer of weight: cast the anxieties on the One who cares for both of you. And when anxiety stops responding to prayer and rest — when it is running the household — it has become a medical matter, and treating it is faithfulness, not failure.',
+      'You listen at 2am for breathing. You count outlets and stair rails. You rehearse the disaster in the pickup line. Some of that is the design working. The question is who carries it. Peter does not say stop caring. He says hand the weight to the One already carrying you both. When worry stops answering to prayer or sleep, it is a medical thing. Treating it is faithfulness.',
     actions: [
-      'Name the worry out loud in prayer, specifically, then say what is actually true right now — the practice of casting is concrete, not vibes.',
-      'Give the recurring 2am worry a daytime appointment: ten minutes, on paper, with your spouse or a friend. Worries lose rank when scheduled.',
-      'If anxiety is stealing sleep, appetite, or joy for more than two weeks, bring it to your doctor with the same seriousness you would bring your child\'s fever. Perinatal and parental anxiety are treatable.',
+      'Pray the worry out loud, by name. Then say what is actually true tonight.',
+      'Give the 2am worry a daytime slot. Ten minutes, on paper, with someone who loves you.',
+      'If it is stealing sleep or appetite for two weeks, take it to your doctor. It is treatable.',
     ],
     warrant: {
       passages: ['1 Peter 5:7', 'Matthew 6:34'],
@@ -77,12 +79,13 @@ export const PARENT_FORMATION_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'parent', stages: 'all' },
     voice: 'shared',
-    title: 'Patience is grown in you, not summoned by you',
+    title: 'Patience is grown, not summoned',
+    lede: 'Every parent runs out. What matters is what you believe about the running out.',
     body:
-      'Every parent runs out of patience; the difference is what they believe about the running out. If patience is willpower, its end is a personal failure and shame follows. If it is fruit — grown by the Spirit through seasons, pruning, and time — then its end is a signal to tend the root: sleep, prayer, help, margin. Parents do not become patient by clenching harder. They become patient the way orchards become fruitful, and orchards are allowed bad seasons.',
+      'Every parent runs out. If patience is willpower, running out is a personal failure, and shame comes next. Paul calls it fruit instead. Fruit grows on a tree, through seasons and pruning and time. So an empty tank is not a verdict on you. It is a reading on the root. How much sleep. How much prayer. How much help. Nobody clenches their way into an orchard, and orchards are allowed bad years.',
     actions: [
-      'Audit the root, not the fruit: this week, what is patience actually running on — how much sleep, prayer, margin, help?',
-      'Build one margin: ten unclaimed minutes between work and the front door, used to arrive rather than to scroll.',
+      'Check the root, not the fruit. What is your patience running on this week?',
+      'Take ten minutes between work and the front door. Use them to arrive, not to scroll.',
     ],
     warrant: {
       passages: ['Galatians 5:22-23', 'John 15:4-5'],

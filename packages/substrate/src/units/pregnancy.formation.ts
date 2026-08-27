@@ -19,12 +19,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'SEE',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'What your child will see began before they can see',
+    title: 'It starts before they can see',
+    lede: 'Nobody can tell you are pregnant yet. You are already exhausted, sick, and frightened.',
     body:
-      'The first trimester is often the hardest stretch of pregnancy that nobody else can see — fatigue, nausea, and worry arrive before any visible bump. How the two of you treat each other under this strain is the first draft of the household your child will grow up watching. Formation of the parent precedes formation of the child.',
+      'Nobody can tell yet. You are already tired, already sick, already scared, and there is nothing to show anyone. How you two treat each other in these weeks is the first draft of the house your child grows up in. They will not remember it. They will live in it.',
     actions: [
-      'Name the hardest part of this week to each other, out loud, once.',
-      'Take one recurring chore off the more exhausted partner without being asked.',
+      'Say the hardest part of this week out loud to each other. Once.',
+      'Take one chore off whoever is more tired. Do not wait to be asked.',
     ],
     warrant: {
       passages: ['Ephesians 5:25-33'],
@@ -47,12 +48,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'SEE',
     scope: { kind: 'pregnancy', weeks: T2 },
     voice: 'shared',
-    title: 'The habits your child will inherit are being set now',
+    title: 'Build the house before they arrive',
+    lede: 'Some energy comes back this trimester. Habits get built with energy, and you will not have any later.',
     body:
-      'The second trimester usually returns some energy — and energy is where habits are made. The rhythms you establish now (how you speak about people who are not in the room, how screens behave at your table, whether prayer happens out loud) are the ones a newborn will simply arrive into. It is far easier to build the household now than to renovate it with an infant in it.',
+      'Some energy comes back now. Use it. How you talk about people who left the room. Whether phones come to the table. Whether anyone prays out loud. A newborn does not learn these things. A newborn simply arrives into them. Building a household is work. Renovating one with an infant in it is much harder.',
     actions: [
-      'Choose one habit you do not want your child to inherit and stop it this month, together.',
-      'Begin one visible practice of faith — grace at meals, or a short evening prayer — so it is ordinary long before your child asks about it.',
+      'Pick one habit you do not want passed on. Stop it this month, together.',
+      'Start saying grace at meals now, so it is ordinary long before anyone asks about it.',
     ],
     warrant: {
       passages: ['Deuteronomy 6:6-9'],
@@ -75,12 +77,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'SEE',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'shared',
-    title: 'Your child will watch how you carry fear',
+    title: 'They will watch you be afraid',
+    lede: 'You will not raise a child without them seeing you frightened. You can decide what they see you do next.',
     body:
-      'The third trimester concentrates the mind: birth is coming, and with it every fear a parent can manufacture. You will not raise a child without them watching you be afraid — of diagnoses, of finances, of the world. What you can decide now is what they will watch you do with it. Prayer that names fear honestly is not weaker faith than composure; it is the only kind a child can learn from.',
+      'Birth is close and your mind has started manufacturing. Diagnoses. Money. The whole world they have to grow up in. You will not raise a child without them seeing you afraid of something. What you can choose is what they watch you do with it. A prayer that says the fear out loud is not weaker than a calm face. It is the only version a child can copy.',
     actions: [
-      'Write down the three fears you actually have about birth and the first weeks. Pray them, specifically, rather than around them.',
-      'Tell your spouse or a trusted friend which fear is the loudest. Fear that is spoken is fear that is shared.',
+      'Write your three real fears about birth. Pray those, not around them.',
+      'Tell one person which fear is loudest. Spoken fear is shared fear.',
     ],
     warrant: {
       passages: ['Philippians 4:6-7'],
@@ -105,12 +108,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'Your child is already received, not yet productive',
+    title: 'Loved before they can do anything',
+    lede: 'Your child cannot smile, achieve, or thank you. They are already yours and already prayed for.',
     body:
-      'Nothing about a first-trimester embryo performs. It cannot smile, achieve, or reciprocate — and it is already yours, already loved, already prayed over. Let that order sink in now, because the entire architecture of Christian parenting hangs on it: your child will be loved because they are yours, not because of what they do. Every affirmation you ever give them stands on this foundation.',
+      'Your child cannot smile at you. Cannot achieve anything. Cannot thank you or give you one thing back. And they are already yours, already loved, already prayed over by name. Get the order straight now, while it is easy. Everything you will ever say to this child stands on it. They are loved because they are yours, not because of what they manage.',
     actions: [
-      'Pray for this child by whatever name or nickname you are using, thanking God for who they are before knowing anything about them.',
-      'Say to each other once this week: this child owes us nothing.',
+      'Pray for this child by whatever name you are using, before you know a thing about them.',
+      'Say it out loud to each other this week. This child owes us nothing.',
     ],
     warrant: {
       passages: ['Matthew 3:17'],
@@ -133,12 +137,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'pregnancy', weeks: T2 },
     voice: 'shared',
-    title: 'What each of you will give is not interchangeable',
+    title: 'You will not give the same things',
+    lede: 'What a child receives from a mother and from a father is not identical, and was never meant to be.',
     body:
-      'As the pregnancy becomes visible, roles start to feel real — and it is worth saying plainly that what a child receives from each parent is not identical, and is not meant to be. Scripture reaches for both images: the gentleness of a nursing mother and the exhorting charge of a father, in the same breath, from the same author. A child flourishes receiving both; a household flourishes when each parent honours what the other carries.',
+      'The bump shows now and the roles start to feel real. What a child gets from each of you is different, and it is supposed to be. Paul reaches for both pictures in five verses. A nursing mother, gentle. A father, charging and encouraging. Same letter, same breath. A child does well receiving both. A house does well when each parent respects what the other is carrying.',
     actions: [
-      'Each of you: name one thing you hope your child receives specifically from you, and one you hope they receive specifically from your spouse.',
-      'If you are carrying both roles alone, name the trusted people — family, church — who can help supply what a second parent would.',
+      'Name one thing you hope your child gets from you, and one from your spouse.',
+      'Carrying both roles alone? Name the people who can help supply the other half.',
     ],
     warrant: {
       passages: ['1 Thessalonians 2:7-12'],
@@ -161,12 +166,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'shared',
-    title: 'Prepare the welcome, not just the nursery',
+    title: 'Prepare the welcome, not the nursery',
+    lede: 'Car seats and bags and lists. Somewhere in there, prepare the only thing nobody else can.',
     body:
-      'The last weeks fill with logistics — car seats, bags, lists. Somewhere in it, prepare the thing only you can prepare: the welcome. A child receives their first identity from how they are received. Write the letter, choose the blessing, decide what you will say over this child in their first days. The nursery furniture will be outgrown in two years; the welcome never is.',
+      'Car seats. Bags. Lists on the fridge. Somewhere in all of it, prepare the one thing only you can. A child takes their first identity from how they are received. Write the letter. Choose the blessing. Decide now what you will say over this child in the first days, before you are too tired to think. The cot gets outgrown in two years. The welcome does not.',
     actions: [
-      'Each parent: write a short letter to the child, sealed, dated, to be read at a milestone you choose.',
-      'Choose a short blessing or verse you will say over the baby in the first week, and practise saying it out loud so it is yours by the time it matters.',
+      'Each of you write a short letter. Seal it. Date it. Pick the milestone it opens on.',
+      'Choose the blessing you will say in week one. Say it out loud now until it is yours.',
     ],
     warrant: {
       passages: ['Luke 1:57-66'],
@@ -191,12 +197,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'Mark the beginning so you can tell the story',
+    title: 'Set the first stone',
+    lede: 'Israel piled stones at the Jordan so children would ask what they meant.',
     body:
-      'Israel piled stones at the Jordan for one reason: so that children would one day ask what the stones meant, and the story would be told. Your family\'s first stones get set now. Keep something from these weeks — the test, a photo, a written prayer, the date you found out — not for sentiment but for the telling: one day this child will ask how they began, and you will want more than a shrug.',
+      'Israel piled stones at the Jordan for one reason. So that children would ask what the stones meant, and somebody would have to tell the story. Your first stones go down this month. Keep the test. Keep a photo, a written prayer, the date you found out. One day this child asks how they began. You will want more than a shrug.',
     actions: [
-      'Start the record this week: one photo, one dated note, one prayer, kept where they will survive twenty-one years.',
-      'Write down the story of finding out — where you were, what you said — while it is still sharp.',
+      'Start the record this week. One photo, one dated note, one prayer.',
+      'Write down the day you found out. Where you were, what you said, while it is sharp.',
     ],
     warrant: {
       passages: ['Joshua 4:4-7'],
@@ -219,12 +226,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'pregnancy', weeks: T2 },
     voice: 'shared',
-    title: 'Give your child the sound of your voices',
+    title: 'Let them hear your voices',
+    lede: 'Hearing is coming online. Low, repeated sound carries best, which means voices.',
     body:
-      'From the middle of the second trimester, hearing is coming online, and low-pitched, repeated sounds — your voices — carry into the womb best. Reading aloud, praying aloud, and simply narrating your day are the first experiences you can deliberately give this child. They will be born already knowing what home sounds like.',
+      'Hearing comes online around now. Low, repeated sound carries furthest into the womb, which means voices more than music. Read out loud. Pray out loud. Narrate the drive to work. These are the first experiences you can hand this child on purpose. They arrive already knowing what home sounds like.',
     actions: [
-      'Spend several minutes a day speaking or reading aloud to the baby — either parent, any book.',
-      'Pray aloud over the baby at the same time each evening, so the rhythm exists before the child does.',
+      'Read out loud to the baby for a few minutes a day. Either parent, any book.',
+      'Pray over the baby at the same time each evening. Build the rhythm before the child arrives.',
     ],
     warrant: {
       passages: ['Deuteronomy 6:6-9', 'Psalm 78:1-4'],
@@ -247,13 +255,14 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'shared',
-    title: 'Rehearse the first weeks before you are in them',
+    title: 'Rehearse the first night',
+    lede: 'Decide who gets up now. Deciding at 3am is how resentment gets built.',
     body:
-      'Wisdom, in Proverbs, is repeatedly a matter of preparation — seeing what is coming and readying the house before it arrives. The newborn weeks are coming, and they are survivable in proportion to what was decided beforehand. Walk through the first night out loud together: who gets up, who feeds, who guards whose sleep, what happens when both of you are empty. Deciding at 3am is how resentment is built; deciding now is how a team is.',
+      'Walk through the first night out loud, this week, while you are both rested. Who gets up. Who feeds. Who guards whose sleep. What happens when you are both completely empty and one of you has to be the adult anyway. Proverbs keeps tying wisdom to seeing a thing coming and getting the house ready. Decide at 3am and you build resentment. Decide now and you build a team.',
     actions: [
-      'Talk through nighttime responsibilities explicitly: feeds, changes, and who protects whose sleep on which nights.',
-      'Agree the postpartum visitors policy now — who, when, how long — so neither of you negotiates it exhausted.',
-      'Decide the signal either of you can use that means "I am past my limit; take the baby" — no justification required.',
+      'Talk through the nights. Feeds, changes, and who protects whose sleep on which night.',
+      'Agree the visitor rules now. Who, when, how long. Do not negotiate this exhausted.',
+      'Pick the signal that means "take the baby, I am done." No explanation required, ever.',
     ],
     warrant: {
       passages: ['Proverbs 24:27'],
@@ -278,11 +287,12 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'How you speak about this child is already forming you',
+    title: 'You hear it first',
+    lede: 'Long before your child hears anything, you do. Listen to how you talk about this pregnancy.',
     body:
-      'Long before your child hears anything, you do. The words you use about this pregnancy — burden or gift, disruption or arrival — are rehearsals of the household voice this child will grow up inside. Psalm 139 does not describe an embryo as potential; it describes a person known by God in the unformed state. Speaking of the child that way is not sentimentality. It is accuracy.',
+      'Long before your child hears anything, you do. Listen to the words you use about this pregnancy. Burden or gift. Disruption or arrival. Those are rehearsals for the household voice this child grows up inside. Psalm 139 does not call an unborn child potential. It calls them someone God already knows, unformed. Speaking that way is accuracy, not sentiment.',
     actions: [
-      'Notice this week how you refer to the baby in conversation. Choose the language of person, not project.',
+      'Listen to how you refer to the baby this week. Say person, not project.',
       'Begin praying for the child by name or nickname, as someone already known to God.',
     ],
     warrant: {
@@ -306,12 +316,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'pregnancy', weeks: T2 },
     voice: 'shared',
-    title: 'The first voice your child needs to hear is yours to each other',
+    title: 'Your tone with each other',
+    lede: 'A child\'s first language lesson is how their parents speak to one another.',
     body:
-      'A child\'s first language lesson is the tone between their parents. Gracious speech is not decoration on a marriage; Proverbs calls it healing to the body and sweetness to the soul — and pregnancy, with its hormones, fears, and exhaustion, is where gracious speech gets hardest and matters most. The voice you use with each other in these months is the voice your child will assume is normal.',
+      'A child\'s first language lesson is the tone between their parents. Proverbs calls kind words honey to the soul and health to the body, which is a physical claim, not a nice one. Pregnancy is where kind words get hardest. Hormones, money, fear, no sleep. The voice you use with each other now is the voice your child will grow up assuming is normal.',
     actions: [
-      'Pick the recurring conversation that most often turns sharp (money, in-laws, names) and agree to have it once, well, this week — rested and fed.',
-      'Each day, say one specific, true, kind sentence to your spouse about how they are handling this season.',
+      'Pick the conversation that keeps turning sharp. Have it once, this week, rested and fed.',
+      'Say one true kind sentence to your spouse each day about how they are handling this.',
     ],
     warrant: {
       passages: ['Proverbs 16:24'],
@@ -334,12 +345,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'shared',
-    title: 'Have "I love you" ready before the first cry',
+    title: 'Have it ready before the first cry',
+    lede: 'Decide now what this child hears from you on day one. You will not be thinking clearly.',
     body:
-      'The first words said over a child matter more to the parents than to the newborn — and that is precisely their value. Deciding now what this child will hear from you on day one ("I love you"; "you are wanted"; a blessing you chose in advance) sets the trajectory of the affirmation ladder this app will walk with you for twenty-one years: love first, from the beginning, never earned.',
+      'Your first words matter more to you than to the baby. Good. That is their value. Decide now what this child hears on day one. "I love you." "We wanted you." A blessing you chose in advance. On the day you will be exhausted and crying and not thinking clearly. Pick it while you can. Love comes first and is never earned back.',
     actions: [
-      'Choose the exact first sentence each of you wants to say to the baby, and say it at the first opportunity.',
-      'Put the chosen blessing where you will find it in the hospital — written in the notes app, or in the hospital bag.',
+      'Choose the exact first sentence each of you will say. Say it at the first chance.',
+      'Put the blessing in your notes app and in the bag. Somewhere you will find it.',
     ],
     warrant: {
       passages: ['Matthew 3:17', 'Proverbs 25:11'],
@@ -364,11 +376,12 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'Your curriculum this trimester: the pregnancy itself',
+    title: 'Learn the warning signs now',
+    lede: 'At 2am you want to be remembering the warning signs, not searching for them.',
     body:
-      'The first parental discipline is learning — and the first syllabus is this pregnancy: what is normal, what is a warning sign, when to call. Diligence here is not anxiety; it is stewardship. Learn the urgent maternal warning signs once, properly, so that at 2am you are recalling rather than searching. The app keeps them one tap away, but the ones that save time are the ones already in your head.',
+      'Learn what is normal, what is not, and when to call. Do it once, properly, this trimester. At 2am you want to be remembering, not searching with one hand while holding a phone light. Cairn keeps the list a tap away. The ones that save you time are the ones already in your head.',
     actions: [
-      'Read the urgent maternal warning signs list once, together, this week.',
+      'Read the urgent maternal warning signs once, together, this week.',
       'Save your provider\'s after-hours number in both phones, labelled so either of you can find it half-asleep.',
     ],
     warrant: {
@@ -392,12 +405,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'pregnancy', weeks: T2 },
     voice: 'shared',
-    title: 'Study the parent you intend to become',
+    title: 'Study the parent you will be',
+    lede: 'The only parenting variable fully in your control is you. Look at it now, while it is quiet.',
     body:
-      'The steadier middle trimester is the season to study the only parenting variable fully in your control: you. What did your own parents give you that you want to pass on? What arrived in you that stops here? Doing this inventory now — on paper, with your spouse, honestly — is cheaper than doing it in the middle of a toddler meltdown that has mysteriously summoned your father\'s temper through your own mouth.',
+      'The only parenting variable fully in your control is you. What did your parents give you that you want to hand on? What arrived in you that stops here? Put it on paper, with your spouse, honestly, while the trimester is steady. Far cheaper now than in the middle of a toddler meltdown that has somehow summoned your father\'s voice out of your own mouth.',
     actions: [
-      'Each of you: write two lists — "received and keeping" and "received and ending here." Compare them.',
-      'Pick the single hardest item on your "ending here" list and tell one trusted person about it. Hidden resolutions do not survive newborns.',
+      'Write two lists each. What you are keeping. What ends with you. Compare them.',
+      'Tell one person the hardest thing on your "ends here" list. Hidden resolutions do not survive newborns.',
     ],
     warrant: {
       passages: ['Psalm 78:5-8'],
@@ -420,12 +434,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'shared',
-    title: 'Competence is a form of love: learn the newborn basics now',
+    title: 'Competence is a form of love',
+    lede: 'The newborn weeks are made entirely of small things. Jesus is unusually interested in small things.',
     body:
-      'Faithfulness in small things is where Jesus locates trustworthiness in large ones — and the newborn weeks are made entirely of small things: safe sleep setup, car-seat installation, feeding basics, when a fever is an emergency. Learn them now, both of you, hands-on where possible. A parent who fumbles is normal; a parent who never prepared chose to fumble.',
+      'Safe sleep. The car seat, actually installed. Feeding. Knowing which fever is an emergency. The newborn weeks are made entirely of small things, and Jesus keeps locating trustworthiness there. Learn them now, both of you, with your hands where you can. Every parent fumbles. Only some parents chose not to prepare.',
     actions: [
-      'Both parents complete the practical floor before week 38: infant safe-sleep rules, car-seat installation (checked), feeding plan basics, and the under-3-months fever rule.',
-      'Take an infant CPR class together, or complete a reputable video course if none is nearby.',
+      'Before week 38, both of you: safe sleep, car seat checked, feeding basics, the fever rule.',
+      'Take an infant CPR class together. A good video course counts if there is none nearby.',
     ],
     warrant: {
       passages: ['Luke 16:10'],
@@ -450,12 +465,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'Trusting God with what you cannot yet see',
+    title: 'Trusting what you cannot see',
+    lede: 'No bump, often no announcement. Everything invisible and everything at stake.',
     body:
-      'The first trimester is an exercise in believing without seeing: no bump, often no announcement, everything invisible and everything at stake. This is the season to establish the family\'s first theological habit — entrusting to God what you cannot monitor. You will need this habit at every stage for twenty-one years; it merely starts here, where you have no alternative.',
+      'No bump yet. Often no announcement. Everything invisible and everything at stake. So this is where your family learns its first theological habit, which is handing God what you cannot monitor. You will need that habit at every stage for twenty-one years. It starts here because here you have no alternative.',
     actions: [
-      'Pray a daily, dated, one-sentence prayer of entrustment for this child. Keep them; they become the first pages of the journey record.',
-      'If fear of loss is loud (it is for many), say so to God and to one trusted person rather than carrying it silently.',
+      'Pray one dated sentence for this child each day. Keep them. They are the first pages.',
+      'If fear of loss is loud, say so to God and to one person. Do not carry it silently.',
     ],
     warrant: {
       passages: ['Hebrews 11:1'],
@@ -478,12 +494,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'pregnancy', weeks: T2 },
     voice: 'shared',
-    title: 'This child is a gift, which changes what you own',
+    title: 'Given, not produced',
+    lede: 'Psalm 127 says something sharper than the nursery wall art suggests.',
     body:
-      'The psalm every baby dedication reaches for says something sharper than its greeting-card usage: children are a heritage from the LORD — given, not produced; entrusted, not owned. Settle the ownership question in the second trimester, because everything downstream (discipline, ambition, release at twenty-one) depends on whether you believe you are raising your possession or God\'s.',
+      'Every dedication service reaches for Psalm 127, usually softly. It is sharper than that. Children are a heritage from the LORD. Given, not produced. Entrusted, not owned. Settle that this trimester, because everything downstream runs on it. Discipline. Ambition. Whether you can let go at twenty-one. You are raising God\'s child, not your possession.',
     actions: [
-      'Read Psalm 127 together once, slowly, and talk about what "heritage" implies about ownership.',
-      'Begin praying not only for the child but about your own grip: for the ability to hold this child openly rather than tightly.',
+      'Read Psalm 127 together, slowly. Talk about what "heritage" says about ownership.',
+      'Pray about your own grip. Ask for the ability to hold this child openly.',
     ],
     warrant: {
       passages: ['Psalm 127:3-5'],
@@ -506,12 +523,13 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'shared',
-    title: 'The God who will be in the delivery room',
+    title: 'He will be in the room',
+    lede: 'Fast, slow, surgical, complicated. The promise is company, not a particular outcome.',
     body:
-      'Whatever birth turns out to be — fast, slow, surgical, complicated — the theological fact to pack in the hospital bag is presence: the Lord goes with you; he does not leave. Not a promise of a particular birth outcome. A promise of company through whichever one arrives. Mothers report that the verse they actually used in labour was the one they had memorised, not the one they had bookmarked.',
+      'Birth might be fast. It might be surgical. It might go somewhere nobody planned. Pack this one fact: the Lord goes with you and does not leave. That is a promise of company, not of an outcome. Mothers say the verse they actually used in labour was the one they had memorised, never the one they had bookmarked.',
     actions: [
-      'Choose one short verse about God\'s presence and memorise it — both of you — before week 38.',
-      'Pray together for the specific people who will be in the room: the providers, by role, and each other.',
+      'Memorise one short verse about God\'s presence. Both of you. Before week 38.',
+      'Pray for the people who will be in the room. The providers, by role, and each other.',
     ],
     warrant: {
       passages: ['Deuteronomy 31:8', 'Isaiah 41:10'],
@@ -536,11 +554,12 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'pregnancy', weeks: T1 },
     voice: 'shared',
-    title: 'Who is this child\'s parent becoming?',
+    title: 'Who are you becoming?',
+    lede: 'Cairn asks who your child is becoming. For nine months you are the only one who can answer.',
     body:
-      'The question every stage of this app asks about your child — who are they becoming? — gets asked about you first, because for nine months you are the only one who can answer it. The fruit of the Spirit is the character list your child will need to find in the house: patience for the toddler years, gentleness for the failures, self-control for the teenage door-slam. None of it is stockpiled in advance; all of it is grown, and the growing starts now.',
+      'For nine months you are the only one who can answer it. Paul\'s fruit of the Spirit is the character list your child will come looking for in this house. Patience for the toddler years. Gentleness for the failures. Self-control for the door-slam at fifteen. None of it stockpiles. All of it grows, slowly, and the growing starts now.',
     actions: [
-      'Pick the one fruit-of-the-Spirit quality you know this child will most test in you. Make it your specific prayer for the rest of the pregnancy.',
+      'Pick the quality this child will most test in you. Pray for it the rest of the pregnancy.',
       'Ask your spouse which quality they would pick for you. Listen without defending.',
     ],
     warrant: {
@@ -566,10 +585,10 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'Decide what your family is for',
     body:
-      'Micah compresses the whole examined life into three clauses: do justice, love kindness, walk humbly with your God. Before the baby arrives is the last unhurried chance to decide, together, that this is the kind of household you are building — one with a direction, not just a schedule. Families that never choose a direction get assigned one by their calendar.',
+      'Micah gets a whole life into three clauses. Do justice. Love kindness. Walk humbly with your God. These weeks are the last unhurried chance to decide, together, what kind of household you are building. A family that never chooses a direction gets one assigned by its calendar.',
     actions: [
-      'Write a one-sentence answer, together, to: "What is our family for?" Put it somewhere you will both see it.',
-      'Choose one concrete practice of justice or kindness your household will do routinely — and start before the baby comes, so it is a fact and not an intention.',
+      'Answer this together in one sentence. "What is our family for?" Put it where you both see it.',
+      'Pick one routine act of kindness your household will do. Start before the baby comes.',
     ],
     warrant: {
       passages: ['Micah 6:8'],
@@ -592,11 +611,12 @@ export const PREGNANCY_FORMATION_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'pregnancy', weeks: T3 },
     voice: 'shared',
-    title: 'You are not bringing home a baby; you are beginning an adult',
+    title: 'You are beginning an adult',
+    lede: 'Luke gives one sentence to eighteen years of Jesus\'s childhood. It is the whole job description.',
     body:
-      'Luke gives one sentence to eighteen years of Jesus\'s childhood: he increased in wisdom and in stature and in favor with God and man. Four axes — mind, body, Godward, manward — and a direction: increase. That is the whole job description, and it ends with a launch, not a keeping. Twenty-one years from your due date, the aim of everything you are about to do is a capable, wise, godly adult who no longer needs you. Begin with that end visible.',
+      'Luke spends one sentence on eighteen years. He increased in wisdom and stature and in favour with God and man. Mind, body, Godward, manward, and one direction. Increase. The job ends in a launch, not a keeping. Twenty-one years from this due date, the aim of everything you are about to do is an adult who does not need you. Start with that visible.',
     actions: [
-      'Read the 21-year roadmap in this app once, together, before the birth — not to plan it, but to see the shape of it.',
+      'Read the 21-year roadmap together before the birth. Not to plan it. To see its shape.',
       'Write one sentence each: "When this child leaves our home, I hope they are…" Keep it with the hospital-bag blessing.',
     ],
     warrant: {
