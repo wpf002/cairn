@@ -1,66 +1,116 @@
 /**
  * Cairn's visual language.
  *
- * Every token the app uses lives here, so retuning the look is a one-file
- * change. Design targets, from the competitive read: Glorify owns "best UX in
- * the Christian category" on calm colour, generous whitespace and no guilt
- * mechanics; Kinedu's 3.2 Android rating is what clutter and dark patterns
- * earn. Cairn is stone and warm neutral, one accent, and no badge, streak, or
- * red dot exists anywhere in the system.
+ * Rebuilt after the first version read as a document rather than an app: warm
+ * neutrals, one green accent, and no imagery, so every screen looked like an
+ * article. The category leaders do not work that way. Hallow, the #1 religious
+ * app, runs a violet gradient brand over deep teal surfaces with saturated
+ * illustration and gold accents. Glorify runs cream and one hot accent with
+ * photography. Neither is monochrome and neither is beige.
  *
- * The palette has to work for a tired parent at 6am and at 11pm, so contrast
- * is high and saturation is low: nothing here glows.
+ * Cairn's system: indigo and violet for the spiritual surfaces, teal and moss
+ * for growth, clay and amber for warmth, over a warm paper ground. Colour
+ * carries meaning here rather than decoration — each of the seven formation
+ * categories owns a hue, so a parent learns the map by looking at it.
+ *
+ * Still no badges, no streaks, no red dots. Colour is not a nag.
  */
+
+/** Core ramp. */
 export const colors = {
-  /** Page ground. Warm off-white, never pure #FFF, which glares at night. */
-  bg: '#F6F4EF',
-  /** A quiet raised surface for secondary cards. */
-  bgRaised: '#EFEBE3',
-  /** Primary card. */
+  /** Page ground. Warm paper, never pure white. */
+  bg: '#F7F5F0',
+  bgRaised: '#EFEBE2',
   card: '#FFFFFF',
 
-  /** Body and headline text. Near-black with warmth, not #000. */
-  ink: '#23221F',
-  /** Secondary text. Passes AA on both bg and card. */
-  inkSoft: '#5F5B53',
-  /** Metadata and labels. */
-  stone: '#8A8579',
+  /** Deep surface for hero cards and scripture. Hallow's move, our hue. */
+  deep: '#1E1B3A',
+  deepSoft: '#302B57',
 
-  /** The one accent: deep moss. Used for actions and nothing decorative. */
-  accent: '#3F6B52',
-  /** Accent text on light ground, darkened for contrast on body-size type. */
-  accentInk: '#2F5340',
-  accentSoft: '#E6EDE7',
+  ink: '#211F2E',
+  inkSoft: '#5A5670',
+  stone: '#8A8598',
+  onDeep: '#FFFFFF',
+  onDeepSoft: '#C9C3E8',
 
-  /** Escalation only. Never used for emphasis or decoration. */
-  warn: '#8A4B3B',
-  warnSoft: '#F5E7E2',
+  /** Brand: indigo through violet. Used for the spiritual spine. */
+  indigo: '#4C3FBF',
+  indigoSoft: '#E7E4F9',
+  violet: '#7A55C9',
+  violetSoft: '#EFE6FA',
 
-  line: '#E5E0D7',
+  /** Growth: teal and moss. Development, competence, becoming. */
+  teal: '#1F7A72',
+  tealSoft: '#DDEFEC',
+  moss: '#3F6B52',
+  mossSoft: '#E3EDE6',
+
+  /** Warmth: clay and amber. Affection, words, milestones. */
+  clay: '#B4573E',
+  claySoft: '#FAE7E0',
+  amber: '#B07A16',
+  amberSoft: '#FBEFD8',
+
+  /** Escalation only. Never decoration. */
+  warn: '#A33A2C',
+  warnSoft: '#F8E3DF',
+
+  line: '#E4DFD5',
+  lineDeep: 'rgba(255,255,255,0.16)',
 } as const;
 
-export const spacing = { xs: 4, sm: 8, md: 16, lg: 20, xl: 32, xxl: 56 } as const;
+/**
+ * The seven categories, each with a hue.
+ *
+ * Section 13's framework becomes legible at a glance: a parent scrolling the
+ * dashboard sees which kind of formation each card belongs to before reading a
+ * word of it.
+ */
+export const categoryColor: Record<string, { fg: string; bg: string; glyph: string }> = {
+  SEE: { fg: colors.indigo, bg: colors.indigoSoft, glyph: '◉' },
+  RECEIVE: { fg: colors.clay, bg: colors.claySoft, glyph: '❋' },
+  EXPERIENCE: { fg: colors.amber, bg: colors.amberSoft, glyph: '◈' },
+  HEAR: { fg: colors.violet, bg: colors.violetSoft, glyph: '❞' },
+  LEARN: { fg: colors.teal, bg: colors.tealSoft, glyph: '✦' },
+  BELIEVE: { fg: colors.indigo, bg: colors.indigoSoft, glyph: '✝' },
+  BECOME: { fg: colors.moss, bg: colors.mossSoft, glyph: '▲' },
+};
 
-export const radius = { card: 16, pill: 999 } as const;
+/** Gradients, as colour stops for expo-linear-gradient. */
+export const gradients = {
+  /** The pregnancy hero. Night into dawn. */
+  pregnancy: ['#2A2358', '#4C3FBF', '#7A55C9'] as const,
+  /** The child hero. Deep water into moss. */
+  child: ['#1B2E4A', '#1F5F72', '#2F7A62'] as const,
+  /** Scripture surface. */
+  scripture: ['#1E1B3A', '#3B2F6B'] as const,
+} as const;
+
+export const spacing = { xs: 4, sm: 8, md: 14, lg: 20, xl: 28, xxl: 56 } as const;
+export const radius = { sm: 10, card: 20, hero: 26, pill: 999 } as const;
 
 /**
  * Type scale.
  *
- * Body sits at 16/25. The previous 15/22 was below iOS's default reading size
- * and produced the dense grey slabs the app was criticised for; line height at
- * roughly 1.55 is what makes a paragraph finishable.
+ * A serif for scripture and for the counter, which is how every app in this
+ * category signals that a line is sacred rather than instructional. iOS ships
+ * New York; it costs nothing and it changes the register instantly.
  */
+export const serif = 'Georgia';
+
 export const type = {
-  /** Once per screen. */
-  display: { fontSize: 30, lineHeight: 36, fontWeight: '700' as const, color: colors.ink, letterSpacing: -0.4 },
-  /** A card headline. */
+  /** Screen title. One per screen, left-aligned with everything else. */
+  display: { fontSize: 32, lineHeight: 37, fontWeight: '700' as const, color: colors.ink, letterSpacing: -0.6 },
   heading: { fontSize: 19, lineHeight: 25, fontWeight: '600' as const, color: colors.ink, letterSpacing: -0.2 },
-  /** The one sentence that carries a card. Slightly larger than body. */
   lede: { fontSize: 17, lineHeight: 25, color: colors.ink },
   body: { fontSize: 16, lineHeight: 25, color: colors.ink },
   soft: { fontSize: 15, lineHeight: 22, color: colors.inkSoft },
-  /** Counters, rendered as a figure rather than a sentence. */
-  figure: { fontSize: 34, lineHeight: 38, fontWeight: '700' as const, color: colors.ink, letterSpacing: -0.8 },
-  label: { fontSize: 12, lineHeight: 16, fontWeight: '700' as const, color: colors.stone, letterSpacing: 1.1 },
+  /** Big numbers. Metrics a parent reads at a glance. */
+  figure: { fontSize: 44, lineHeight: 48, fontWeight: '700' as const, letterSpacing: -1.4, color: colors.ink },
+  figureSm: { fontSize: 26, lineHeight: 30, fontWeight: '700' as const, letterSpacing: -0.6, color: colors.ink },
+  /** Scripture. Serif, generous, never squeezed. */
+  verse: { fontFamily: serif, fontSize: 19, lineHeight: 30, color: colors.onDeep },
+  verseRef: { fontSize: 13, letterSpacing: 1.4, fontWeight: '700' as const, color: colors.onDeepSoft },
+  label: { fontSize: 11, lineHeight: 15, fontWeight: '800' as const, color: colors.stone, letterSpacing: 1.3 },
   meta: { fontSize: 13, lineHeight: 18, color: colors.stone },
 } as const;

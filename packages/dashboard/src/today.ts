@@ -1,6 +1,7 @@
 import type { Audience } from '@cairn/framework';
 import {
   countdown,
+  GESTATION_DAYS,
   monthsBetween,
   pregnancyStatus,
   rolePosition,
@@ -30,6 +31,12 @@ export interface TodayBlock {
   readonly action: string | null;
   /** Weeks remaining to 21 (children) or days to due date (pregnancy). */
   readonly counterLine: string;
+  /**
+   * How far through the span this block is, 0 to 1. Pregnancy runs to the due
+   * date; a child runs to twenty-one. Rendered as the bar under the hero
+   * figure, so the number has a shape as well as a value.
+   */
+  readonly progress: number;
 }
 
 export interface TodayViewModel {
@@ -78,6 +85,7 @@ export function buildToday(input: TodayInput, units: readonly Unit[], on: Calend
       action: focus?.unit.actions?.[0] ?? null,
       counterLine:
         status.daysUntilDue > 0 ? `${status.daysUntilDue} days until the due date` : 'Due now',
+      progress: Math.min(1, Math.max(0, status.gestationalDays / GESTATION_DAYS)),
     });
   }
 
@@ -103,6 +111,7 @@ export function buildToday(input: TodayInput, units: readonly Unit[], on: Calend
       counterLine: c.complete
         ? 'The formation years are complete.'
         : `${c.weeksRemaining.toLocaleString('en-US')} weeks until 21`,
+      progress: c.fractionElapsed,
     });
   }
 

@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   empty: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.bg },
   unit: { marginBottom: spacing.md },
-  action: { ...type.body, color: colors.accent, marginBottom: 2 },
-  paired: { ...type.soft, color: colors.accent, marginTop: 2 },
+  action: { ...type.body, color: colors.indigo, marginBottom: 2 },
+  paired: { ...type.soft, color: colors.indigo, marginTop: 2 },
   provenance: { ...type.soft, marginTop: spacing.sm, fontStyle: 'italic' },
 });

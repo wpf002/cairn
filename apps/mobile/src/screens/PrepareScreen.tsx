@@ -77,6 +77,6 @@ const styles = StyleSheet.create({
     borderColor: colors.stone,
     marginRight: spacing.sm,
   },
-  checked: { backgroundColor: colors.accent, borderColor: colors.accent },
+  checked: { backgroundColor: colors.indigo, borderColor: colors.indigo },
   doneText: { textDecorationLine: 'line-through', color: colors.inkSoft },
 });

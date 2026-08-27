@@ -132,7 +132,7 @@ export function TrackersScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   primary: {
-    backgroundColor: colors.accent,
+    backgroundColor: colors.indigo,
     borderRadius: 10,
     paddingVertical: spacing.sm + 4,
     alignItems: 'center',

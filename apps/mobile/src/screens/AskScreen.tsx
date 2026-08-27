@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   primary: {
-    backgroundColor: colors.accent,
+    backgroundColor: colors.indigo,
     borderRadius: 10,
     paddingVertical: spacing.sm + 4,
     alignItems: 'center',
@@ -146,6 +146,6 @@ const styles = StyleSheet.create({
   primaryText: { color: '#fff', fontWeight: '600', fontSize: 15 },
   childRow: { flexDirection: 'row', gap: spacing.sm, marginBottom: spacing.sm },
   childChip: { ...type.soft, borderWidth: 1, borderColor: colors.line, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 4 },
-  childChipActive: { color: colors.accent, borderColor: colors.accent },
+  childChipActive: { color: colors.indigo, borderColor: colors.indigo },
   passages: { ...type.soft, marginTop: spacing.sm, fontStyle: 'italic' },
 });

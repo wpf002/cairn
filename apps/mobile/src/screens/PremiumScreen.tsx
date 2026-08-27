@@ -17,7 +17,7 @@ export function PremiumScreen() {
 
       {p.options.map((o) => (
         <Pressable key={o.productId} style={[styles.option, o.preselected && styles.optionSelected]}>
-          <Text style={[type.heading, o.preselected && { color: colors.accent }]}>{o.headline}</Text>
+          <Text style={[type.heading, o.preselected && { color: colors.indigo }]}>{o.headline}</Text>
           {o.preselected ? <Text style={type.soft}>Most families choose annual</Text> : null}
         </Pressable>
       ))}
@@ -58,6 +58,6 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     marginBottom: spacing.sm,
   },
-  optionSelected: { borderColor: colors.accent, backgroundColor: colors.accentSoft },
+  optionSelected: { borderColor: colors.indigo, backgroundColor: colors.indigoSoft },
   restore: { alignItems: 'center', paddingVertical: spacing.md },
 });

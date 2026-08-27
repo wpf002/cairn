@@ -1,46 +1,39 @@
 import { useState, type PropsWithChildren, type ReactNode } from 'react';
 import { LayoutAnimation, Platform, Pressable, ScrollView, StyleSheet, Text, UIManager, View } from 'react-native';
-import { colors, radius, spacing, type } from '../theme';
+import { LinearGradient } from 'expo-linear-gradient';
+import { categoryColor, colors, gradients, radius, spacing, type } from '../theme';
 
 /**
  * The shared UI vocabulary.
  *
- * Every screen previously assembled its own <View>/<Text> stacks with inline
- * styles, which is how the app ended up rendering an 82-word body as a flat
- * wall of text on the surface a parent sees first. These components make the
- * hierarchy the default: a card shows a headline, one sentence, and one thing
- * to do, and the depth opens on a tap.
+ * The first version of this file produced a readable document and not an app:
+ * white cards, grey text, one accent, no imagery, no numbers a parent could
+ * read at a glance. Every leader in this category does the opposite. Hallow
+ * runs a violet gradient over deep surfaces; Glorify puts a duration on every
+ * row and a photograph behind its hero.
  *
- * All visual values come from theme.ts. Nothing here hardcodes a colour or a
- * size, so retuning the palette is a one-file change.
+ * So: gradient heroes, scripture on a deep surface in serif, metrics rendered
+ * as figures and rings rather than sentences, and a hue per formation
+ * category so the framework is visible before it is read.
  */
 
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-/** Screen scaffold. Consistent horizontal rhythm and bottom breathing room. */
 export function Screen({ children }: PropsWithChildren) {
   return (
-    <ScrollView
-      style={styles.screen}
-      contentContainerStyle={styles.screenContent}
-      showsVerticalScrollIndicator={false}
-    >
+    <ScrollView style={styles.screen} contentContainerStyle={styles.screenContent} showsVerticalScrollIndicator={false}>
       {children}
     </ScrollView>
   );
 }
 
-/** A quiet section label. Uppercase, tracked, never competing with a headline. */
-export function SectionLabel({ children }: PropsWithChildren) {
-  return <Text style={styles.sectionLabel}>{children}</Text>;
+export function SectionLabel({ children, color }: PropsWithChildren<{ color?: string }>) {
+  return <Text style={[styles.sectionLabel, color ? { color } : null]}>{children}</Text>;
 }
 
-/**
- * The page's one big line. Used once per screen, at the top.
- * Section 20: a parent should know whose day this is before they read anything.
- */
+/** The one big line on a screen. Left-aligned to the same gutter as everything else. */
 export function PageTitle({ children, sub }: PropsWithChildren<{ sub?: string }>) {
   return (
     <View style={styles.pageTitle}>
@@ -50,12 +43,134 @@ export function PageTitle({ children, sub }: PropsWithChildren<{ sub?: string }>
   );
 }
 
+/**
+ * The hero. A gradient panel carrying the child's name, the stage, and the
+ * counter as a figure — the one thing a parent should be able to read from
+ * across a room.
+ */
+export function Hero({
+  eyebrow,
+  title,
+  sub,
+  metricValue,
+  metricUnit,
+  progress,
+  variant = 'child',
+  onPress,
+}: {
+  eyebrow: string;
+  title: string;
+  sub?: string;
+  metricValue?: string;
+  metricUnit?: string;
+  /** 0 to 1. Renders the bar under the metric. */
+  progress?: number;
+  variant?: 'child' | 'pregnancy';
+  onPress?: () => void;
+}) {
+  const body = (
+    <LinearGradient
+      colors={[...(variant === 'pregnancy' ? gradients.pregnancy : gradients.child)]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.hero}
+    >
+      <Text style={styles.heroEyebrow}>{eyebrow.toUpperCase()}</Text>
+      <Text style={styles.heroTitle}>{title}</Text>
+      {sub ? <Text style={styles.heroSub}>{sub}</Text> : null}
+
+      {metricValue ? (
+        <View style={styles.heroMetric}>
+          <Text style={styles.heroFigure}>{metricValue}</Text>
+          {metricUnit ? <Text style={styles.heroUnit}>{metricUnit}</Text> : null}
+        </View>
+      ) : null}
+
+      {progress !== undefined ? <ProgressBar value={progress} onDark /> : null}
+    </LinearGradient>
+  );
+  return onPress ? (
+    <Pressable onPress={onPress} style={({ pressed }) => pressed && styles.pressed}>
+      {body}
+    </Pressable>
+  ) : (
+    body
+  );
+}
+
+/** A thin bar. Progress through a stage, or through the twenty-one years. */
+export function ProgressBar({ value, onDark = false, color }: { value: number; onDark?: boolean; color?: string }) {
+  const pct = Math.min(1, Math.max(0, value));
+  return (
+    <View style={[styles.track, onDark && styles.trackOnDark]}>
+      <View
+        style={[
+          styles.fill,
+          { width: `${pct * 100}%`, backgroundColor: color ?? (onDark ? '#FFFFFF' : colors.indigo) },
+        ]}
+      />
+    </View>
+  );
+}
+
+/**
+ * Scripture, on a deep surface, in serif.
+ *
+ * The roadmap's whole claim is that this is a Christian formation platform
+ * rather than a parenting library, and the first build buried every passage
+ * behind a "read more". Scripture now has its own surface and its own
+ * typeface, so a parent can see the faith layer without opening anything.
+ */
+export function ScriptureCard({ reference, children }: PropsWithChildren<{ reference: string }>) {
+  return (
+    <LinearGradient
+      colors={[...gradients.scripture]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.scripture}
+    >
+      <Text style={styles.scriptureLabel}>SCRIPTURE</Text>
+      <Text style={type.verse}>{children}</Text>
+      <Text style={styles.scriptureRef}>{reference.toUpperCase()}</Text>
+    </LinearGradient>
+  );
+}
+
+/** A short prayer, set apart. Section 5 ships one on every weekly card. */
+export function PrayerCard({ children }: PropsWithChildren) {
+  return (
+    <View style={styles.prayer}>
+      <Text style={styles.prayerLabel}>PRAYER</Text>
+      <Text style={styles.prayerText}>{children}</Text>
+    </View>
+  );
+}
+
+/** A row of readable numbers. */
+export function MetricRow({ items }: { items: { value: string; label: string; color?: string }[] }) {
+  return (
+    <View style={styles.metricRow}>
+      {items.map((m) => (
+        <View key={m.label} style={styles.metric}>
+          <Text style={[type.figureSm, m.color ? { color: m.color } : null]}>{m.value}</Text>
+          <Text style={styles.metricLabel}>{m.label.toUpperCase()}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
 export function Card({
   children,
   onPress,
   tone = 'default',
-}: PropsWithChildren<{ onPress?: () => void; tone?: 'default' | 'quiet' | 'accent' }>) {
-  const body = <View style={[styles.card, tone === 'quiet' && styles.cardQuiet, tone === 'accent' && styles.cardAccent]}>{children}</View>;
+  accent,
+}: PropsWithChildren<{ onPress?: () => void; tone?: 'default' | 'quiet'; accent?: string }>) {
+  const body = (
+    <View style={[styles.card, tone === 'quiet' && styles.cardQuiet, accent ? { borderLeftWidth: 4, borderLeftColor: accent } : null]}>
+      {children}
+    </View>
+  );
   if (!onPress) return body;
   return (
     <Pressable onPress={onPress} style={({ pressed }) => pressed && styles.pressed}>
@@ -64,48 +179,45 @@ export function Card({
   );
 }
 
-/** A headline sized for a card, not for a page. */
-export function CardTitle({ children }: PropsWithChildren) {
-  return <Text style={type.heading}>{children}</Text>;
-}
-
-/** The one sentence that carries a card. */
-export function Lede({ children }: PropsWithChildren) {
-  return <Text style={styles.lede}>{children}</Text>;
-}
-
-/**
- * The single thing to do today.
- *
- * Section 2's test: the app must translate knowledge into parental action, and
- * a card with three actions is a card with none. Surfaces show one.
- */
-export function Action({ children }: PropsWithChildren) {
+/** A category chip: the glyph and hue that make the framework visible. */
+export function CategoryChip({ category, heading }: { category: string; heading: string }) {
+  const c = categoryColor[category] ?? { fg: colors.stone, bg: colors.bgRaised, glyph: '•' };
   return (
-    <View style={styles.actionRow}>
-      <View style={styles.actionMark} />
-      <Text style={styles.actionText}>{children}</Text>
+    <View style={[styles.chip, { backgroundColor: c.bg }]}>
+      <Text style={[styles.chipGlyph, { color: c.fg }]}>{c.glyph}</Text>
+      <Text style={[styles.chipText, { color: c.fg }]}>{heading.toUpperCase()}</Text>
     </View>
   );
 }
 
-/** Small, dimmed, bottom-of-card metadata. The counter lives here. */
+export function CardTitle({ children }: PropsWithChildren) {
+  return <Text style={type.heading}>{children}</Text>;
+}
+
+export function Lede({ children }: PropsWithChildren) {
+  return <Text style={styles.lede}>{children}</Text>;
+}
+
+export function Action({ children, color }: PropsWithChildren<{ color?: string }>) {
+  return (
+    <View style={styles.actionRow}>
+      <View style={[styles.actionMark, color ? { backgroundColor: color } : null]} />
+      <Text style={[styles.actionText, color ? { color } : null]}>{children}</Text>
+    </View>
+  );
+}
+
 export function Meta({ children }: PropsWithChildren) {
   return <Text style={styles.meta}>{children}</Text>;
 }
 
-/**
- * Depth behind a tap.
- *
- * The body a unit carries is worth reading and is not worth showing by
- * default. Collapsed, a card stays scannable; expanded, the reader chose it.
- */
 export function Expandable({
   summary,
   children,
   openLabel = 'Read more',
   closeLabel = 'Less',
-}: PropsWithChildren<{ summary?: ReactNode; openLabel?: string; closeLabel?: string }>) {
+  color,
+}: PropsWithChildren<{ summary?: ReactNode; openLabel?: string; closeLabel?: string; color?: string }>) {
   const [open, setOpen] = useState(false);
   return (
     <View>
@@ -118,36 +230,16 @@ export function Expandable({
         }}
         hitSlop={8}
       >
-        <Text style={styles.expandToggle}>{open ? closeLabel : openLabel}</Text>
+        <Text style={[styles.expandToggle, color ? { color } : null]}>{open ? closeLabel : `${openLabel} ›`}</Text>
       </Pressable>
     </View>
   );
 }
 
-/**
- * The counter, rendered as a figure rather than a sentence.
- *
- * Parent Cue's whole brand is "936 weeks" as a number a parent sees. Cairn's
- * is larger and runs to twenty-one; showing it as body text buried it.
- */
-export function Counter({ value, unit, caption }: { value: string; unit: string; caption?: string }) {
-  return (
-    <View style={styles.counter}>
-      <View style={styles.counterFigure}>
-        <Text style={type.figure}>{value}</Text>
-        <Text style={styles.counterUnit}>{unit}</Text>
-      </View>
-      {caption ? <Text style={styles.meta}>{caption}</Text> : null}
-    </View>
-  );
-}
-
-/** A hairline between stacked items inside one card. */
 export function Divider() {
   return <View style={styles.divider} />;
 }
 
-/** Attribution for a descriptive claim. Section 19's provenance, made visible. */
 export function Source({ children }: PropsWithChildren) {
   return <Text style={styles.source}>{children}</Text>;
 }
@@ -157,9 +249,45 @@ const styles = StyleSheet.create({
   screenContent: { padding: spacing.lg, paddingBottom: spacing.xxl },
 
   pageTitle: { marginBottom: spacing.lg },
-  pageSub: { ...type.soft, marginTop: spacing.xs },
+  pageSub: { ...type.meta, marginTop: spacing.xs },
 
-  sectionLabel: { ...type.label, marginBottom: spacing.sm, marginTop: spacing.md },
+  sectionLabel: { ...type.label, marginBottom: spacing.sm, marginTop: spacing.lg },
+
+  hero: { borderRadius: radius.hero, padding: spacing.lg, marginBottom: spacing.md },
+  heroEyebrow: { ...type.label, color: colors.onDeepSoft },
+  heroTitle: { fontSize: 27, lineHeight: 32, fontWeight: '700', color: colors.onDeep, marginTop: spacing.xs, letterSpacing: -0.4 },
+  heroSub: { ...type.meta, color: colors.onDeepSoft, marginTop: 2 },
+  heroMetric: { flexDirection: 'row', alignItems: 'baseline', marginTop: spacing.lg },
+  heroFigure: { ...type.figure, color: colors.onDeep },
+  heroUnit: { ...type.label, color: colors.onDeepSoft, marginLeft: spacing.sm },
+
+  track: { height: 5, borderRadius: 3, backgroundColor: colors.line, marginTop: spacing.md, overflow: 'hidden' },
+  trackOnDark: { backgroundColor: 'rgba(255,255,255,0.22)' },
+  fill: { height: '100%', borderRadius: 3 },
+
+  scripture: { borderRadius: radius.card, padding: spacing.lg, marginBottom: spacing.md },
+  scriptureLabel: { ...type.label, color: colors.onDeepSoft, marginBottom: spacing.sm },
+  scriptureRef: { ...type.verseRef, marginTop: spacing.md },
+
+  prayer: {
+    borderRadius: radius.card,
+    padding: spacing.lg,
+    marginBottom: spacing.md,
+    backgroundColor: colors.violetSoft,
+  },
+  prayerLabel: { ...type.label, color: colors.violet, marginBottom: spacing.sm },
+  prayerText: { fontFamily: 'Georgia', fontSize: 17, lineHeight: 27, color: colors.ink },
+
+  metricRow: { flexDirection: 'row', gap: spacing.md, marginBottom: spacing.md },
+  metric: {
+    flex: 1,
+    backgroundColor: colors.card,
+    borderRadius: radius.card,
+    padding: spacing.md,
+    borderWidth: 1,
+    borderColor: colors.line,
+  },
+  metricLabel: { ...type.label, marginTop: 2 },
 
   card: {
     backgroundColor: colors.card,
@@ -170,29 +298,30 @@ const styles = StyleSheet.create({
     borderColor: colors.line,
   },
   cardQuiet: { backgroundColor: colors.bgRaised, borderColor: 'transparent' },
-  cardAccent: { backgroundColor: colors.accentSoft, borderColor: 'transparent' },
-  pressed: { opacity: 0.7 },
+  pressed: { opacity: 0.75 },
+
+  chip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 5,
+    borderRadius: radius.pill,
+    marginBottom: spacing.sm,
+  },
+  chipGlyph: { fontSize: 13, marginRight: 6 },
+  chipText: { fontSize: 11, fontWeight: '800', letterSpacing: 1.2 },
 
   lede: { ...type.lede, marginTop: spacing.xs },
 
   actionRow: { flexDirection: 'row', alignItems: 'flex-start', marginTop: spacing.md },
-  actionMark: {
-    width: 3,
-    alignSelf: 'stretch',
-    borderRadius: 2,
-    backgroundColor: colors.accent,
-    marginRight: spacing.sm,
-  },
-  actionText: { ...type.body, color: colors.accentInk, flex: 1 },
+  actionMark: { width: 3, alignSelf: 'stretch', borderRadius: 2, backgroundColor: colors.indigo, marginRight: spacing.sm },
+  actionText: { ...type.body, color: colors.indigo, flex: 1, fontWeight: '500' },
 
   meta: { ...type.meta, marginTop: spacing.sm },
 
   expandBody: { marginTop: spacing.sm },
-  expandToggle: { ...type.meta, color: colors.accent, marginTop: spacing.sm, fontWeight: '600' },
-
-  counter: { marginTop: spacing.md },
-  counterFigure: { flexDirection: 'row', alignItems: 'baseline' },
-  counterUnit: { ...type.meta, marginLeft: spacing.xs, textTransform: 'uppercase', letterSpacing: 1 },
+  expandToggle: { ...type.meta, color: colors.indigo, marginTop: spacing.sm, fontWeight: '700' },
 
   divider: { height: 1, backgroundColor: colors.line, marginVertical: spacing.md },
 

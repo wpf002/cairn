@@ -60,8 +60,8 @@ export function RoadmapScreen() {
         <View style={styles.chart}>
           {rm.samples.map((s) => (
             <View key={s.year} style={styles.column}>
-              <View style={{ flex: Math.max(s.childResponsibility, 0.001), backgroundColor: colors.accentSoft }} />
-              <View style={{ flex: Math.max(s.parentalControl, 0.001), backgroundColor: colors.accent }} />
+              <View style={{ flex: Math.max(s.childResponsibility, 0.001), backgroundColor: colors.indigoSoft }} />
+              <View style={{ flex: Math.max(s.parentalControl, 0.001), backgroundColor: colors.indigo }} />
             </View>
           ))}
         </View>
@@ -103,5 +103,5 @@ const styles = StyleSheet.create({
   legendItem: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   swatch: { width: 10, height: 10, borderRadius: 2 },
   marker: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.xs },
-  markerYear: { ...type.heading, color: colors.accent, width: 28 },
+  markerYear: { ...type.heading, color: colors.indigo, width: 28 },
 });

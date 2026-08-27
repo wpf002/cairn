@@ -75,7 +75,7 @@ export function ChildScreen({ childId }: { childId: string }) {
       {view.thisMonth.length > 0 ? (
         <>
           <SectionLabel>THIS MONTH</SectionLabel>
-          <Card tone="accent">
+          <Card accent={colors.amber} tone="quiet">
             {view.thisMonth.map((a) => (
               <Action key={a}>{a}</Action>
             ))}
@@ -139,8 +139,8 @@ const styles = StyleSheet.create({
   roleRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', marginBottom: spacing.md },
   rolePill: {
     ...type.label,
-    color: colors.accentInk,
-    backgroundColor: colors.accentSoft,
+    color: colors.indigo,
+    backgroundColor: colors.indigoSoft,
     paddingHorizontal: spacing.sm,
     paddingVertical: 5,
     borderRadius: 999,
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   },
   transition: { ...type.meta, marginLeft: spacing.sm, flexShrink: 1 },
   unit: { paddingVertical: spacing.xs },
-  tag: { ...type.meta, color: colors.accent, marginTop: spacing.sm, fontWeight: '600' },
+  tag: { ...type.meta, color: colors.indigo, marginTop: spacing.sm, fontWeight: '600' },
   windowMeta: { ...type.meta, marginTop: 2 },
   watchItem: { ...type.body, marginBottom: spacing.xs },
   watchNote: { ...type.meta, marginTop: spacing.sm },

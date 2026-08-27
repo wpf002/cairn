@@ -73,5 +73,5 @@ export function JourneyScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.xs },
-  age: { ...type.heading, color: colors.accent, width: 28 },
+  age: { ...type.heading, color: colors.indigo, width: 28 },
 });
