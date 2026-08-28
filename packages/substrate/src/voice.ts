@@ -106,7 +106,14 @@ export const VOICE_TICS: readonly Tic[] = [
      * structure.
      */
     id: 'voice.apparatus-opener',
-    pattern: /(?:^|\.\s)(?:The (?:worksheet|printed|second|first|final) \w+|Section \d+)/g,
+    /*
+     * Only Cairn's own furniture. An earlier version matched "The first ..."
+     * and "The second ...", which flagged perfectly good titles like "The
+     * first time they doubt out loud" — a rule that punishes ordinary English
+     * gets edited around rather than obeyed.
+     */
+    pattern:
+      /(?:^|\.\s)(?:The (?:worksheet|printed grid|framework|substrate)|On the worksheet|Section \d+|This app)/g,
     severity: 'error',
     message: 'Opens on Cairn\'s own apparatus. Start with the child, the room, or the sentence a parent says.',
   },

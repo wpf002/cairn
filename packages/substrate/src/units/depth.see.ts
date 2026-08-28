@@ -27,12 +27,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'father',
     pairedWith: 'see.mother.early-childhood',
-    title: 'They can now narrate what you did',
+    title: 'They can tell someone now',
+    lede: 'At five your child can recount what happened. To a teacher. To a grandparent.',
     body:
-      'The change at five is that your child can tell someone else what happened. Not just absorb it — recount it, to a teacher, to a grandparent, to themselves. That is when modelling stops being ambient and starts being testimony. The two behaviours children reproduce most reliably at this age are what a father does with his anger and what he does with his phone when someone is talking to him. Neither is a lecture topic. Both are being recorded verbatim.',
+      'At five your child can tell someone else what happened. Not just absorb it. Recount it, to a teacher, to a grandparent, to themselves in the dark. Two things get copied most reliably at this age. What a father does with his anger, and what he does with his phone while somebody is talking to him. Neither is a lecture topic. Both go in word for word.',
     actions: [
-      'Put the phone face-down and out of reach when they start talking. They are timing you.',
-      'When you lose your temper, repair it in front of them — name what you did, without excusing it.',
+      'Phone face-down and out of reach when they start talking. They are timing you.',
+      'Lose your temper, then repair it where they can see. Name it. Do not excuse it.',
     ],
     warrant: {
       passages: ['Deuteronomy 6:6-9', '1 Corinthians 11:1'],
@@ -57,12 +58,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'mother',
     pairedWith: 'see.father.early-childhood',
-    title: 'How you treat people who can do nothing for you',
+    title: 'How you treat the cashier',
+    lede: 'Five-year-olds watch how adults treat other adults, and draw the lines from what they see.',
     body:
-      'Five- to seven-year-olds are unusually attentive to how adults treat other adults, and they draw the category lines from what they see: who counts, who can be spoken to sharply, whose name you bother to learn. The cashier, the neighbour who talks too long, the person who got your order wrong. Children do not extract a principle from this — they extract a map. A mother who is warm to her friends and clipped to strangers has taught a working theory of human worth without saying a sentence about it.',
+      'The cashier. The neighbour who talks too long. The person who got your order wrong. Five-year-olds watch how adults treat other adults and draw the lines from what they see. Who counts. Who can be spoken to sharply. Whose name you bother learning. They do not take a principle from this. They take a map. Warm to friends and clipped to strangers teaches a theory of human worth without one sentence about it.',
     actions: [
-      'Learn and use one service worker\'s name where your child can hear you do it.',
-      'When someone is difficult in front of your child, say afterwards what you were choosing and why — not that you were right.',
+      'Learn one service worker\'s name and use it where your child can hear.',
+      'After someone is difficult, tell your child what you were choosing. Not that you were right.',
     ],
     warrant: {
       passages: ['James 2:1-4', 'Matthew 25:40'],
@@ -89,12 +91,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'father',
     pairedWith: 'see.mother.middle-childhood',
-    title: 'What your child hears you say about your work',
+    title: 'What you say about your work',
+    lede: 'Around seven they ask what you do all day. What sticks is the tone, not the job title.',
     body:
-      'Somewhere around seven a child starts asking what you actually do all day, and the answer they retain is not the job title — it is the tone. A father who narrates work as endurance ("I hate it, but the bills") teaches that adult life is a sentence to be served. A father who narrates it as contribution, including the parts that are genuinely tedious, teaches that work is something a person does on purpose. This is not a case for pretending. It is a case for saying the true whole thing: this part is dull, this part matters, here is who is better off because I did it.',
+      'Around seven a child asks what you actually do all day. What sticks is the tone, not the job title. "I hate it, but the bills" teaches that adult life is a sentence to be served. Do not pretend it is all interesting. Say the whole true thing. This part is dull. This part matters. Here is who is better off because I did it.',
     actions: [
-      'Describe one specific thing your work accomplished this week for a person who is not you.',
-      'Take them to where you work, or show them the thing you made, once this year.',
+      'Name one thing your work did this week for a person who is not you.',
+      'Take them where you work, or show them what you made. Once this year.',
     ],
     warrant: {
       passages: ['Colossians 3:23', 'Genesis 2:15'],
@@ -119,12 +122,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'mother',
     pairedWith: 'see.father.middle-childhood',
-    title: 'What you do with your own mistakes, watched by a perfectionist',
+    title: 'Be wrong out loud',
+    lede: 'Around five a child stops trying things she might get wrong. Girls hit this earlier.',
     body:
-      'Seven to nine is when many children — daughters disproportionately — begin to fear getting things wrong in a way that is genuinely costly: not trying, hiding work, crying over a rubbed-out line. The most effective intervention is not reassurance. It is watching their mother be wrong out loud and survive it, visibly, without spiralling or self-attacking. "I got that wrong, I am going to redo it" said flatly and then acted on teaches something no amount of "it is okay to make mistakes" can, because the child is checking whether you believe it about yourself.',
+      'She will not start the drawing. She rubs out the same line four times. She cries over a worksheet. Girls hit this earlier and harder. Reassurance does almost nothing here. What works is watching their mother be wrong out loud and survive it, with no spiral and no self-attack. Say "I got that wrong, I am redoing it" flatly, then redo it. Your child is checking whether you believe it about yourself.',
     actions: [
-      'Say "I was wrong about that" out loud, in front of them, at least once this month — and then move on without self-criticism.',
-      'Let them see you attempt something you are visibly bad at, and keep going.',
+      'Say "I was wrong about that" in front of them this month. Then move on.',
+      'Let them watch you try something you are bad at, and keep going.',
     ],
     warrant: {
       passages: ['Proverbs 24:16', '2 Corinthians 12:9'],
@@ -151,12 +155,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'father',
     pairedWith: 'see.mother.pre-adolescence',
-    title: 'They can read the room now — including the silences',
+    title: 'They can read the silences',
+    lede: 'At nine a child no longer needs raised voices to know there is a conflict.',
     body:
-      'Around nine or ten a child stops needing raised voices to know there is a conflict. They read the shortened sentences, the exits, the temperature. This is the age at which a marriage stops being described to a child and starts being interpreted by them. The worksheet marks Dad Loving Mom across the entire span for a reason — but the content of that row changes here. What they need to see is not the absence of disagreement, which they will correctly identify as concealment. It is disagreement handled: you can hear it start, and you can see it end, and nothing was destroyed in between.',
+      'At nine a child stops needing raised voices to know there is a conflict. They read the shortened sentences, the sudden errand, the temperature of a room. Your marriage stops being described to them and starts being interpreted. They do not need to see an absence of disagreement, which they will read correctly as concealment. They need to see one handled. It starts, it ends, and nothing was destroyed in between.',
     actions: [
-      'Let them witness one ordinary disagreement resolve, rather than exporting every conflict behind a closed door.',
-      'Speak well of your wife when she is not in the room. They notice which version they are hearing.',
+      'Let them see one ordinary disagreement resolve. Not every conflict behind a door.',
+      'Speak well of your wife when she is not there. They notice which version they get.',
     ],
     warrant: {
       passages: ['Ephesians 5:25', 'Ephesians 4:2-3'],
@@ -181,12 +186,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'mother',
     pairedWith: 'see.father.pre-adolescence',
-    title: 'Your friendships are their syllabus',
+    title: 'Your friendships are the lesson',
+    lede: 'They are entering the years when friendship rules everything, and watching yours.',
     body:
-      'Just as your child is entering the years when friendship becomes the dominant social fact of their life, they are watching yours — and mothers are usually the parent whose friendships are visible. What they learn is specific and durable: whether adult friendship survives disagreement, whether you talk about absent friends the way you talk to them, whether you have anyone at all. A ten-year-old navigating a first serious falling-out is running your example, because it is the only model of adult friendship they have watched at close range.',
+      'Friendship is about to run your child\'s life. Yours is the only adult version they have watched up close. They are learning whether friendship survives a disagreement. Whether you speak about an absent friend the way you speak to her. Whether you have anyone at all. A ten-year-old in a first real falling-out is running your example, because it is the only one they have.',
     actions: [
-      'Let them see you repair a friendship rather than replace it.',
-      'Do not narrate your friends critically in front of them; they are calculating what you say about them elsewhere.',
+      'Let them see you repair a friendship instead of replacing it.',
+      'Do not run your friends down in front of them. They are working out what you say elsewhere.',
     ],
     warrant: {
       passages: ['Proverbs 17:17', 'Proverbs 18:24'],
@@ -213,12 +219,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'father',
     pairedWith: 'see.mother.early-adolescence',
-    title: 'The audit begins: public you against private you',
+    title: 'The audit begins',
+    lede: 'Your child can now hold two versions of you in mind and compare them.',
     body:
-      'Early adolescence brings a new cognitive capacity aimed straight at you — the ability to hold two versions of a person in mind and compare them. Your child now has years of data and the machinery to cross-reference it. How you are at church against how you are in the car on the way home. What you say about honesty against how you talk about your taxes. This is where hypocrisy becomes visible, and it is the leading reason adolescents give for discarding a faith later. The good news is that consistency, not flawlessness, is what passes the audit — and admitting a gap you have not yet closed counts as consistency.',
+      'She has watched you twelve years. This year she compares the notes. How you are at church against how you are in the car home. What you say about honesty against how you talk about taxes. Adolescents name this more than anything else when they walk away later. She is not looking for a perfect man. She is checking whether the same man shows up twice.',
     actions: [
-      'Name one gap between what you teach and how you live, out loud, before they name it.',
-      'Check what changes about you between the church car park and the kitchen.',
+      'Name one gap between what you teach and how you live, before they name it.',
+      'Notice what changes about you between the church car park and your kitchen.',
     ],
     warrant: {
       passages: ['Matthew 23:2-3', 'Titus 2:7'],
@@ -243,12 +250,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'mother',
     pairedWith: 'see.father.early-adolescence',
-    title: 'Your phone, against the rules you set about theirs',
+    title: 'Your phone, and their rules',
+    lede: 'The first real charge of hypocrisy usually gets filed here. It is often accurate.',
     body:
-      'This is the stage where device rules arrive, and where the first genuine charge of hypocrisy usually gets filed. It is often accurate. An adolescent told to leave the phone at dinner, by a parent scrolling at dinner, has learned exactly one thing: that the rule is about power rather than principle. Mothers are frequently the rule-setter here and the most-observed user. The rule can stand — an adult and a twelve-year-old genuinely do not have the same brain or the same risk — but the asymmetry has to be argued honestly rather than enforced silently, and it will not survive if your own use is unexamined.',
+      'Device rules arrive, and so does the first real charge of hypocrisy. It is often accurate. A twelve-year-old told to leave the phone at dinner, by a parent scrolling at dinner, has learned one thing. The rule is about power. The rule can still stand. An adult and a twelve-year-old do not have the same brain or the same risk. But argue the difference out loud, because it will not survive being enforced in silence.',
     actions: [
-      'Apply one device rule to yourself first, visibly, for a month before you require it of them.',
-      'Say out loud why the rules differ, and concede the parts where they do not.',
+      'Keep one device rule yourself, visibly, for a month before you require it.',
+      'Say why the rules differ. Concede the parts where they do not.',
     ],
     warrant: {
       passages: ['Romans 2:21', '1 Corinthians 9:27'],
@@ -275,12 +283,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'father',
     pairedWith: 'see.mother.middle-adolescence',
-    title: 'Apologising to a fourteen-year-old, properly',
+    title: 'Apologise properly',
+    lede: 'By fourteen your child has a list of times you were wrong and said nothing.',
     body:
-      'By fourteen your child has a detailed record of times you were wrong and did not say so. What they are watching for now is whether an adult man can apologise to someone with less power than him, specifically and without conditions. Most cannot. The tell is the shape: "I am sorry I shouted, but you were being impossible" is not an apology, and they can parse it instantly. The clean version names the act, omits their contribution, and asks nothing. It costs a father something real, which is precisely why it is one of the most formative things a fourteen-year-old can witness.',
+      'Your child has a list of times you were wrong and said nothing. They are watching whether a grown man can apologise to someone with less power. Most cannot. "I am sorry I shouted, but you were being impossible" is not an apology. They parse it instantly. Name the act. Leave out their part. Ask for nothing. It costs you something real. They remember it.',
     actions: [
-      'Apologise once with no "but" clause and no request for a reciprocal apology.',
-      'Do not follow it by explaining yourself. Let it stand alone.',
+      'Apologise once with no "but" and no request for one back.',
+      'Do not explain yourself afterwards. Let it stand alone.',
     ],
     warrant: {
       passages: ['James 5:16', 'Matthew 5:23-24'],
@@ -305,12 +314,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'mother',
     pairedWith: 'see.father.middle-adolescence',
-    title: 'What you do with your faith when nobody is watching',
+    title: 'Faith on a Tuesday',
+    lede: 'Around thirteen they first suspect your faith is social rather than real.',
     body:
-      'Thirteen to fifteen is when many children first suspect their parents\' faith is social rather than real — a family activity with a building attached. The evidence that answers the suspicion is not attendance, which they can attribute to habit. It is the private practice they were not supposed to see: found praying at the kitchen table at an odd hour, a Bible that is visibly used on a Tuesday, a decision explained by conviction when the convenient option was available. Do not stage this. Staged versions are detected and are worse than nothing. Just stop concealing what is already there.',
+      'Around thirteen they suspect your faith is social. A family activity with a building attached. Attendance does not answer that. Attendance looks like habit. What answers it is what they were not meant to see. You praying at an odd hour. A Bible used on a Tuesday. A decision made on conviction when the easy option sat right there. Do not stage it. Staged gets caught.',
     actions: [
-      'Stop hiding your own practice out of self-consciousness. Let it be visible without being announced.',
-      'Once, explain a decision you made on conviction that cost you something — briefly, without a moral attached.',
+      'Stop hiding your own practice. Let it be visible without announcing it.',
+      'Once, explain a decision that cost you something. Briefly. No moral attached.',
     ],
     warrant: {
       passages: ['Matthew 6:5-6', '2 Timothy 1:5'],
@@ -337,12 +347,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'father',
     pairedWith: 'see.mother.late-adolescence',
-    title: 'What your money says, now that they understand money',
+    title: 'What your money says',
+    lede: 'By sixteen they understand household finance well enough to audit it.',
     body:
-      'By sixteen your child understands household finance well enough to audit it: what gets bought quickly, what gets deliberated, what gets given away, whether generosity is a line item or a story you tell. This is the last stage where they are inside the accounts, and what they see becomes the default they carry into their own. A father who talks about stewardship and buys reflexively has taught the buying. One who visibly declines something affordable, or gives at a level that is actually felt, has taught something an entire youth-group series cannot.',
+      'By sixteen your child can audit the accounts. What gets bought without thinking. What gets deliberated. What gets given away. Whether generosity is a line item or a story you tell. They are inside your finances for the last time, and what they see becomes their default. Talk stewardship and buy reflexively, and you taught the buying. Decline something affordable where they can see it.',
     actions: [
-      'Let them see one real financial decision including the trade-off — what you did not buy so this could happen.',
-      'Give once at a level that visibly costs the household something, and let them know it happened.',
+      'Show them one real trade-off. What you did not buy so this could happen.',
+      'Give once at a level the household actually feels. Tell them it happened.',
     ],
     warrant: {
       passages: ['Matthew 6:21', '1 Timothy 6:17-19'],
@@ -367,12 +378,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'mother',
     pairedWith: 'see.father.late-adolescence',
-    title: 'How you react the first time they say they are not sure they believe',
+    title: 'The first time they doubt out loud',
+    lede: 'It comes sideways, in a car, timed to be low stakes. Your face decides the next five years.',
     body:
-      'It usually arrives between fifteen and eighteen, often to the mother, often deliberately timed to be low-stakes — in a car, sideways, as though it were nothing. Your face in the first two seconds decides the next five years. Panic teaches that doubt is dangerous and must be conducted elsewhere, which is how a temporary question becomes a permanent departure conducted in silence. Calm interest teaches that this house can hold the question. You are not being asked to have an answer. You are being tested on whether the relationship can survive the honesty, and that is a much easier test to pass.',
+      'It comes in a car, sideways, timed to sound like nothing. Usually to the mother. Your face in the first two seconds decides the next five years. Panic teaches that doubt is dangerous and belongs somewhere else. That is how a question becomes a silent departure. Calm interest teaches that this house holds it. You are not being asked for an answer.',
     actions: [
-      'Respond with a question, not a defence: "what brought that up?" Then listen without correcting.',
-      'Say out loud that doubt does not put them outside the family or outside God\'s reach.',
+      'Ask "what brought that up?" Then listen without correcting anything.',
+      'Say that doubt puts them outside neither this family nor God\'s reach.',
     ],
     warrant: {
       passages: ['Mark 9:24', 'Jude 22'],
@@ -399,12 +411,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['emerging-adult'] },
     voice: 'father',
     pairedWith: 'see.mother.emerging-adult',
-    title: 'How you handle no longer being the strongest man in the room',
+    title: 'Being overtaken',
+    lede: 'Your child passes you at something that used to be yours. They watch how you take it.',
     body:
-      'Somewhere around here your child overtakes you at something that used to be yours — physically, technically, or in plain competence at a thing you taught them. How a father takes that is watched with real interest, because it is a preview of every future transition in the relationship. Competing, minimising, or making a joke that lands as a correction all teach that your standing depended on being ahead. Straightforward pleasure in being overtaken teaches something else entirely: that the whole project was aimed at this, and you meant it.',
+      'Your child passes you at something that used to be yours. Lifting, fixing, arguing, or the thing you taught them yourself. They watch how you take it, because it previews every transition still coming. Competing, minimising, or a joke that lands as a correction all say the same thing. Your standing depended on being ahead. Plain pleasure at being overtaken says the whole project was aimed here and you meant it.',
     actions: [
-      'Concede a domain out loud. Ask them to teach you something and actually learn it.',
-      'When they outperform you, say so plainly, without a qualifier or a story about your own prime.',
+      'Concede a domain out loud. Ask them to teach you, then actually learn it.',
+      'When they beat you, say so plainly. No qualifier, no story about your prime.',
     ],
     warrant: {
       passages: ['John 3:30', 'Numbers 27:18-20'],
@@ -429,12 +442,13 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['emerging-adult'] },
     voice: 'mother',
     pairedWith: 'see.father.emerging-adult',
-    title: 'What you do with the room they left',
+    title: 'What you do with the empty room',
+    lede: 'Your nineteen-year-old is watching what happens to you now that they have gone.',
     body:
-      'Your nineteen-year-old is watching, from a distance, what happens to you now that the central occupation of two decades has moved out. This is not vanity on their part — it is load-bearing. A mother who visibly builds something in the vacated space frees her child to leave properly. A mother who visibly hollows out gives them a debt they did not agree to, and they will pay it in guilt, in over-frequent calls made from obligation, or in staying away because the calls are too heavy. What you do next is one of the last big things you model, and it is genuinely for you as well as for them.',
+      'Your nineteen-year-old is watching what happens to you now. Twenty years of occupation moved out. Build something in that space and you free them to leave properly. Hollow out and you hand them a debt they never agreed to. They pay it in guilt, in dutiful calls, or in staying away because the calls got heavy. This is one of the last big things you model. It is also, plainly, for you.',
     actions: [
-      'Start one thing this year that is yours and has nothing to do with your children. Let them hear about it.',
-      'When they ask how you are, answer with your actual life rather than with news about them.',
+      'Start one thing this year that has nothing to do with your children.',
+      'When they ask how you are, answer with your life, not news about them.',
     ],
     warrant: {
       passages: ['Proverbs 31:25', 'Psalm 92:14'],
@@ -463,7 +477,7 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     pairedWith: 'see.mother.young-adult',
     title: 'Your life is now the argument',
     body:
-      'At twenty-one your child evaluates your life as a completed case rather than a set of rules they are under. They can see what two decades of your choices produced: whether the marriage is warm, whether the faith held under something hard, whether the work was worth it, whether you have friends. This is the most honest assessment you will ever receive, and none of it is deliverable by speech any more. What is still available is the part still being lived — how you handle the next decade, including its losses. They are still watching, and now they are taking notes for their own turn.',
+      'Your child now reads your life as a finished case. Not a set of rules. They can see what two decades of choices produced. Whether the marriage is warm. Whether the faith held under something hard. Whether you have friends. It is the most honest assessment you will get, and no speech can change it. What is left is the part still being lived. They are taking notes for their own turn.',
     actions: [
       'Keep doing the things you would want them to do at sixty. That is the remaining lesson.',
       'Tell them one thing you would do differently, without self-pity, as information rather than confession.',
@@ -493,7 +507,7 @@ export const DEPTH_SEE_UNITS: readonly Unit[] = [
     pairedWith: 'see.father.young-adult',
     title: 'How you treat the person they chose',
     body:
-      'If your child is in a serious relationship, the single most consequential thing you now model is how you treat that person. Warmth toward someone you did not select, and would not have selected, is the clearest available evidence that you meant it when you said the goal was their flourishing rather than your preferences. Reservations can be spoken — once, early, privately, and then set down. What cannot be recovered is a partner who learned they were being tolerated. Mothers carry disproportionate weight here, and this is frequently where a good twenty-year relationship with a child quietly begins to cool.',
+      'If your child is with someone, you now model how you treat that person. Warmth toward someone you would not have chosen proves you meant it about their flourishing. Say your reservation once. Early, privately, then set it down. A partner who worked out they were being tolerated does not forget. This is where a good twenty-year relationship quietly starts to cool.',
     actions: [
       'Say your reservation once, privately, then commit to the relationship you actually have.',
       'Build something direct with their partner that does not route through your child.',
