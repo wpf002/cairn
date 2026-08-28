@@ -22,11 +22,12 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'shared',
-    title: 'Teaching sin and grace to a child who now knows they do wrong',
+    title: 'Sin and grace, without terror',
+    lede: 'Around five a child develops a working conscience. The gospel becomes intelligible.',
     body:
-      'Around five, a child develops a working conscience — they know when they have done wrong and they feel it. That is the moment the gospel becomes intelligible, and also the moment it becomes possible to do real damage. Two failures are common. The first is skipping sin entirely, which leaves grace as a solution to nothing. The second is teaching sin so heavily that a five-year-old concludes God is primarily angry with them. The workable shape at this age is short, concrete, and always completed: this is what we did wrong, this is what Jesus did about it, this is why we are not afraid of God. Never leave the first part standing overnight on its own.',
+      'Around five a child gets a working conscience. They know when they have done wrong and they feel it. The gospel becomes intelligible, and so does real damage. Skip sin entirely and grace solves nothing. Teach sin heavily and a five-year-old decides God is mostly angry with them. Keep it short, concrete, and always finished. Here is what we did wrong. Here is what Jesus did about it. Here is why we are not afraid of God.',
     actions: [
-      'When you correct, name the wrong and the forgiveness in the same conversation. Do not let a child sleep on the first half.',
+      'Name the wrong and the forgiveness in one conversation. Never sleep on half.',
       'Answer "is God angry with me?" directly and warmly, every time it comes up.',
     ],
     warrant: {
@@ -51,12 +52,13 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'shared',
-    title: 'From Bible stories to one story',
+    title: 'From stories to one story',
+    lede: 'A flood, a giant, a fish, a manger. Filed alongside every other tale they were told.',
     body:
-      'By seven or eight a child has a warehouse of disconnected episodes — a flood, a giant, a fish, a manger — filed alongside other tales they have been told. The work of this stage is assembly: showing that these are chapters of one account that goes somewhere, and that it makes claims about actual events rather than furnishing morals. A child who reaches eleven with Bible stories still shelved next to fables will begin discarding them on the same shelf. This is also the age to be honest that some of it is difficult, because they are about to notice.',
+      'A flood. A giant. A fish. A manger. By eight your child has a warehouse of disconnected episodes filed beside every other tale they were told. Assemble them. Show that these are chapters of one account that goes somewhere and makes claims about actual events. A child who reaches eleven with Bible stories still shelved next to fables starts discarding them off the same shelf. Be honest that some of it is hard. They are about to notice.',
     actions: [
-      'Read through one whole book together rather than more isolated stories.',
-      'When a passage is troubling, say so plainly instead of moving past it. "That is hard, and Christians have thought about it a lot" is a real answer.',
+      'Read one whole book together instead of more isolated stories.',
+      'When a passage troubles you, say so. "That is hard" is a real answer.',
     ],
     warrant: {
       passages: ['Luke 24:27', 'Psalm 78:1-8'],
@@ -80,13 +82,14 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'shared',
-    title: 'The first "why" — and why answering it badly is expensive',
+    title: 'The first real why',
+    lede: 'Not what Christians believe. Why anyone should.',
     body:
-      'Nine to eleven brings the first genuine question about grounds rather than content: not what Christians believe but why anyone should. It usually arrives casually and it is a real question. Two responses do lasting damage — treating it as rebellion, and improvising a bad argument the child will later discover was bad. A ten-year-old given a weak apologetic and a confident tone learns to distrust the tone when the argument fails at nineteen. "That is a good question, I do not know, let us find out" costs nothing now and buys enormous credibility later.',
+      'The first question about grounds rather than content arrives around nine. Not what Christians believe. Why anyone should. It comes casually and it is real. Two responses do lasting damage. Treating it as rebellion, and improvising an argument the child later discovers was bad. Give a ten-year-old a weak apologetic in a confident tone and they learn to distrust the tone at nineteen. "Good question. I do not know. Let us find out."',
     actions: [
-      'Answer one "why" this month by actually researching it together rather than from memory.',
+      'Answer one why this month by researching it together, not from memory.',
       'Say "I do not know" at least once, and then come back with something.',
-      'Introduce that other people believe differently, and describe their view fairly.',
+      'Tell them other people believe differently. Describe that view fairly.',
     ],
     warrant: {
       passages: ['1 Peter 3:15', 'Acts 17:11'],
@@ -110,13 +113,14 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'shared',
-    title: 'The year they realise they did not choose this',
+    title: 'They did not choose this',
+    lede: 'Born elsewhere, they would believe something else. That is a correct observation.',
     body:
-      'Around twelve or thirteen a young person notices that their religion was assigned — that had they been born elsewhere they would believe something else. This is not a crisis; it is a correct observation, and how a household handles it largely determines what happens at nineteen. The failing response is to treat the observation as disloyalty. The useful one is to agree with it and then name the actual question: given that everyone inherits a starting position, is this one true? That reframes the work ahead as investigation rather than rebellion, and it puts you on the same side of the table.',
+      'Around twelve a young person works out that their religion was assigned. Born elsewhere, they would believe something else. That is not a crisis. It is a correct observation, and how you handle it decides a lot about nineteen. Do not treat it as disloyalty. Agree with it, then name the real question. Everyone inherits a starting position, so is this one true? Now you are on the same side of the table.',
     actions: [
-      'Agree out loud that they did not choose it, and say that choosing it is the point.',
-      'Give them a genuine question to investigate rather than an answer to accept.',
-      'Let them attend something outside your tradition and discuss it without anxiety.',
+      'Agree out loud that they did not choose it. Say that choosing it is the point.',
+      'Give them a real question to investigate, not an answer to accept.',
+      'Let them visit something outside your tradition. Discuss it without anxiety.',
     ],
     warrant: {
       passages: ['Joshua 24:15', 'Deuteronomy 6:20-21'],
@@ -140,13 +144,14 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'shared',
-    title: 'Doubt belongs in this house or it will happen in another one',
+    title: 'Doubt belongs in this house',
+    lede: 'Every objection gets raised somewhere. The only question is whether it happens near someone who loves them.',
     body:
-      'Thirteen to fifteen is when the objections get specific: suffering, hell, science, the behaviour of Christians, the parts of Scripture that are genuinely hard. Every one of these will be raised somewhere. The only question is whether it happens where someone loves them. A household that treats doubt as a threat exports the conversation to a comment section, and comment sections are not gentle. Section 13 calls this stage CHALLENGE for a reason: the parent\'s job here is not to defend but to help the young person interrogate properly, including interrogating the objection itself.',
+      'The objections get specific now. Suffering. Hell. Science. How Christians behave. The parts of Scripture that are genuinely hard. Every one gets raised somewhere. The only question is whether it happens near someone who loves them. Treat doubt as a threat and you export the conversation to a comment section, and comment sections are not gentle. Your job is not to defend. It is to help them interrogate properly, including the objection.',
     actions: [
-      'Ask them what the strongest argument against Christianity is, and take the answer seriously.',
-      'Bring in an adult who handles the specific question better than you do. Delegation is not defeat.',
-      'Never punish a stated doubt. Not once — the first time sets the policy.',
+      'Ask what the strongest argument against Christianity is. Take it seriously.',
+      'Bring in an adult who handles that question better than you. That is not defeat.',
+      'Never punish a stated doubt. The first time sets the policy.',
     ],
     warrant: {
       passages: ['John 20:27', 'Jude 22'],
@@ -170,13 +175,14 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'shared',
-    title: 'Faith they practise when you are not in the building',
+    title: 'Practised without you',
+    lede: 'The strongest predictor of faith surviving is whether any of it was ever practised alone.',
     body:
-      'The single strongest predictor of whether faith survives leaving home is whether any of it was ever practised independently of the household. A seventeen-year-old whose entire Christian life has been family-scheduled — your church, your service, your devotions — has no practice of their own to continue, only a routine to discontinue. The work of this stage is transferring ownership while they are still nearby to be supported: their choice of gathering, their own giving out of their own money, a commitment they made and you did not.',
+      'The strongest predictor of faith surviving the move out is whether any of it was ever practised alone. A seventeen-year-old whose whole Christian life was family-scheduled has no practice of their own to continue. Only a routine to stop. Your church. Your service. Your devotions. Transfer ownership while they are still close enough to support. Their gathering. Their giving, from their money. A commitment they made and you did not.',
     actions: [
-      'Let them choose where they serve, even if it is not where you would put them.',
+      'Let them choose where they serve, even if it is not where you would.',
       'Have them give from their own earnings, at an amount they set.',
-      'Stop scheduling their spiritual life. Ask about it; do not run it.',
+      'Stop scheduling their spiritual life. Ask about it. Do not run it.',
     ],
     warrant: {
       passages: ['Philippians 2:12', 'Hebrews 10:24-25'],
@@ -200,13 +206,14 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['emerging-adult'] },
     voice: 'shared',
-    title: 'If they walk away, what you do next matters more than what you say',
+    title: 'If they walk away',
+    lede: 'The instinct is to argue, plead, pressure. All of it accelerates the leaving.',
     body:
-      'A substantial number of young adults raised in Christian homes disengage between eighteen and twenty-two, and the parental instinct — argue, plead, apply pressure, involve others — reliably accelerates it. What holds a door open is unglamorous: continued warmth with no conditions, no scorekeeping about attendance, no relitigating at every visit, and a refusal to make the relationship contingent on their position. This is where section 12\'s Counselor is hardest and most necessary. You have moved from managing outcomes to remaining reachable, and reachable is not nothing — it is the whole of what is still available to you.',
+      'Many young adults raised in Christian homes disengage between eighteen and twenty-two. The instinct is to argue, plead, apply pressure, involve other people. All of it speeds the leaving. What holds a door open is unglamorous. Warmth with no conditions. No scorekeeping about attendance. No relitigating at every visit. You have moved from managing outcomes to staying reachable, and reachable is the whole of what is left.',
     actions: [
-      'Say once, clearly, that nothing about your love or their welcome depends on this. Then stop raising it.',
+      'Say once that nothing about your love or their welcome depends on this. Then stop.',
       'Keep inviting without requiring. An invitation with a cost attached is a summons.',
-      'Take your grief to God and to other adults rather than to your child.',
+      'Take your grief to God and to other adults. Not to your child.',
     ],
     warrant: {
       passages: ['Luke 15:20', 'Romans 2:4'],
@@ -230,13 +237,14 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['young-adult'] },
     voice: 'shared',
-    title: 'Faith that is theirs, not yours',
+    title: 'Faith that is theirs',
+    lede: 'The strongest signal is that they have started discipling somebody else.',
     body:
-      'The destination stated in section 13 is not "my parents are Christians" but "I understand Christianity, I know what I believe, and I am capable of choosing whether I will follow Christ." At twenty-one that is testable. The markers are unglamorous and specific: a church they chose and committed to, giving from their own income, a faith crisis handled without a parent in the room, and — the strongest signal — discipling someone else. When a young adult starts teaching this to a person junior to them, the transfer is complete. Your role from here is peer: you may be asked, and when asked you answer fully.',
+      'The destination was never "my parents are Christians." It is "I know what I believe, and I can choose whether to follow Christ." At twenty-one that is testable. A church they chose and committed to. Giving from their own income. A faith crisis handled with no parent in the room. And the strongest signal, discipling someone else. When they start teaching this to someone junior, the transfer is complete.',
     actions: [
-      'Ask what they are learning, and receive it as information rather than assessing it.',
-      'When they ask a theological question, answer as a peer would — including where you are unsure.',
-      'Notice and name it out loud when they are discipling someone else.',
+      'Ask what they are learning. Receive it as information, not as something to assess.',
+      'Answer a theological question as a peer would, including where you are unsure.',
+      'Say it out loud when you notice them discipling someone else.',
     ],
     warrant: {
       passages: ['2 Timothy 2:2', '3 John 4'],

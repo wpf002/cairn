@@ -22,13 +22,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'shared',
-    title: 'The first thing that is genuinely theirs to fail at',
+    title: 'Something theirs to fail at',
+    lede: 'A job nobody rescues. A plant that dies if forgotten.',
     body:
-      'Five to seven is the right window for a child to own something outright — a job nobody rescues, a small animal, a plant that dies if forgotten. Section 13 lists exactly this at age seven: a household responsibility they completely own. The formative element is not the chore. It is the first experience of a consequence that arrives without an adult arranging it, at an age where the stakes are survivable. A parent who quietly waters the plant has removed the entire lesson and taught a different one.',
+      'A job nobody rescues. A small animal. A plant that dies if forgotten. Give a child something they own outright. The chore is not the formative part. The formative part is a consequence that arrives without an adult arranging it, at an age where the stakes are survivable. A parent who quietly waters the plant has removed the lesson and taught a different one.',
     actions: [
-      'Assign one job that is fully theirs, and let it visibly go undone once.',
-      'Let them lose a game without engineering a draw. Then teach losing well, in the moment they need it.',
-      'Let them buy something with money they earned, including if it is a bad purchase.',
+      'Assign one job that is fully theirs. Let it visibly go undone once.',
+      'Let them lose a game without engineering a draw. Teach losing in the moment.',
+      'Let them buy something with money they earned, even a bad purchase.',
     ],
     warrant: {
       passages: ['Luke 16:10', 'Galatians 6:5'],
@@ -52,13 +53,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'shared',
-    title: 'Serving someone who cannot reciprocate, and fixing something you broke',
+    title: 'Serve, and make it right',
+    lede: 'Both are experiences, not conversations. Neither transfers by being explained.',
     body:
-      'Seven to nine is when a child can hold another person\'s situation in mind well enough for service to mean something, and when restitution becomes teachable. Two distinct experiences belong here. The first: serving someone who cannot thank you usefully — an elderly neighbour, a family in difficulty — with the child doing actual work rather than watching adults do it. The second: making something right that they broke, in person, including the uncomfortable part where they say it themselves. Both are experiences, not conversations, and neither transfers by being explained.',
+      'Seven is when a child can hold someone else\'s situation in mind well enough for service to mean anything. Two experiences belong here. Serving a person who cannot usefully thank them, with the child doing real work rather than watching adults do it. And making right something they broke, in person, including the uncomfortable part where they say it themselves. Neither transfers by being explained.',
     actions: [
       'Do one service commitment as a family where your child does real work, not decoration.',
-      'Next time they break or lose something of someone else\'s, walk them through repaying or repairing it themselves.',
-      'Let them apologise directly to the person, without you narrating it for them.',
+      'When they break something of someone else\'s, walk them through repaying it.',
+      'Let them apologise directly. Do not narrate it for them.',
     ],
     warrant: {
       passages: ['Luke 19:8', 'Matthew 25:40'],
@@ -82,13 +84,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'shared',
-    title: 'The one-on-one window opens here',
+    title: 'The one-on-one window opens',
+    lede: 'A routine begun now survives adolescence. One begun at fourteen reads as surveillance.',
     body:
-      'The worksheet marks Special One-on-One Times with an opportunity marker beginning around nine — and it is the only row that later carries both markers at once. Nine to eleven is when the practice has to be established, because a routine begun now survives adolescence and a routine begun at fourteen reads as surveillance. What makes it work is that it is regular, protected, and has no agenda: no performance review, no scheduled Serious Conversation. The value is entirely in the accumulated hours, which is why starting early matters more than doing it impressively.',
+      'Nine to eleven is when this has to start. A routine begun now survives adolescence. One begun at fourteen reads as surveillance. What makes it work is that it is regular, protected and has no agenda. No performance review. No scheduled Serious Conversation. The value is in accumulated hours, so starting early beats doing it impressively.',
     actions: [
-      'Establish a fixed recurring one-on-one slot with each child separately. Same day, same rhythm, protected.',
-      'Do not use the first year of it to raise difficult topics. Build the container before you put anything in it.',
-      'Take each child somewhere individually, overnight if you can, once in this stage.',
+      'Set a fixed one-on-one slot with each child. Same day, same rhythm, protected.',
+      'Do not raise difficult topics in the first year. Build the container first.',
+      'Take each child somewhere alone, overnight if you can, once in this stage.',
     ],
     warrant: {
       passages: ['Mark 6:31', 'Deuteronomy 6:7'],
@@ -112,13 +115,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'shared',
-    title: 'The first rite of passage, around thirteen',
+    title: 'The first rite of passage',
+    lede: 'Most families skip this one, and adolescence arrives as unmarked concessions instead.',
     body:
-      'The worksheet marks its first ceremony at roughly thirteen — printed as Intro into Manhood, generalised in section 14 to sons and daughters both. This is the one most families skip, and skipping it is why adolescence often arrives as a series of unmarked concessions rather than a recognised transition. The form matters less than the fact of it: other adults present, something said aloud about what is changing, something given that lasts. A thirteen-year-old told in front of witnesses that they are entering a new standing behaves differently from one who simply gets a later curfew.',
+      'Most families skip this, and adolescence arrives as a series of unmarked concessions instead of a recognised transition. The form matters less than the fact of it. Other adults present. Something said out loud about what is changing. Something given that lasts. A thirteen-year-old told in front of witnesses that they have entered a new standing behaves differently from one who simply got a later curfew.',
     actions: [
       'Plan a marked event at thirteen. Invite three or four adults who are not you.',
-      'Ask each adult to say or write one specific thing they see forming in this young person.',
-      'Name plainly what changes: which decisions are now theirs, and what is now expected.',
+      'Ask each adult to name one thing they see forming in this young person.',
+      'Name what changes. Which decisions are theirs now, and what is expected.',
     ],
     warrant: {
       passages: ['Luke 2:41-52', 'Joshua 4:4-7'],
@@ -142,13 +146,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'shared',
-    title: 'Consequences you did not soften, while the stakes are still small',
+    title: 'Let the consequence land',
+    lede: 'A missed deadline costs a grade, not a job. This is the cheapest it gets.',
     body:
-      'Thirteen to fifteen is the last stage where the natural consequences of a bad decision are cheap. A missed deadline costs a grade, not a job. A friendship handled badly costs a term, not a marriage. Section 12 is explicit that the Consultant allows real-world consequences when safe, and this is the window where "safe" is widest. Parents who intervene here — the emailed teacher, the covered shift, the paid-off debt — are not preventing the lesson so much as deferring it to an age where it costs their child considerably more.',
+      'This is the last stage where a bad decision is cheap. A missed deadline costs a grade, not a job. A friendship handled badly costs a term, not a marriage. The Consultant lets real consequences arrive when it is safe, and safe is widest right now. The emailed teacher, the covered shift, the paid-off debt. None of those prevent the lesson. They defer it to an age where it costs far more.',
     actions: [
-      'Pick one consequence this term that you will let land, and decide in advance not to intervene.',
-      'Debrief afterwards without saying you were right: ask what they would do differently.',
-      'Let them hold real money — an account they manage and can genuinely mismanage.',
+      'Pick one consequence this term to let land. Decide in advance not to intervene.',
+      'Debrief without saying you were right. Ask what they would do differently.',
+      'Let them hold real money. An account they can genuinely mismanage.',
     ],
     warrant: {
       passages: ['Galatians 6:7', 'Proverbs 19:19'],
@@ -172,13 +177,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'shared',
-    title: 'Rehearse the leaving before the leaving',
+    title: 'Rehearse the leaving',
+    lede: 'The failures that happen while they still live with you are the cheapest they will get.',
     body:
-      'The worksheet places two ceremonies in this band — Growing in Manhood around sixteen and Releasing to Manhood around seventeen — and the practical content between them is rehearsal. A young person who has never booked their own appointment, resolved their own billing error, or run a household week unsupervised is not ready to do all of it at once in a new city. Hand over whole domains rather than tasks: not "call the dentist this once" but "your health admin is yours now." The failures that happen while they still live with you are the cheapest they will ever be.',
+      'A young person who has never booked an appointment, sorted a billing error, or run a household week unsupervised is not ready to do all of it at once in a new city. Hand over whole domains, not tasks. Not "call the dentist this once" but "your health admin is yours now." The failures that happen while they still live with you are the cheapest they will ever be.',
     actions: [
-      'Transfer one complete domain — health admin, their own transport, their own laundry and food for a week.',
-      'Have them run the household for a week: budget, shopping, cooking, while you deliberately do not step in.',
-      'Mark seventeen with the releasing ceremony. Say out loud which decisions have moved to them permanently.',
+      'Transfer one whole domain. Health admin, transport, or a week of their own food.',
+      'Have them run the household a week. Budget, shopping, cooking. Do not step in.',
+      'Mark seventeen with a releasing ceremony. Say which decisions have moved for good.',
     ],
     warrant: {
       passages: ['1 Corinthians 13:11', 'Luke 15:12'],
@@ -202,13 +208,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['emerging-adult'] },
     voice: 'shared',
-    title: 'Time together that they chose',
+    title: 'Invited, not summoned',
+    lede: 'Shared time stops being a household default and becomes a decision they make.',
     body:
-      'Once a child lives elsewhere, shared experience stops being a household default and becomes a decision they make. That is the change worth planning around. Invitations work; summonses do not. Standing obligations ("you come every Sunday") convert relationship into compliance, and the compliance is what erodes first. What holds is a small number of things they actually want to be at, plus a genuinely open door with no ledger kept about who visited whom last. The parent who stops counting is the parent who gets visited.',
+      'Once a child lives elsewhere, shared time stops being a default and becomes a decision they make. Invitations work. Summonses do not. "You come every Sunday" converts a relationship into compliance, and compliance is what erodes first. What holds is a few things they actually want to attend, plus an open door with no ledger about who visited whom last. The parent who stops counting is the parent who gets visited.',
     actions: [
-      'Establish one annual thing worth travelling for, and make it enjoyable rather than obligatory.',
+      'Build one annual thing worth travelling for. Make it enjoyable, not obligatory.',
       'Stop keeping score of contact frequency. Say so out loud, once.',
-      'Visit them, in their place, on their terms — and treat their household as theirs.',
+      'Visit them in their place, on their terms. Treat their household as theirs.',
     ],
     warrant: {
       passages: ['Philemon 14', '3 John 4'],
@@ -232,13 +239,14 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['young-adult'] },
     voice: 'shared',
-    title: 'Recognize: the ceremony the whole framework points at',
+    title: 'Recognize, at twenty-one',
+    lede: 'Not confer. Not celebrate. Recognition acknowledges something already true.',
     body:
-      'The worksheet\'s final marker sits at twenty-one and is called Recognize — not confer, not celebrate. Recognition acknowledges something already true. Section 14 identifies this as the milestone most Christian families never mark, which is precisely why it belongs in the product. The content is public and specific: adults who have known them across the two decades saying what they see, a parent stating plainly that the formation work is complete and the relationship has changed, and something given that will still exist in forty years. Section 37\'s Story Of Your Childhood is generated to be handed over here.',
+      'Not confer. Not celebrate. Recognition acknowledges what is already true, and it is the milestone most Christian families never mark. Make it public and specific. Adults who have known them for two decades saying what they see. A parent stating plainly that the formation work is finished and the relationship has changed. Something given that will still exist in forty years.',
     actions: [
-      'Plan it properly, months ahead. Invite the people who were actually present across the twenty-one years.',
+      'Plan it months ahead. Invite the people who were actually present.',
       'Ask each to write rather than only speak, so the words survive the evening.',
-      'Say out loud, in front of witnesses, that the parenting work is finished and the relationship is now peer-with-history.',
+      'Say in front of witnesses that the parenting work is finished.',
       'Hand over the Story Of Your Childhood.',
     ],
     warrant: {
