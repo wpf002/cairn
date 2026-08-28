@@ -17,12 +17,13 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     category: 'SEE',
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
-    title: 'What they need to see now: parents who actually changed',
+    title: 'Parents who actually changed',
+    lede: 'They are watching whether you meant it about moving from authority to counsel.',
     body:
-      'The most persuasive thing a young adult can observe is parents who meant it — who genuinely moved from authority to counsel, who honour the adult child\'s household, money, calendar, and decisions without a shadow campaign of hints. They are also watching how you age into faith: whether the thing you taught them still holds you now that the enforcing is over. Your marriage, your church life, your generosity — all still on display, now evaluated by an adult who can compare it with everything else they have seen.',
+      'The most persuasive thing a young adult sees is parents who meant it. Who moved from authority to counsel and stayed there. Who honour their household, money, calendar and decisions with no shadow campaign of hints. They are also watching how you age into faith, and whether what you taught them still holds you now the enforcing is over. Your marriage, your church, your giving. All still on display, now judged by an adult with something to compare it to.',
     actions: [
-      'Audit your own follow-through quarterly: where did counsel drift back into management this season? Repair it out loud.',
-      'Let them see your faith continuing for its own sake — the serving and giving that outlived the parenting rationale.',
+      'Audit yourself quarterly. Where did counsel drift back into management? Repair it out loud.',
+      'Let them see your faith continuing for its own sake, after the parenting reason expired.',
     ],
     warrant: {
       passages: ['Genesis 2:24', 'Psalm 92:14'],
@@ -48,13 +49,14 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
-    title: 'What they need from you now: counsel that waits to be asked',
+    title: 'Counsel that waits to be asked',
+    lede: 'The wait is the discipline.',
     body:
-      'The counselor\'s discipline is the wait. Speak when asked — and then speak fully, honestly, without softening the hard part. Between askings: presence without pressure, the door open, the leash gone. Stop managing consequences entirely; a rescue at twenty-two costs what a rescue at nine cost, compounded. The proverb says counsel is sweet — like perfume — when it comes from a friend\'s earnest heart; the operative word is friend. That is the new job title.',
+      'The discipline is the wait. Speak when asked, and then speak fully, without softening the hard part. Between askings, presence without pressure. Door open, leash gone. Stop managing consequences altogether. A rescue at twenty-two costs what a rescue at nine cost, compounded. Proverbs says counsel is sweet when it comes from a friend. Friend is the operative word, and it is your new job title.',
     actions: [
-      'Institute the ask-first rule and keep it: advice waits for the invitation. Measure yourself honestly for a month.',
-      'When asked, give the whole answer — the counselor\'s privilege is candour, purchased by restraint.',
-      'Replace the check-up call with the friendship call: no agenda, no audit, genuinely curious.',
+      'Keep the ask-first rule. Advice waits for the invitation. Measure yourself a month.',
+      'When asked, give the whole answer. Candour is what the restraint bought you.',
+      'Swap the check-up call for the friendship call. No agenda, no audit.',
     ],
     warrant: {
       passages: ['Proverbs 27:9', '3 John 1:4'],
@@ -80,13 +82,14 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
-    title: 'The Recognize ceremony: finish out loud',
+    title: 'Finish out loud',
+    lede: 'Almost no family marks this one, which is why the app walks you through it.',
     body:
-      'The final marker on the worksheet grid sits at twenty-one: Recognize Manhood, Recognize Womanhood. It is the moment the parents say publicly that the formation work is finished and the relationship has changed — and it is the milestone almost no family marks, which is why this app walks you through it. Gather the circle who watched them grow. Letters, written to an adult. The words said plainly: "You are a man now. You are a woman now. We recognize it." A marker they keep. And the Story of Their Childhood — both parents\' threads, twenty-one years — placed in their hands.',
+      'This is where the parents say publicly that the formation work is finished and the relationship has changed. Almost no family marks it. Gather the circle who watched them grow. Letters, written to an adult. The words said plainly. "You are a man now." "You are a woman now." "We recognise it." Something they keep. And the Story of Their Childhood, both parents\' threads across twenty-one years, put into their hands.',
     actions: [
       'Set the date within the twenty-first year and treat it as immovable.',
-      'Invite the thirteen-year-old ceremony\'s circle where possible — the same voices, now speaking to an adult.',
-      'Write the recognition sentences beforehand and say them without hedging. This is the one speech in the whole roadmap that must not be improvised.',
+      'Invite the same circle from the ceremony at thirteen, now speaking to an adult.',
+      'Write the recognition sentences beforehand. Do not improvise this one.',
     ],
     warrant: {
       passages: ['Genesis 48:15-16', 'Numbers 6:24-26'],
@@ -145,12 +148,13 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
-    title: 'The 19–21 curriculum: a life someone else could depend on',
+    title: 'A life someone can depend on',
+    lede: 'Not can they run their own life. Could someone depend on the life they run.',
     body:
-      'The question matures: not "can they run their own life" but "could someone depend on the life they run?" File taxes. Carry insurance and know what it is for. Negotiate a lease and a salary. Build and repair credit, understanding Proverbs\' blunt word on debt. Choose a church and commit — membership, not attendance. Give consistently from real income. Evaluate a romantic relationship for marriage rather than for feeling. Keep commitments no one is checking. Ask for help without shame. And recover from one real failure — job, relationship, money — without a parent absorbing the cost.',
+      'The question matures. Not can they run their own life, but could someone depend on the life they run. File taxes. Carry insurance and know what it is for. Negotiate a lease and a salary. Build credit, and know what Proverbs says plainly about debt. Choose a church and commit to membership, not attendance. Give from real income. Keep commitments nobody checks. Ask for help without shame. Recover from one real failure with nobody absorbing the cost.',
     actions: [
-      'Offer the knowledge, not the management: a tax walkthrough, a lease read-through before signing — invited, once, then hands off.',
-      'When the real failure comes — it will — hold the counselor\'s line: full support, zero absorption. Be the safe place to process, not the insurance policy.',
+      'Offer knowledge, not management. One tax walkthrough, one lease read. Then hands off.',
+      'When the real failure comes, hold the line. Full support, zero absorption.',
     ],
     warrant: {
       passages: ['1 Corinthians 13:11', '2 Thessalonians 3:10', 'Proverbs 22:7'],
@@ -176,13 +180,14 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
-    title: 'The 19–21 layer: faith that is theirs, not yours',
+    title: 'Faith that is theirs',
+    lede: 'Church membership in a congregation you did not pick.',
     body:
-      'The final layer of the twenty-one-year curriculum: church membership by their own choice, in a congregation you did not pick. Stewardship from their own income. A faith crisis weathered without a parent in the room — and the discovery that it held. Discipling someone younger, because the faith that only receives is still adolescent. Sexual integrity as their own conviction. Suffering met without rescue. The goal stated at the start of the roadmap is due now: "I understand Christianity, I know what I believe, and I am capable of choosing whether I will follow Christ." Your part: pray more than you speak, and let the Spirit keep the timetable.',
+      'Church membership by their own choice, in a congregation you did not pick. Giving from their own income. A faith crisis weathered with no parent in the room, and the discovery that it held. Discipling someone younger, because a faith that only receives is still adolescent. Sexual integrity as their own conviction. Suffering met without a rescue. Your part now is to pray more than you speak, and let the Spirit keep the timetable.',
     actions: [
-      'Move to intercession as the primary instrument: pray daily, specifically, and mostly silently about it.',
-      'When they choose a church, a tradition, or an emphasis different from yours within orthodoxy, bless it out loud.',
-      'If a faith crisis comes, hold the Mark 9 posture — mercy on the doubt, confidence in the God who meets it — and resist managing the outcome.',
+      'Make intercession the main instrument. Daily, specific, and mostly silent.',
+      'When they choose differently from you inside orthodoxy, bless it out loud.',
+      'If a crisis comes, hold mercy on the doubt and confidence in God. Do not manage it.',
     ],
     warrant: {
       passages: ['2 Timothy 1:5', 'Philippians 1:6'],
@@ -208,12 +213,13 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
-    title: 'The destination, reached: launch is the success condition',
+    title: 'The empty room is the diploma',
+    lede: 'If that person now exists, imperfect and standing, the work succeeded.',
     body:
-      'Twenty-one years ago the roadmap named the objective: a capable, wise, loving, responsible, spiritually grounded adult who can govern their own life. If that person now exists — imperfect, still growing, but standing — the work succeeded, including every part that felt like failure at the time. The relationship does not end; it graduates: peer-with-history, friend-with-portfolio, and one day, if God grants it, grandparent. The empty room is not evidence of loss. It is the diploma.',
+      'Twenty-one years ago you set out to raise a capable, wise, loving, responsible adult who could govern their own life. If that person now exists, imperfect and still growing but standing, the work succeeded. That includes every part of it that felt like failure at the time. The relationship does not end. It graduates. Peer with history. Friend with a portfolio. One day, God willing, grandparent. The empty room is the diploma.',
     actions: [
-      'At the Recognize ceremony, say the completion out loud — to them, and privately to each other as parents.',
-      'Begin the new discipline the same week: relating to them as the adult they are, not the child you remember, one conversation at a time.',
+      'Say the completion out loud at the ceremony. Then privately, to each other.',
+      'Start the new discipline that week. Relate to the adult, not the child you remember.',
     ],
     warrant: {
       passages: ['Genesis 2:24', 'Luke 2:52', '3 John 1:4'],

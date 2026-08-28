@@ -23,12 +23,13 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'shared',
-    title: 'Aiming at: a child who tells the truth and can recover from being wrong',
+    title: 'Truth that is survivable',
+    lede: 'Not a child who never lies. One for whom telling the truth is survivable.',
     body:
-      'Five to seven is when lying becomes competent — a child can now construct a plausible falsehood and read whether it worked. What you are forming is not a child who never lies but one for whom telling the truth is survivable. Those are different targets and they respond to opposite tactics. Punishing the confession more heavily than the offence teaches concealment with perfect efficiency. Making the truth cheaper than the cover-up, consistently, is what produces a fifteen-year-old who tells you something difficult. That is the actual objective, and it is being decided now.',
+      'Around five, lying becomes competent. Your child can build a plausible falsehood and read whether it worked. You are not forming someone who never lies. You are forming someone for whom telling the truth is survivable. Punish the confession harder than the offence and you teach concealment with perfect efficiency. Make truth cheaper than the cover-up, every time, and you get a fifteen-year-old who tells you something difficult.',
     actions: [
-      'Reduce the consequence when they tell you unprompted, and say that is why.',
-      'Never interrogate when you already know. Ask them to tell you, and let them.',
+      'Cut the consequence when they tell you unprompted. Say that is why.',
+      'Never interrogate when you already know. Ask them to tell you.',
     ],
     warrant: {
       passages: ['Ephesians 4:25', 'Proverbs 28:13'],
@@ -52,12 +53,13 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'shared',
-    title: 'Aiming at: someone who is good at something, and kind while being it',
+    title: 'Good at something, and kind',
+    lede: 'Skill buys status, and status can be spent on cruelty.',
     body:
-      'Seven to nine is where competence and social standing start reinforcing each other, and where the two can come apart badly. A child who is good at something learns quickly that skill buys status, and status can be spent on cruelty. What you are forming is the pairing: real competence, developed seriously, held by someone who does not use it as a weapon or a measure of other people\'s worth. The pairing does not happen by default. It has to be named, because the surrounding culture will reliably teach only the first half.',
+      'A child who is good at something learns fast that skill buys status, and status can be spent on cruelty. You are forming the pairing. Real competence, developed seriously, held by someone who does not use it as a weapon or a ruler for other people. The pairing does not happen by default. Name it, because the culture around them will reliably teach only the first half.',
     actions: [
-      'Let them go deep on one thing rather than sampling six. Competence needs duration.',
-      'Name it directly when skill is used to diminish someone — including when they win.',
+      'Let them go deep on one thing rather than sampling six.',
+      'Name it when skill gets used to diminish someone, including when they win.',
       'Ask about the child in their class nobody sits with. Keep asking.',
     ],
     warrant: {
@@ -82,13 +84,14 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'shared',
-    title: 'Aiming at: someone who does right when the room disagrees',
+    title: 'When the room disagrees',
+    lede: 'Peer opinion overtakes adult opinion here, and it happens fast.',
     body:
-      'Nine to eleven is when peer opinion overtakes adult opinion as the dominant social force, and it happens fast. The target is a child whose behaviour is governed by something internal rather than by whoever is watching. This is not built by rules, which only relocate the external authority. It is built by giving them practice at holding a position under mild social cost while the cost is still mild — disagreeing with a friend, declining to join something, being the one who says it was them. Every rehearsal at ten is a rehearsal for fifteen, when the same skill is required against much heavier pressure.',
+      'Peer opinion overtakes adult opinion here, and it happens fast. Aim at a child governed by something internal rather than by whoever is watching. Rules do not build that. Rules relocate the authority. Practice builds it. Disagreeing with a friend. Declining to join something. Being the one who says it was them. Every rehearsal at ten is a rehearsal for fifteen, when the pressure is much heavier.',
     actions: [
-      'Praise unpopular right action specifically, and more loudly than you praise achievement.',
-      'Rehearse the exit line out loud: exactly what they say and do when they want to leave a situation.',
-      'Tell them plainly they can blame you to get out of anything, any time, no questions.',
+      'Praise unpopular right action, and louder than you praise achievement.',
+      'Rehearse the exit line out loud. What they say and do to leave a situation.',
+      'Tell them they can blame you to get out of anything, any time.',
     ],
     warrant: {
       passages: ['Romans 12:2', 'Daniel 1:8'],
@@ -112,12 +115,13 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'shared',
-    title: 'Aiming at: a distinct person, not a compliant one',
+    title: 'Distinct, not compliant',
+    lede: 'They are building a self that is not an extension of this household.',
     body:
-      'Eleven to thirteen is when a young person begins constructing a self that is not simply an extension of the household, and it is uncomfortable by design. The mistake available here is to read differentiation as rebellion and to suppress it, which produces one of two outcomes: a compliant adolescent who defers the individuation to twenty-five and does it destructively, or a young person who concludes that being themselves and being loved are incompatible. What you are aiming at is someone who is genuinely distinct from you and still connected to you. Both halves are the target.',
+      'They are building a self that is not an extension of this household, and it is uncomfortable by design. Read it as rebellion and suppress it, and you get one of two outcomes. A compliant adolescent who defers all this to twenty-five and does it destructively. Or a young person who concludes that being themselves and being loved cannot both happen. Aim at someone genuinely distinct from you and still connected to you.',
     actions: [
-      'Let them differ from you visibly in something that does not matter — music, clothes, opinions — without commentary.',
-      'Distinguish out loud between what is a moral boundary and what is merely your preference. Enforce the first; concede the second.',
+      'Let them differ from you visibly on something that does not matter. No commentary.',
+      'Separate a moral boundary from your preference out loud. Enforce one, concede the other.',
     ],
     warrant: {
       passages: ['Psalm 139:13-16', 'Colossians 3:21'],
@@ -141,13 +145,14 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'shared',
-    title: 'Aiming at: someone who keeps commitments nobody is checking',
+    title: 'Commitments nobody checks',
+    lede: 'Obedience answers a present authority and disappears with it.',
     body:
-      'Thirteen to fifteen is the stage where external structure should begin visibly receding, and the question becomes what remains when it does. Not obedience — obedience is a response to a present authority and it disappears with the authority. What you are forming is self-government: doing the thing at the time they said they would, when no one will know if they do not. This is the trait that most reliably predicts whether independence goes well, and it can only be built by removing supervision incrementally and letting the gaps show.',
+      'External structure should be visibly receding now. The question is what remains. Not obedience. Obedience answers a present authority and disappears with it. You are building self-government. Doing the thing at the time they said, when nobody will know if they do not. It predicts whether independence goes well better than anything else, and it only grows by removing supervision and letting the gaps show.',
     actions: [
-      'Stop checking one thing you currently check. Tell them you have stopped, and mean it.',
+      'Stop checking one thing you currently check. Tell them, and mean it.',
       'Let a missed commitment produce its natural cost rather than a reminder.',
-      'Ask them to set their own deadline, then hold them to the one they set rather than one you would have chosen.',
+      'Let them set the deadline. Hold them to theirs, not to yours.',
     ],
     warrant: {
       passages: ['Psalm 15:4', 'Matthew 5:37'],
@@ -171,12 +176,13 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'shared',
-    title: 'Aiming at: can this young adult responsibly govern their own life?',
+    title: 'Can they govern their life?',
+    lede: 'Answerable, not rhetorical. Score it honestly, domain by domain.',
     body:
-      'Section 13 names this as the central question at eighteen, and it is answerable rather than rhetorical. Money, work, food, housing, transport, relationships, conflict, sex, faith, health, time, commitments, decisions, failure, success, safety, technology, morality. The useful exercise is to score it honestly domain by domain in the year before they leave, because a gap identified at seventeen is a teachable problem and the same gap at nineteen is a crisis occurring in another city. Most families discover the list is shorter than they feared and more specific than they expected.',
+      'This is answerable, not rhetorical. Money, work, food, housing, transport, relationships, conflict, sex, faith, health, time, commitments, failure, safety, technology. Score it honestly, domain by domain, in the year before they leave. A gap found at seventeen is a teachable problem. The same gap at nineteen is a crisis in another city. Most families find the list shorter than they feared and more specific than they expected.',
     actions: [
-      'Score each domain honestly this year: can they do it alone, with help, or not at all?',
-      'Pick the three weakest and build them deliberately, with real practice rather than conversation.',
+      'Score each domain this year. Alone, with help, or not at all.',
+      'Pick the three weakest. Build them with real practice, not conversation.',
       'Tell them the list. It is theirs to close, not yours to close for them.',
     ],
     warrant: {
@@ -201,13 +207,14 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['emerging-adult'] },
     voice: 'shared',
-    title: 'Aiming at: someone another person could depend on',
+    title: 'Someone others can depend on',
+    lede: 'Self-sufficiency is surviving. Dependability is being load-bearing for someone else.',
     body:
-      'Section 13 shifts the question at nineteen from "can they govern their own life?" to "can they build a life someone else could depend on?" — a materially higher bar. Self-sufficiency is about surviving; dependability is about being load-bearing for someone else. The markers are unromantic: keeping commitments when nobody is checking, asking for help without shame, recovering from a real failure without a parent absorbing the cost, and giving consistently rather than when convenient. Most of this is now outside your control, which is itself the point.',
+      'The question changes at nineteen. Not can they run their own life, but could someone else depend on the life they run. Self-sufficiency is surviving. Dependability is load-bearing. The markers are unromantic. Commitments kept when nobody checks. Help asked for without shame. A real failure survived without a parent absorbing the cost. Giving that happens when it is inconvenient. Most of this is outside your control now.',
     actions: [
-      'Stop absorbing costs. A failure they carry themselves is the only version that teaches.',
-      'When they ask for help, give it cleanly, without terms and without a lecture attached.',
-      'Notice out loud when someone else relies on them and it holds.',
+      'Stop absorbing costs. Only a failure they carry themselves teaches anything.',
+      'When they ask for help, give it cleanly. No terms, no lecture.',
+      'Say it out loud when someone relies on them and it holds.',
     ],
     warrant: {
       passages: ['Luke 16:10', 'Galatians 6:2'],
@@ -231,13 +238,14 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: ['young-adult'] },
     voice: 'shared',
-    title: 'The whole aim, stated plainly at twenty-one',
+    title: 'The whole aim',
+    lede: 'Some of it did not happen. That is the ordinary experience of every parent who finished.',
     body:
-      'Section 13 states the destination without hedging: helping a completely dependent newborn become someone capable, wise, loving, responsible, spiritually grounded, emotionally mature, competent, independent, compassionate, honest, courageous, disciplined, humble, and able to govern their own life. At twenty-one you can look at that list and see, honestly, which of it happened. Some did not, and that is the ordinary experience of every parent who has ever finished. The framework does not require a perfect result; it requires that the work was aimed somewhere and that the aim is now handed over, out loud, to the person who will finish it themselves.',
+      'You set out to help a completely dependent newborn become someone capable, wise, loving, responsible, honest, disciplined, humble, and able to run their own life. At twenty-one you can look at that list and see which of it happened. Some did not. That is the ordinary experience of every parent who has ever finished. Nobody needs a perfect result. The work was aimed somewhere, and now the aim gets handed to the person who will finish it.',
     actions: [
-      'Say out loud what you were aiming at for twenty-one years, and where you fell short.',
-      'Hand the remaining work to them explicitly. It is theirs now, and saying so is the release.',
-      'Mark it with the Recognize ceremony rather than letting it pass by drift.',
+      'Say what you were aiming at for twenty-one years, and where you fell short.',
+      'Hand the remaining work over explicitly. Saying so is the release.',
+      'Mark it with the Recognize ceremony rather than letting it drift past.',
     ],
     warrant: {
       passages: ['Luke 2:52', '3 John 4'],
