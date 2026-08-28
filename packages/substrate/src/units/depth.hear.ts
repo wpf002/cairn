@@ -29,12 +29,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'father',
     pairedWith: 'hear.mother.early-childhood',
-    title: 'What a five-year-old is checking when he looks up at you',
+    title: 'The look after the jump',
+    lede: 'He jumps off the step and turns to find your face. The looking is the event.',
     body:
-      'At this age a child performs and then looks — and in most households it is the father whose noticing is rationed, which is exactly what makes it weigh more. The look up after the jump, the drawing carried across the room: the child is auditing whether you saw. What lands is not volume but specificity, and specificity about the thing they chose rather than the thing you wish they had chosen. "You kept going after it fell over twice" is heard. "Good job" is not — it is the sound a parent makes while looking at a phone, and children learn the difference before they can name it.',
+      'He jumps off the step and turns to find your face. She carries the drawing across the room and stops. The looking is the event, not the jump. Fathers hand this out less often, so when it comes from you it costs more. Say what you actually saw. "You kept going after it fell over twice." Not "good job," which is the sound a parent makes while looking at a phone.',
     actions: [
-      'When they show you something, say one concrete sentence about what you actually noticed before you say anything evaluative.',
-      'Once this week, praise something they chose that you would not have chosen for them.',
+      'Say one concrete thing you noticed before you say anything evaluative.',
+      'Praise something they chose that you would never have chosen for them.',
     ],
     warrant: {
       passages: ['1 Thessalonians 2:11-12', 'Proverbs 25:11'],
@@ -59,12 +60,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'mother',
     pairedWith: 'hear.father.early-childhood',
-    title: 'Your running commentary is becoming their inner voice',
+    title: 'Your throwaway sentences',
+    lede: 'Not the speeches. The sentences you say five hundred times without noticing.',
     body:
-      'The parent who speaks most is the parent whose phrasing the child internalises, and in most households at this age that is the mother. Not the speeches — the ambient sentences. "You are so slow in the mornings." "You are my helper." Said five hundred times, these stop being descriptions and become equipment: the child picks them up and uses them on themselves at seven, at seventeen, at forty. The work here is not adding praise. It is auditing the sentences you already say most often, because those are the ones being installed.',
+      'Not the speeches. The ambient ones. "You are so slow in the mornings." "You are my helper." Said five hundred times, those stop being descriptions and become equipment. Your child picks them up and uses them on themselves at seven, at seventeen, at forty. The work is not adding praise. It is listening to what you already say most.',
     actions: [
-      'For two days, notice which sentence about your child you say most. That is the one doing the forming.',
-      'Replace one recurring exasperated label ("you never listen") with the behaviour it describes ("I need you to come the first time I call").',
+      'For two days, notice which sentence about your child you say most.',
+      'Swap "you never listen" for "come the first time I call."',
     ],
     warrant: {
       passages: ['Ephesians 4:29', 'Proverbs 12:25'],
@@ -91,12 +93,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'father',
     pairedWith: 'hear.mother.middle-childhood',
-    title: 'The competence years: name the skill, not the child',
+    title: 'Name the skill, not the child',
+    lede: 'School has started issuing evidence about who your child is. Graded, weekly.',
     body:
-      'Seven to nine is when a child starts deciding what kind of person they are on the evidence of what they can do — and school begins issuing that evidence in graded form. A father\'s words here are unusually load-bearing on the competence axis. The useful move is technical: name the specific skill you saw, with the vocabulary of someone who knows the domain. "Your second attempt was slower and that is why it held." Children can tell the difference between a parent who is impressed and a parent who was actually watching, and only the second one builds a durable sense of capability. Praise aimed at the whole self ("you\'re so smart") does the opposite — it makes every future failure evidence about their identity.',
+      'Seven is when a child starts deciding who they are from what they can do, and school issues that evidence weekly. Get technical. "Your second attempt was slower and that is why it held." A child can tell the difference between a parent who is impressed and a parent who was watching. Only the second builds anything durable. "You are so smart" does the opposite, and makes every future failure a verdict.',
     actions: [
-      'Praise the process in domain language: what they adjusted, what they repeated, what they chose.',
-      'Let them hear you describe a specific competence of theirs to another adult, accurately, while they are in the room.',
+      'Praise what they adjusted, repeated, or chose. Not what they are.',
+      'Let them overhear you describe a real skill of theirs to another adult.',
     ],
     warrant: {
       passages: ['Luke 16:10', 'Proverbs 22:29'],

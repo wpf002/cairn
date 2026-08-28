@@ -17,13 +17,14 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...BAND_5_11] },
     voice: 'father',
     pairedWith: 'see.mother.coach-years',
-    title: 'They are watching how a man handles losing, winning, and being wrong',
+    title: 'How a man loses',
+    lede: 'They will handle losing the way they watched you handle losing.',
     body:
-      'The worksheet marks a father\'s character and spiritual life as especially important from five to seventeen — this is the heart of that band. A school-age child is now scoring your reactions: what you do when the referee is wrong, when the promotion goes elsewhere, when you are beaten at checkers by an eight-year-old, when Mom proves you wrong at dinner. Competitive grace, honest defeat, and visible weekday faith are the syllabus. They will handle losing the way you handle losing.',
+      'A school-age child is scoring your reactions now. The referee gets it wrong. The promotion goes to someone else. An eight-year-old beats you at checkers. Your wife proves you wrong at dinner in front of everyone. What you do in those four seconds is the lesson. They will handle losing the way they watched you handle losing, and there is no version of this you can teach with words.',
     actions: [
-      'Lose to them sometimes for real — play hard, lose honestly, model the handshake.',
-      'Narrate one of your own failures this month at the dinner table, including what you did next.',
-      'Let them catch you praying or reading Scripture without an audience being the point.',
+      'Play hard and lose honestly sometimes. Then shake their hand.',
+      'Tell them about one of your failures at dinner this month, and what you did next.',
+      'Let them catch you praying when an audience was not the point.',
     ],
     warrant: {
       passages: ['Titus 2:7', '1 Corinthians 11:1'],
@@ -48,12 +49,13 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...BAND_5_11] },
     voice: 'mother',
     pairedWith: 'see.father.coach-years',
-    title: 'They are watching how a woman speaks — about herself, and about others',
+    title: 'How a woman speaks',
+    lede: 'Your child is learning the inner voice they will use on themselves. Mostly from yours.',
     body:
-      'In the comparison years, your child is learning the inner voice they will use on themselves — largely from yours. How you speak about your own body, your own mistakes, other women, and people who annoy you is being installed verbatim. A daughter learns what womanhood sounds like from the inside of your sentences; a son learns what women are owed by how you expect to be spoken to. Kindness of tongue and dignity of self-description are the coach-years curriculum in the mother\'s voice.',
+      'Your child is building the voice they will use on themselves, and they are building it out of yours. How you talk about your body. Your mistakes. Other women. The person who annoyed you in the car park. It goes in verbatim. A daughter learns what womanhood sounds like from inside your sentences. A son learns what women are owed by how you expect to be spoken to.',
     actions: [
-      'Retire self-disparagement in front of them — about your body, your cooking, your competence. They are taking dictation.',
-      'Let them hear you speak graciously about someone who wronged you — once, deliberately, this month.',
+      'Stop running yourself down in front of them. They are taking dictation.',
+      'Let them hear you speak kindly about someone who wronged you. Once, on purpose.',
     ],
     warrant: {
       passages: ['Proverbs 31:26', 'Ephesians 4:29'],
@@ -143,12 +145,13 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'stage', stages: [...BAND_5_11] },
     voice: 'shared',
-    title: 'Words for the comparison years: specific, true, and aimed at character',
+    title: 'Say the specific thing',
+    lede: 'Your child lives among rankings now. Generic praise has stopped landing.',
     body:
-      'Your child now lives among rankings, and generic praise ("good job, buddy") has stopped landing — they can hear its emptiness. What they need is precision: "You kept your temper when the call went against you." "You told the truth when it cost you." The affirmation ladder\'s first rung — I love you — still holds daily; the worksheet\'s affirming-encouragement row runs hot through this whole band. Encouragement that names real character builds a child who pursues character; praise that names talent builds a child who protects a reputation.',
+      'Your child lives among rankings now, and they can hear the emptiness in "good job, buddy." Get specific. "You kept your temper when the call went against you." "You told the truth when it cost you." Praise aimed at talent produces a child who protects a reputation. Praise aimed at character produces a child who goes after character. And "I love you" still runs daily underneath all of it.',
     actions: [
-      'Once a day, name one specific, true thing — effort or character, not talent.',
-      '"I love you" keeps its fixed anchors, and especially follows failure: after the lost game, the bad grade, the discipline.',
+      'Name one true specific thing a day. Effort or character, never talent.',
+      'Keep the "I love you" anchors, especially after the lost game and the bad grade.',
     ],
     warrant: {
       passages: ['Proverbs 16:24', '1 Thessalonians 5:11'],

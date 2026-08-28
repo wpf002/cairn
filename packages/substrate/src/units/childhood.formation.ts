@@ -104,12 +104,13 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'stage', stages: [...ALL_0_5] },
     voice: 'shared',
-    title: '"I love you" — said, daily, from before they understand it',
+    title: 'Say it before they understand it',
+    lede: 'Your child should never be able to remember the first time they heard it.',
     body:
-      'The second full-span row on the worksheet: "I love you," ages one to twenty-one, no gaps. It starts now, spoken to a baby who cannot parse it — because the practice must be older than the child\'s memory. A child who cannot remember the first time a parent said "I love you" has been given something structural: the words were always there, like the floor. Say it at the same fixed points (waking, leaving, sleeping) so its absence would be noticed, and say it after discipline especially — that is when the words do their heaviest work.',
+      'Say it to a baby who cannot understand it yet. That is the point. Your child should never be able to remember the first time they heard it, the way nobody remembers learning the floor was there. Fix it to the same moments every day. Waking, leaving, sleeping. Then say it after discipline, which is when the words do their heaviest work. Ages one to twenty-one, no gaps.',
     actions: [
-      'Fix "I love you" to at least two daily anchors — final words at bedtime, first words at reunion.',
-      'Always reconnect after correction with the words said aloud: the discipline and the love must arrive in the same hour.',
+      'Pick two daily anchors. Last words at bedtime, first words at reunion.',
+      'After every correction, say it out loud. The discipline and the love arrive in the same hour.',
     ],
     warrant: {
       passages: ['1 John 4:19', 'Romans 5:8'],
@@ -133,12 +134,13 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'stage', stages: ['toddler', 'preschool'] },
     voice: 'shared',
-    title: 'Words that bless versus words that grade',
+    title: 'Bless them, do not grade them',
+    lede: 'By three, a child is fluent in your evaluations. Most of what they hear is grading.',
     body:
-      'By three, a child is fluent in your evaluations — and evaluation is most of what modern children hear ("good job" as verbal wallpaper). What they need woven in is blessing: words about who they are and whose they are, not what they produced. "You are ours. God made you on purpose. Being with you is one of my favourite things." A blessing has no performance clause, which is exactly what distinguishes it — and children can hear the difference long before they can describe it.',
+      'By three a child is fluent in your evaluations, and grading is most of what they hear. "Good job" is wallpaper. Weave in something else. "You are ours." "God made you on purpose." "Being with you is one of my favourite things." A blessing has no performance clause anywhere in it. Children can hear that difference years before they can describe it.',
     actions: [
-      'Add one performance-free sentence a day: about their presence, not their output.',
-      'Institute a weekly blessing moment — a hand on the head at Sunday bedtime, a sentence of blessing said the same way. Small liturgy, long half-life.',
+      'Say one sentence a day about their presence, not their output.',
+      'Put a hand on their head at Sunday bedtime and bless them the same way each week.',
     ],
     warrant: {
       passages: ['Numbers 6:24-26', 'Genesis 48:8-9'],

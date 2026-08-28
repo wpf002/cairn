@@ -19,12 +19,13 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...ALL_0_5] },
     voice: 'father',
     pairedWith: 'child.see.mother-loving-father',
-    title: 'The most important thing your child will watch you do',
+    title: 'Dad loving Mom',
+    lede: 'Your child cannot follow a sermon yet. They are already recording a marriage.',
     body:
-      'On the worksheet this whole framework grew from, only two rows run the entire span from one to twenty-one, and this is one of them: Dad loving Mom. Your child cannot yet parse a sermon, but they are already recording a marriage. How you speak to her when the baby has been crying for an hour, whether you reach for her hand in ordinary moments, how you apologise — this is the curriculum that is always in session.',
+      'Your child cannot follow a sermon yet. They are already recording a marriage. How you speak to her when the baby has been crying for an hour. Whether you reach for her hand while the kettle boils. What you do after you were wrong. Two rows on the worksheet run the whole span, one to twenty-one. This is one of them. Class is always in session.',
     actions: [
-      'Let your child routinely see affection between you: the greeting kiss, the thank-you, the hand on the shoulder.',
-      'When you are wrong with her in front of the kids, apologise in front of the kids.',
+      'Let them see the greeting kiss, the thank-you, the hand on the shoulder.',
+      'Wrong with her in front of the kids? Apologise in front of the kids.',
     ],
     warrant: {
       passages: ['Ephesians 5:25-33'],
@@ -49,12 +50,13 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...ALL_0_5] },
     voice: 'mother',
     pairedWith: 'child.see.father-loving-mother',
-    title: 'What your child learns from how you love their dad',
+    title: 'Mom loving Dad',
+    lede: 'The tone you use about him when he is out of the room is studied closely.',
     body:
-      'The second full-span constant, mirrored: Mom loving Dad. Your child is learning what respect sounds like, what partnership looks like, and what a woman\'s strength is for — from you, daily, whether or not you are teaching. The tone you use about him when he is not in the room may be the most closely studied speech your child ever hears.',
+      'Your child is learning what respect sounds like. What partnership looks like. What a woman\'s strength is for. They learn it from you, daily, whether or not you meant to teach. The tone you use about him when he is not in the room may be the most closely studied speech your child ever hears.',
     actions: [
-      'Speak well of their father to your children, especially in his absence.',
-      'Let them see you receive his care without scorekeeping, and offer yours without martyrdom.',
+      'Speak well of their father to them, especially when he is not there.',
+      'Receive his care without scorekeeping. Give yours without martyrdom.',
     ],
     warrant: {
       passages: ['Ephesians 5:33', 'Titus 2:4'],
@@ -79,12 +81,13 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...ALL_0_5] },
     voice: 'shared',
     soloVariantOf: 'child.see.father-loving-mother',
-    title: 'Your child still gets to watch love — yours',
+    title: 'They still get to watch love',
+    lede: 'Your household writes this row differently. Not worse.',
     body:
-      'The worksheet\'s longest row assumes two parents; your household writes it differently, not worse. What the constant actually teaches is that love is enacted, daily, reliably — and a single parent models that every time a child watches them keep showing up, honour the other parent where that is possible, speak without bitterness where it is not, and receive help from friends, family, and church without shame. Your child is not missing the lesson. They are watching you teach it under harder conditions, which is the more memorable class.',
+      'The lesson was never two parents. The lesson is that love gets done, daily, on days nobody feels it. Your child watches you keep showing up. Watches you speak without bitterness about someone who earned it. Watches you take help from a friend or a church without shame. They are not missing the class. They are watching it taught under harder conditions, which they will remember longer.',
     actions: [
-      'Let your child see your friendships and your church carry you sometimes — being loved is also modeled.',
-      'Where the other parent is part of your child\'s life, guard your speech about them; where they are not, guard your child from carrying your grief for you.',
+      'Let them see your friends and your church carry you. Being loved is also modelled.',
+      'Guard your speech about their other parent. Guard your child from carrying your grief.',
     ],
     warrant: {
       passages: ['Psalm 68:5-6'],
@@ -110,12 +113,13 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...INFANCY] },
     voice: 'father',
     pairedWith: 'child.see.mother-character.infancy',
-    title: 'The father a baby is recording',
+    title: 'The father a baby records',
+    lede: 'Your tone at 3am. Whether you are a parent or a babysitter in your own house.',
     body:
-      'Nobody preaches to an infant, and yet the recording is running: your tone at 3am, whether you are a parent or a babysitter in your own house, whether mom gets relieved or managed. The habits of fatherhood set in the first year are the ones that will still be running at year twelve. The baby will not remember this year. You will, and so will your wife, and the father you are practising becoming is the one your child will eventually see.',
+      'Nobody preaches to an infant. The recording still runs. Your tone at 3am. Whether you are a parent in this house or a babysitter in it. Whether your wife gets relieved or managed. Habits set in year one are still running at year twelve. The baby will not remember. Your wife will, and so will the man you are practising becoming.',
     actions: [
-      'Own real territory, alone, from the start — bath time, a night shift, the morning hour — not as help but as yours.',
-      'Start one private habit of prayer for this child now, before they can watch; it will be visible soon enough.',
+      'Own real territory alone. Bath time, a night shift, the morning hour. Yours, not help.',
+      'Start praying for this child now, privately. It becomes visible soon enough.',
     ],
     warrant: {
       passages: ['Titus 2:7'],
@@ -139,12 +143,13 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...INFANCY] },
     voice: 'mother',
     pairedWith: 'child.see.father-character.infancy',
-    title: 'The mother a baby is recording',
+    title: 'The mother a baby records',
+    lede: 'This year forms you faster than any year will form your child.',
     body:
-      'The first year of motherhood forms you faster than any year will form your child — and the woman being formed is the model your child will grow up watching. Two things are being recorded even now: how you treat yourself when you fail (the harsh self-talk toddlers later mimic word-for-word), and where you go when you are empty. A mother who visibly refuels — rest, friendship, prayer, help accepted — is teaching sustainability. A mother who only ever pours out is teaching martyrdom, and children learn both lessons equally well.',
+      'Two things are already being recorded. How you talk to yourself when you fail, which toddlers repeat back word for word. And where you go when you are empty. A mother who rests, calls a friend, prays, takes the help, is teaching that this is sustainable. A mother who only pours out is teaching martyrdom. Children learn both equally well.',
     actions: [
-      'Take the break that is offered. Accepting care in front of your child is curriculum, not weakness.',
-      'When you lose your patience, narrate the repair out loud — "Mama was frustrated; I\'m sorry; let\'s try again" — years before they can say it back.',
+      'Take the break that is offered. Being cared for in front of them is the lesson.',
+      'Say the repair out loud. "Mama was frustrated. I am sorry. Let us try again."',
     ],
     warrant: {
       passages: ['Proverbs 31:25-26', 'Mark 6:31'],
@@ -168,12 +173,13 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...TODDLERHOOD] },
     voice: 'father',
     pairedWith: 'child.see.mother-character.toddlerhood',
-    title: 'Your toddler is now quoting you — in behaviour',
+    title: 'Your toddler is quoting you',
+    lede: 'Everything is imitated now. How you drive. Your face when plans change.',
     body:
-      'From here on, everything is imitated: how you drive, how you talk about the referee, what your face does when dinner plans change, whether your faith exists on weekdays. A toddler cannot be taught emotional regulation; they can only catch it. The single most valuable thing a father models in these years is the repaired failure: losing your temper, and then — visibly, out loud — apologising. A child who watches a strong man apologise learns that strength and repentance live in the same person.',
+      'How you drive. What you say about the referee. Your face when dinner plans change. Whether your faith turns up on a Tuesday. A toddler cannot be taught to regulate. They catch it. The most valuable thing you model in these years is the repaired failure. You lose your temper, and then you apologise, out loud, where they can see. A child who watches a strong man apologise learns that strength and repentance live in the same body.',
     actions: [
-      'Apologise to your child directly when you blow it: kneel, eye level, plain words. No "but."',
-      'Let them see your faith in ordinary time: praying, reading, serving — witnessed, not performed.',
+      'When you blow it, kneel to eye level and say it plainly. No "but."',
+      'Let them catch your faith on an ordinary Tuesday. Witnessed, not performed.',
     ],
     warrant: {
       passages: ['1 Corinthians 11:1', 'James 5:16'],
@@ -197,12 +203,13 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...TODDLERHOOD] },
     voice: 'mother',
     pairedWith: 'child.see.father-character.toddlerhood',
-    title: 'The regulation your toddler borrows is yours',
+    title: 'They borrow your brakes',
+    lede: 'A toddler mid-meltdown has none of their own.',
     body:
-      'A toddler mid-meltdown has no working brakes — they borrow yours. Which means the most-watched model in these years is your nervous system: the breath you take before responding, the voice that stays low when theirs goes high, the calm that is decided rather than felt. Nobody performs this perfectly. The target is not serenity; it is showing them, hundreds of times, what coming back down looks like — including the times you have to come back down yourself, out loud.',
+      'A toddler mid-meltdown has no brakes. They borrow yours. So the most-watched thing in these years is your nervous system. The breath before you answer. The voice that goes down when theirs goes up. Calm you decided on rather than felt. Nobody does this well every time. The target is showing them, several hundred times, what coming back down looks like. Including your own.',
     actions: [
-      'In the meltdown, lower your voice as theirs rises. You are demonstrating the skill they are missing.',
-      'When you snap, model the comeback: name it, apologise, reconnect. The repair teaches more than the rupture cost.',
+      'Lower your voice as theirs rises. You are demonstrating the skill they lack.',
+      'When you snap, come back. Name it, apologise, reconnect. The repair outweighs the rupture.',
     ],
     warrant: {
       passages: ['Proverbs 15:1', 'Galatians 5:22-23'],

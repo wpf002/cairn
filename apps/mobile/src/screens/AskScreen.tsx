@@ -54,7 +54,6 @@ export function AskScreen({ adapter }: { adapter: ModelAdapter | null }) {
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={{ padding: spacing.md }}>
-      <Text style={type.label}>HELP ME PARENT THIS</Text>
       <Card>
         <View style={styles.childRow}>
           {family.children.map((c) => (

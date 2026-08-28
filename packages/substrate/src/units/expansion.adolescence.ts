@@ -177,13 +177,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'stage', stages: [...TEEN] },
     voice: 'shared',
-    title: '"I\'m proud of you" and "I admire this about you" — the rows that start now',
+    title: 'Proud of you, and I admire you',
+    lede: 'A thirteen-year-old knows their own effort now, and can tell what was earned.',
     body:
-      'The worksheet back-loads these deliberately: from about thirteen, competence-based and character-based affirmation begin doing work they could not do at eight — because the teenager knows their own effort now, and can detect what is earned. "I\'m proud of you" lands on effort and growth. "I admire this about you" goes further: it tells them character is becoming visible, that they are becoming a distinct person someone respects. Both rows run to twenty-one. And the first rung never retires — a fifteen-year-old still needs "I love you," especially on the days they seem least interested in it.',
+      'These two start at thirteen for a reason. A teenager knows their own effort now and can tell what was earned, which an eight-year-old cannot. "I am proud of you" lands on work and growth. "I admire this about you" goes further, and tells them their character has become visible to someone. Both run to twenty-one. And a fifteen-year-old still needs "I love you," most on the days they look least interested.',
     actions: [
-      'Say "I\'m proud of you" for something they worked at within the week — named, specific.',
-      'Once a season, the admire sentence: "I admire how you ___ — that\'s not common." Watch what it does.',
-      'Keep the "I love you" anchors from childhood running, unembarrassed, through every eye-roll.',
+      'Say "I am proud of you" about something they worked at this week. Name it.',
+      'Once a season: "I admire how you did that. It is not common." Then watch.',
+      'Keep the childhood anchors running through every eye-roll, unembarrassed.',
     ],
     warrant: {
       passages: ['Matthew 3:17', 'Proverbs 25:11'],

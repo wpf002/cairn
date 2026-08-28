@@ -24,7 +24,7 @@ export function JourneyScreen() {
           onChange={setSection}
           options={[
             { id: 'memory', label: 'Memory' },
-            { id: 'path', label: 'The path' },
+            { id: 'path', label: 'The Path' },
           ]}
         />
       </View>

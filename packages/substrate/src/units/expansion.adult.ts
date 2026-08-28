@@ -112,13 +112,14 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     category: 'HEAR',
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
-    title: '"I respect the person you\'re becoming." "I need your counsel on this."',
+    title: 'Respect, then trust',
+    lede: 'Nothing announces a changed relationship like being asked for counsel and taken seriously.',
     body:
-      'The ladder\'s last rungs. Around eighteen to twenty: "I respect the person you\'re becoming" — spoken to their agency, their judgment, their competence. At the summit, around twenty-one: "I trust you," and its more radical twin, "I need your counsel on this" — the first time the parent genuinely asks and genuinely takes the answer. Nothing announces the changed relationship like being consulted. And beneath the new rungs, the oldest one still bears weight: the worksheet runs "I love you" to the edge of the grid. A twenty-one-year-old still needs it. Say all of it.',
+      'Around eighteen: "I respect the person you are becoming." Say it to their judgement and their competence, not their behaviour. Around twenty-one: "I trust you," and the harder one, "I need your counsel on this." Then actually take the answer. Nothing announces a changed relationship like being consulted. Underneath both, the oldest rung still carries weight. A twenty-one-year-old still needs to hear you love them.',
     actions: [
-      'Say the respect sentence this season about something specific they handled as an adult.',
-      'Ask their counsel on something real in your own life — and visibly weigh it.',
-      '"I love you" — still at the partings, still at the ends of calls, unretired.',
+      'Say the respect sentence about something specific they handled as an adult.',
+      'Ask their counsel on something real in your life. Let them see you weigh it.',
+      'Still say it at the partings and the ends of calls.',
     ],
     warrant: {
       passages: ['Proverbs 25:11', 'Romans 12:10'],
