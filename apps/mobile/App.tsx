@@ -4,10 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { FamilyContext, DEMO_FAMILY } from './src/state/family';
 import { TodayScreen } from './src/screens/TodayScreen';
 import { ChildScreen } from './src/screens/ChildScreen';
-import { WeekScreen } from './src/screens/WeekScreen';
-import { TrackersScreen } from './src/screens/TrackersScreen';
-import { PrepareScreen } from './src/screens/PrepareScreen';
-import { RoadmapScreen } from './src/screens/RoadmapScreen';
+import { PregnancyScreen } from './src/screens/PregnancyScreen';
 import { AskScreen } from './src/screens/AskScreen';
 import { JourneyScreen } from './src/screens/JourneyScreen';
 import { PremiumScreen } from './src/screens/PremiumScreen';
@@ -19,18 +16,24 @@ import { colors, spacing, type } from './src/theme';
  * PREGNANCY (week card + trackers + prepare), ROADMAP. ASK arrives with
  * Phase 5, BIBLE/PROFILE later.
  */
-type Tab = 'today' | 'children' | 'pregnancy' | 'ask' | 'journey' | 'roadmap' | 'premium';
+type Tab = 'today' | 'ask' | 'journey' | 'premium';
 
+/**
+ * Three destinations.
+ *
+ * Children and Weeks are gone: a child's page is reached by tapping that
+ * child on the home screen, and a pregnancy is a child, so its week-by-week
+ * lives on that child's page too. Path folded into Journey, which is the same
+ * story at a different zoom.
+ */
 const TABS: { id: Tab; label: string; glyph: string }[] = [
   { id: 'today', label: 'Today', glyph: '◐' },
-  { id: 'children', label: 'Children', glyph: '✻' },
-  { id: 'pregnancy', label: 'Weeks', glyph: '◍' },
   { id: 'ask', label: 'Ask', glyph: '❞' },
   { id: 'journey', label: 'Journey', glyph: '◈' },
-  { id: 'roadmap', label: 'Path', glyph: '▲' },
 ];
 
-type PregnancySub = 'week' | 'trackers' | 'prepare';
+/** What the home screen has opened, if anything. */
+type Open = { kind: 'none' } | { kind: 'child'; id: string } | { kind: 'pregnancy' };
 
 /**
  * ASK's model adapter. Routes through Cairn's Edge Function so the Anthropic
@@ -40,73 +43,42 @@ const anthropic = proxyAdapter();
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('today');
-  const [openChildId, setOpenChildId] = useState<string | null>(null);
-  const [pregnancySub, setPregnancySub] = useState<PregnancySub>('week');
+  const [open, setOpen] = useState<Open>({ kind: 'none' });
 
   return (
     <FamilyContext.Provider value={DEMO_FAMILY}>
       <SafeAreaView style={styles.root}>
         <StatusBar style="dark" />
         <View style={styles.header}>
-          <Text style={type.display}>Cairn</Text>
+          {open.kind === 'none' || tab !== 'today' ? (
+            <Text style={type.display}>Cairn</Text>
+          ) : (
+            <Pressable onPress={() => setOpen({ kind: 'none' })} hitSlop={10}>
+              <Text style={styles.back}>‹ Today</Text>
+            </Pressable>
+          )}
           <Pressable onPress={() => setTab('premium')}>
             <Text style={styles.premiumLink}>Premium</Text>
           </Pressable>
         </View>
 
         <View style={{ flex: 1 }}>
-          {tab === 'today' && (
+          {tab === 'today' && open.kind === 'none' && (
             <TodayScreen
-              onOpenChild={(id) => {
-                setOpenChildId(id);
-                setTab('children');
-              }}
+              onOpenChild={(id) => setOpen({ kind: 'child', id })}
+              onOpenPregnancy={() => setOpen({ kind: 'pregnancy' })}
             />
           )}
-          {tab === 'children' && (
-            <View style={{ flex: 1 }}>
-              <View style={styles.subTabs}>
-                {DEMO_FAMILY.children.map((c) => (
-                  <Pressable key={c.id} onPress={() => setOpenChildId(c.id)}>
-                    <Text
-                      style={[
-                        styles.subTabText,
-                        (openChildId ?? DEMO_FAMILY.children[0]?.id) === c.id && styles.subTabActive,
-                      ]}
-                    >
-                      {c.name}
-                    </Text>
-                  </Pressable>
-                ))}
-              </View>
-              <ChildScreen childId={openChildId ?? DEMO_FAMILY.children[0]?.id ?? ''} />
-            </View>
-          )}
-          {tab === 'pregnancy' && (
-            <View style={{ flex: 1 }}>
-              <View style={styles.subTabs}>
-                {(['week', 'trackers', 'prepare'] as const).map((s) => (
-                  <Pressable key={s} onPress={() => setPregnancySub(s)}>
-                    <Text style={[styles.subTabText, pregnancySub === s && styles.subTabActive]}>
-                      {s === 'week' ? 'This Week' : s === 'trackers' ? 'Trackers' : 'Prepare'}
-                    </Text>
-                  </Pressable>
-                ))}
-              </View>
-              {pregnancySub === 'week' && <WeekScreen />}
-              {pregnancySub === 'trackers' && <TrackersScreen />}
-              {pregnancySub === 'prepare' && <PrepareScreen />}
-            </View>
-          )}
+          {tab === 'today' && open.kind === 'child' && <ChildScreen childId={open.id} />}
+          {tab === 'today' && open.kind === 'pregnancy' && <PregnancyScreen />}
           {tab === 'ask' && <AskScreen adapter={anthropic} />}
           {tab === 'journey' && <JourneyScreen />}
-          {tab === 'roadmap' && <RoadmapScreen />}
           {tab === 'premium' && <PremiumScreen />}
         </View>
 
         <View style={styles.tabs}>
           {TABS.map((t) => (
-            <Pressable key={t.id} style={styles.tab} onPress={() => setTab(t.id)}>
+            <Pressable key={t.id} style={styles.tab} onPress={() => { setTab(t.id); setOpen({ kind: 'none' }); }}>
               <Text style={[styles.tabGlyph, tab === t.id && styles.tabActive]}>{t.glyph}</Text>
               <Text style={[styles.tabText, tab === t.id && styles.tabActive]} numberOfLines={1}>
                 {t.label}
@@ -129,6 +101,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   premiumLink: { ...type.soft, color: colors.indigo, fontWeight: '600' },
+  back: { fontSize: 19, color: colors.indigo, fontWeight: '600' },
   tabs: {
     flexDirection: 'row',
     borderTopWidth: 1,

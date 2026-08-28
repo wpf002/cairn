@@ -1,33 +1,30 @@
-import { View } from 'react-native';
+import { Alert } from 'react-native';
 import { buildToday } from '@cairn/dashboard';
 import { allUnits, ledeFor } from '@cairn/substrate';
 import { firstAvailableVerse } from '@cairn/canon';
-import {
-  Action,
-  Card,
-  CardTitle,
-  CategoryChip,
-  Hero,
-  Lede,
-  MetricRow,
-  PrayerCard,
-  ScriptureCard,
-  Screen,
-  SectionLabel,
-} from '../components/ui';
+import { AddCard, Action, Card, CardTitle, ChildCard, PrayerCard, ScriptureCard, Screen, SectionLabel } from '../components/ui';
 import { useFamily } from '../state/family';
-import { categoryColor, colors } from '../theme';
+import { colors } from '../theme';
 
 /**
- * TODAY — the product surface (sections 20, 29).
+ * TODAY — the home screen (sections 20, 29).
  *
- * Composed the way the category leaders compose: a gradient hero carrying the
- * one number a parent should read from across the room, scripture on its own
- * deep surface in serif rather than buried behind a tap, a prayer, and one
- * action per child. The formation category of every card is shown as a
- * coloured chip, so the seven-category framework is visible before it is read.
+ * Scripture sits at the top, because the roadmap's claim is that this is a
+ * Christian formation platform and the faith layer should be the first thing
+ * a parent meets rather than something they scroll to.
+ *
+ * Under it, one compact card per child — a pregnancy is a child here too,
+ * carried in that child's own card rather than on a separate Weeks tab.
+ * Everything about a child lives one tap in, so the home screen stays
+ * scannable instead of stacking a dashboard per child.
  */
-export function TodayScreen({ onOpenChild }: { onOpenChild: (id: string) => void }) {
+export function TodayScreen({
+  onOpenChild,
+  onOpenPregnancy,
+}: {
+  onOpenChild: (id: string) => void;
+  onOpenPregnancy: () => void;
+}) {
   const family = useFamily();
   const today = buildToday(
     {
@@ -41,45 +38,16 @@ export function TodayScreen({ onOpenChild }: { onOpenChild: (id: string) => void
     family.today,
   );
 
-  // The scripture surface takes the first passage Cairn ships verse text for,
-  // drawn from the units already selected for today rather than a separate
-  // verse-of-the-day feed. What a parent reads is warranted by what they are
-  // being asked to do.
-  const passages = today.blocks
-    .flatMap((b) => b.focus?.unit.warrant?.passages ?? [])
-    .concat(today.parentFocus?.unit.warrant?.passages ?? []);
-  const verse = firstAvailableVerse(passages);
+  // Scripture is drawn from the warrant of the units already chosen for today,
+  // so what a parent reads is tied to what they are being asked to do.
+  const verse = firstAvailableVerse(
+    today.blocks
+      .flatMap((b) => b.focus?.unit.warrant?.passages ?? [])
+      .concat(today.parentFocus?.unit.warrant?.passages ?? []),
+  );
 
   return (
     <Screen>
-      {today.blocks.map((block) => {
-        const focus = block.focus?.unit;
-        const counter = splitCounter(block.counterLine);
-        const cat = focus ? categoryColor[focus.category] : undefined;
-        return (
-          <View key={block.id}>
-            <Hero
-              variant={block.kind === 'child' ? 'child' : 'pregnancy'}
-              eyebrow={block.kind === 'child' ? (block.headline.split(' — ')[1] ?? '') : heroEyebrow(block)}
-              title={heroTitle(block)}
-              sub={block.subline}
-              metricValue={counter?.value}
-              metricUnit={counter?.unit}
-              progress={block.progress}
-              onPress={block.kind === 'child' ? () => onOpenChild(block.id) : undefined}
-            />
-            {focus ? (
-              <Card accent={cat?.fg}>
-                <CategoryChip category={focus.category} heading={focus.category} />
-                <CardTitle>{focus.title}</CardTitle>
-                <Lede>{ledeFor(focus)}</Lede>
-                {block.action ? <Action color={cat?.fg}>{block.action}</Action> : null}
-              </Card>
-            ) : null}
-          </View>
-        );
-      })}
-
       {verse ? (
         <>
           <SectionLabel>TODAY'S SCRIPTURE</SectionLabel>
@@ -87,12 +55,40 @@ export function TodayScreen({ onOpenChild }: { onOpenChild: (id: string) => void
         </>
       ) : null}
 
+      <SectionLabel>YOUR CHILDREN</SectionLabel>
+      {today.blocks.map((block) => {
+        const counter = splitCounter(block.counterLine);
+        const pregnancy = block.kind === 'pregnancy';
+        return (
+          <ChildCard
+            key={block.id}
+            name={pregnancy ? 'Baby' : (block.headline.split(' — ')[0] ?? block.headline)}
+            stage={pregnancy ? weekLine(block.headline) : (block.headline.split(' — ')[1] ?? '')}
+            metricValue={counter?.value ?? ''}
+            metricUnit={shortUnit(counter?.unit ?? '')}
+            progress={block.progress}
+            action={block.action ?? undefined}
+            tint={pregnancy ? colors.violet : colors.teal}
+            onPress={pregnancy ? onOpenPregnancy : () => onOpenChild(block.id)}
+          />
+        );
+      })}
+
+      <AddCard
+        label="Add a child"
+        onPress={() =>
+          Alert.alert(
+            'Add a child',
+            'Onboarding captures a name, a birthdate or due date, and your voice. Wired up when the encrypted profile store lands.',
+          )
+        }
+      />
+
       {today.parentFocus ? (
         <>
-          <SectionLabel color={colors.violet}>BECOMING THE PARENT THEY NEED</SectionLabel>
+          <SectionLabel color={colors.violet}>FOR YOU</SectionLabel>
           <Card accent={colors.violet}>
             <CardTitle>{today.parentFocus.unit.title}</CardTitle>
-            <Lede>{ledeFor(today.parentFocus.unit)}</Lede>
             {today.parentFocus.unit.actions?.[0] ? (
               <Action color={colors.violet}>{today.parentFocus.unit.actions[0]}</Action>
             ) : null}
@@ -101,31 +97,30 @@ export function TodayScreen({ onOpenChild }: { onOpenChild: (id: string) => void
       ) : null}
 
       <PrayerCard>
-        Father, you knew each of these children before we did. Give us today what they need from us,
-        and make us the kind of people they can safely watch. Amen.
+        Father, you knew these children before we did. Give us today what they need from us. Amen.
       </PrayerCard>
     </Screen>
   );
 }
 
-/** "Emma — 13 weeks pregnant" splits into the name and the week. */
-function heroEyebrow(block: { headline: string; kind: string }): string {
-  const [name] = block.headline.split(' — ');
-  return name ?? block.headline;
+/**
+ * Counter units, shortened for the card lane.
+ * "days until the due date" reads fine in a hero and collides with a name in
+ * a row, so the row gets the short form.
+ */
+function shortUnit(unit: string): string {
+  if (unit.startsWith('days until')) return 'days left';
+  if (unit.startsWith('weeks until')) return 'weeks to 21';
+  return unit;
 }
 
-function heroTitle(block: { headline: string; kind: string }): string {
-  const parts = block.headline.split(' — ');
-  const tail = parts[1] ?? '';
-  if (block.kind === 'pregnancy') {
-    const m = /(\d+)\s*weeks/.exec(tail);
-    return m ? `Week ${m[1]}` : tail;
-  }
-  // For a child the name is the title and the stage is the eyebrow.
-  return parts[0] ?? block.headline;
+/** "Emma — 13 weeks pregnant" becomes "Week 13". */
+function weekLine(headline: string): string {
+  const m = /(\d+)\s*weeks/.exec(headline);
+  return m ? `Week ${m[1]} · due soon` : 'Pregnancy';
 }
 
-/** "772 weeks until 21" becomes 772 / "weeks until 21", so it can be set as a figure. */
+/** "772 weeks until 21" splits into the figure and its unit. */
 function splitCounter(line: string | undefined): { value: string; unit: string } | null {
   if (!line) return null;
   const m = /^([\d,]+)\s+(.*)$/.exec(line.trim());

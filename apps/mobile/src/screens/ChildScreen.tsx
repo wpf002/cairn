@@ -6,6 +6,7 @@ import {
   Action,
   Card,
   CardTitle,
+  CategoryChip,
   Divider,
   Expandable,
   Lede,
@@ -15,7 +16,7 @@ import {
   Source,
 } from '../components/ui';
 import { useFamily } from '../state/family';
-import { colors, spacing, type } from '../theme';
+import { categoryColor, colors, spacing, type } from '../theme';
 
 /**
  * The per-child age dashboard — section 21's ten sections, voice-resolved.
@@ -57,14 +58,14 @@ export function ChildScreen({ childId }: { childId: string }) {
       {view.categories.map((section) =>
         section.units.length === 0 ? null : (
           <View key={section.category}>
-            <SectionLabel>{section.heading}</SectionLabel>
-            <Card>
+            <SectionLabel color={categoryColor[section.category]?.fg}>{section.heading}</SectionLabel>
+            <Card accent={categoryColor[section.category]?.fg}>
               {section.units.map(({ unit, decision }, i) => (
                 <View key={unit.id}>
                   {i > 0 ? <Divider /> : null}
                   {decision === 'paired' ? <Text style={styles.tag}>What your spouse is carrying</Text> : null}
                   {decision === 'solo' ? <Text style={styles.tag}>For a parent carrying both roles</Text> : null}
-                  <UnitBlock unit={unit} />
+                  <UnitBlock unit={unit} tint={categoryColor[section.category]?.fg} />
                 </View>
               ))}
             </Card>
@@ -120,14 +121,18 @@ export function ChildScreen({ childId }: { childId: string }) {
 }
 
 /** One unit: headline, one sentence, and the rest behind a tap. */
-function UnitBlock({ unit }: { unit: Unit }) {
+function UnitBlock({ unit, tint }: { unit: Unit; tint?: string }) {
   const minutes = readingMinutes(unit.body);
   return (
     <View style={styles.unit}>
       <CardTitle>{unit.title}</CardTitle>
-      <Expandable summary={<Lede>{ledeFor(unit)}</Lede>} openLabel={`Read more · ${minutes} min`}>
+      <Expandable
+        summary={<Lede>{ledeFor(unit)}</Lede>}
+        openLabel={`Read more · ${minutes} min`}
+        color={tint}
+      >
         <Text style={type.body}>{unit.body}</Text>
-        {unit.actions?.[0] ? <Action>{unit.actions[0]}</Action> : null}
+        {unit.actions?.[0] ? <Action color={tint}>{unit.actions[0]}</Action> : null}
         {unit.warrant ? <Source>{unit.warrant.passages.join(' · ')}</Source> : null}
         {unit.evidence?.length ? <Source>Source: {unit.evidence.map((e) => e.org).join(', ')}</Source> : null}
       </Expandable>

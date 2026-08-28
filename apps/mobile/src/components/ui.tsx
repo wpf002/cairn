@@ -179,6 +179,100 @@ export function Card({
   );
 }
 
+/**
+ * A compact child row for TODAY.
+ *
+ * The home screen carries one of these per child and one for a pregnancy.
+ * Everything about that child lives one tap in, so TODAY stays scannable
+ * rather than stacking a full dashboard per child.
+ */
+export function ChildCard({
+  name,
+  stage,
+  metricValue,
+  metricUnit,
+  progress,
+  action,
+  tint,
+  onPress,
+}: {
+  name: string;
+  stage: string;
+  metricValue: string;
+  metricUnit: string;
+  progress: number;
+  action?: string;
+  tint: string;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable onPress={onPress} style={({ pressed }) => pressed && styles.pressed}>
+      <View style={styles.childCard}>
+        <View style={styles.childTop}>
+          <View style={[styles.avatar, { backgroundColor: tint }]}>
+            <Text style={styles.avatarText}>{name.slice(0, 1).toUpperCase()}</Text>
+          </View>
+          <View style={styles.childIdentity}>
+            <Text style={styles.childName} numberOfLines={1}>
+              {name}
+            </Text>
+            <Text style={styles.childStage} numberOfLines={1}>
+              {stage}
+            </Text>
+          </View>
+          <View style={styles.childMetric}>
+            <Text style={[type.figureSm, { color: tint }]} numberOfLines={1}>
+              {metricValue}
+            </Text>
+            <Text style={styles.childMetricUnit} numberOfLines={2}>
+              {metricUnit}
+            </Text>
+          </View>
+        </View>
+        <ProgressBar value={progress} color={tint} />
+        {action ? (
+          <Text style={styles.childAction} numberOfLines={2}>
+            {action}
+          </Text>
+        ) : null}
+      </View>
+    </Pressable>
+  );
+}
+
+/** Add a child, from the home screen. */
+export function AddCard({ label, onPress }: { label: string; onPress: () => void }) {
+  return (
+    <Pressable onPress={onPress} style={({ pressed }) => pressed && styles.pressed}>
+      <View style={styles.addCard}>
+        <Text style={styles.addPlus}>+</Text>
+        <Text style={styles.addText}>{label}</Text>
+      </View>
+    </Pressable>
+  );
+}
+
+/** A segmented control for sub-sections inside a page. */
+export function Segments<T extends string>({
+  value,
+  options,
+  onChange,
+}: {
+  value: T;
+  options: { id: T; label: string }[];
+  onChange: (id: T) => void;
+}) {
+  return (
+    <View style={styles.segments}>
+      {options.map((o) => (
+        <Pressable key={o.id} onPress={() => onChange(o.id)} style={[styles.segment, value === o.id && styles.segmentOn]}>
+          <Text style={[styles.segmentText, value === o.id && styles.segmentTextOn]}>{o.label}</Text>
+        </Pressable>
+      ))}
+    </View>
+  );
+}
+
 /** A category chip: the glyph and hue that make the framework visible. */
 export function CategoryChip({ category, heading }: { category: string; heading: string }) {
   const c = categoryColor[category] ?? { fg: colors.stone, bg: colors.bgRaised, glyph: '•' };
@@ -299,6 +393,54 @@ const styles = StyleSheet.create({
   },
   cardQuiet: { backgroundColor: colors.bgRaised, borderColor: 'transparent' },
   pressed: { opacity: 0.75 },
+
+  childCard: {
+    backgroundColor: colors.card,
+    borderRadius: radius.card,
+    padding: spacing.lg,
+    marginBottom: spacing.md,
+    borderWidth: 1,
+    borderColor: colors.line,
+  },
+  childTop: { flexDirection: 'row', alignItems: 'center', marginBottom: spacing.sm },
+  // The identity column shrinks and the metric keeps a fixed lane, so a long
+  // unit label can never run under the child's name.
+  childIdentity: { flex: 1, minWidth: 0, marginRight: spacing.sm },
+  avatar: { width: 42, height: 42, borderRadius: 21, alignItems: 'center', justifyContent: 'center', marginRight: spacing.md },
+  avatarText: { color: '#FFFFFF', fontSize: 18, fontWeight: '700' },
+  childName: { fontSize: 20, fontWeight: '700', color: colors.ink, letterSpacing: -0.3 },
+  childStage: { ...type.meta, marginTop: 1 },
+  childMetric: { alignItems: 'flex-end', width: 96 },
+  childMetricUnit: {
+    fontSize: 10,
+    lineHeight: 13,
+    fontWeight: '700',
+    letterSpacing: 0.6,
+    color: colors.stone,
+    textTransform: 'uppercase',
+    textAlign: 'right',
+  },
+  childAction: { ...type.soft, color: colors.ink, marginTop: spacing.md },
+
+  addCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: radius.card,
+    paddingVertical: spacing.md,
+    marginBottom: spacing.md,
+    borderWidth: 1.5,
+    borderStyle: 'dashed',
+    borderColor: colors.line,
+  },
+  addPlus: { fontSize: 19, color: colors.stone, marginRight: spacing.sm, fontWeight: '600' },
+  addText: { ...type.soft, color: colors.inkSoft, fontWeight: '600' },
+
+  segments: { flexDirection: 'row', backgroundColor: colors.bgRaised, borderRadius: radius.pill, padding: 3, marginBottom: spacing.lg },
+  segment: { flex: 1, paddingVertical: 7, borderRadius: radius.pill, alignItems: 'center' },
+  segmentOn: { backgroundColor: colors.card },
+  segmentText: { fontSize: 13, fontWeight: '700', color: colors.stone },
+  segmentTextOn: { color: colors.ink },
 
   chip: {
     flexDirection: 'row',

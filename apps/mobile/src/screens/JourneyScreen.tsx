@@ -1,16 +1,39 @@
+import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { CEREMONIES, MILESTONE_MOMENTS, nextCeremony } from '@cairn/journey';
 import { Card } from '../components/Card';
+import { Segments } from '../components/ui';
+import { RoadmapScreen } from './RoadmapScreen';
 import { useFamily } from '../state/family';
 import { colors, spacing, type } from '../theme';
 
 /**
- * Journey — family memory and Milestone Moments. The full capture flow
- * (entries, photos, sealed letters) rides on the encrypted store; this
- * surface shows the shape: the next ceremony, the milestone list, and the
- * promise of the Story at twenty-one.
+ * Journey — family memory, Milestone Moments, and the 21-year path.
+ *
+ * The roadmap used to be its own tab. It is the same story told at a
+ * different zoom — where this child is on the twenty-one years — so it lives
+ * here as a second section rather than as a sixth destination.
  */
 export function JourneyScreen() {
+  const [section, setSection] = useState<'memory' | 'path'>('memory');
+  return (
+    <View style={{ flex: 1 }}>
+      <View style={{ paddingHorizontal: spacing.lg, paddingTop: spacing.lg }}>
+        <Segments
+          value={section}
+          onChange={setSection}
+          options={[
+            { id: 'memory', label: 'Memory' },
+            { id: 'path', label: 'The path' },
+          ]}
+        />
+      </View>
+      {section === 'memory' ? <MemorySection /> : <RoadmapScreen />}
+    </View>
+  );
+}
+
+function MemorySection() {
   const family = useFamily();
   const child = family.children[0] ?? null;
   const upcoming = child ? nextCeremony(child.birthdate, family.today) : null;
