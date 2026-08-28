@@ -15,12 +15,13 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: [...INFANCY] },
     voice: 'shared',
-    title: 'Experiences to create in the first year: rhythm and faces',
+    title: 'Rhythm, not outings',
+    lede: 'An infant\'s formative experiences are not trips. They are the same song, nightly.',
     body:
-      'An infant\'s formative experiences are not outings; they are rhythms. The same song before every sleep. Grace before meals they cannot eat yet. The weekly gathering where the same church faces smile at them. Rhythm is how a preliterate person learns what the world is like — and a household whose rhythms already include God is giving the baby a first geography with worship in it.',
+      'The same song before every sleep. Grace before meals they cannot eat yet. The same church faces smiling at them on Sunday. Rhythm is how someone who cannot read learns what the world is like. A household whose rhythms already include God hands a baby a first map with worship on it.',
     actions: [
-      'Set one fixed daily ritual per parent — the bath song, the morning window, the goodnight blessing — and defend it.',
-      'Bring the baby into the worshiping community from the start; being carried in the congregation is an experience, not a logistics problem.',
+      'Set one fixed daily ritual each. The bath song, the morning window, the blessing.',
+      'Carry the baby into the congregation from the start. That is an experience, not logistics.',
     ],
     warrant: {
       passages: ['Deuteronomy 6:7', 'Luke 2:22-27'],
@@ -43,12 +44,13 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['early-toddler', 'toddler'] },
     voice: 'shared',
-    title: 'Experiences to create at one to three: the touchable world',
+    title: 'The touchable world',
+    lede: 'A toddler is a scientist with no grant and no safety protocols.',
     body:
-      'A toddler is a scientist with no grant and no safety protocols. The experience they need most is the touchable world — dirt, water, animals, rain, dough, the mess your schedule would prefer to skip — with a parent narrating creation as creation: "God made this. Feel it." One-on-one time starts mattering here too, not for its content but for its exclusivity: ten minutes where nobody else exists teaches a two-year-old the sentence underneath all formation — I am worth someone\'s undivided time.',
+      'A toddler is a scientist with no grant and no safety protocols. Give them the touchable world. Dirt, water, animals, rain, dough, all the mess your schedule would rather skip. Narrate it plainly. "God made this. Feel it." One-on-one starts mattering here too, for its exclusivity rather than its content. Ten minutes where nobody else exists teaches a two-year-old that they are worth somebody\'s undivided attention.',
     actions: [
-      'Get outside daily where possible; narrate what God made in plain words while they touch it.',
-      'Give each child ten unshared minutes a day, device down, following their lead. Guard it like an appointment.',
+      'Get outside daily. Name what God made, in plain words, while they touch it.',
+      'Give each child ten unshared minutes a day, device down, following their lead.',
     ],
     warrant: {
       passages: ['Psalm 19:1', 'Mark 10:13-16'],
@@ -72,13 +74,14 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: ['preschool'] },
     voice: 'shared',
-    title: 'Experiences to create at three to five: firsts worth remembering',
+    title: 'Firsts worth remembering',
+    lede: 'Preschool memory starts keeping. Engineer the firsts now.',
     body:
-      'Preschool memory starts keeping. This is the window for the deliberate firsts: the first camping night, the first time they hand the gift they chose to someone who needed it, the first job finished and celebrated, the first loss taken without a rescue. Engineer them — the worksheet behind this app calls these "special opportunities," and it marks them because they close. Also begin the tradition stack: the birthday blessing, the Christmas Eve reading, the Saturday pancakes. Traditions are the stones children ask about later.',
+      'Preschool memory starts keeping, so engineer the firsts. The first night in a tent. The first time they hand over a gift they chose for someone who needed it. The first job finished and celebrated. The first loss nobody rescued them from. Start the traditions too. The birthday blessing, the Christmas Eve reading, the Saturday pancakes. Traditions are the stones children ask about later.',
     actions: [
-      'Plan one memorable first this season and let them anticipate it for days — anticipation is half the formation.',
-      'Establish one tradition per year that is theirs — and write down its origin story in the family journal.',
-      'Let them lose a game this month without rescuing the outcome; debrief gently afterward.',
+      'Plan one memorable first this season. Let them anticipate it for days.',
+      'Start one tradition a year that is theirs. Write down where it came from.',
+      'Let them lose a game this month without a rescue. Debrief gently after.',
     ],
     warrant: {
       passages: ['Deuteronomy 6:20-25', 'Joshua 4:6-7'],
@@ -105,9 +108,9 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...ALL_0_5] },
     voice: 'shared',
     title: 'Say it before they understand it',
-    lede: 'Your child should never be able to remember the first time they heard it.',
+    lede: 'Your child should never remember the first time they heard it.',
     body:
-      'Say it to a baby who cannot understand it yet. That is the point. Your child should never be able to remember the first time they heard it, the way nobody remembers learning the floor was there. Fix it to the same moments every day. Waking, leaving, sleeping. Then say it after discipline, which is when the words do their heaviest work. Ages one to twenty-one, no gaps.',
+      'Say it to a baby who cannot understand it yet. Your child should never be able to remember the first time they heard it, the way nobody remembers learning the floor was there. Fix it to the same moments every day. Waking, leaving, sleeping. Then say it after discipline, which is when the words do their heaviest work. Ages one to twenty-one, no gaps.',
     actions: [
       'Pick two daily anchors. Last words at bedtime, first words at reunion.',
       'After every correction, say it out loud. The discipline and the love arrive in the same hour.',
@@ -135,9 +138,9 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['toddler', 'preschool'] },
     voice: 'shared',
     title: 'Bless them, do not grade them',
-    lede: 'By three, a child is fluent in your evaluations. Most of what they hear is grading.',
+    lede: 'By three a child is fluent in your evaluations. Grading is most of what they hear.',
     body:
-      'By three a child is fluent in your evaluations, and grading is most of what they hear. "Good job" is wallpaper. Weave in something else. "You are ours." "God made you on purpose." "Being with you is one of my favourite things." A blessing has no performance clause anywhere in it. Children can hear that difference years before they can describe it.',
+      'By three a child is fluent in your evaluations. Grading is most of what they hear. "Good job" is wallpaper. Weave in something else. "You are ours." "God made you on purpose." "Being with you is one of my favourite things." A blessing has no performance clause anywhere in it. Children can hear that difference years before they can describe it.',
     actions: [
       'Say one sentence a day about their presence, not their output.',
       'Put a hand on their head at Sunday bedtime and bless them the same way each week.',
@@ -165,12 +168,13 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: [...INFANCY] },
     voice: 'shared',
-    title: 'The first year\'s curriculum runs through you',
+    title: 'This year the student is you',
+    lede: 'A baby\'s syllabus is short. Trust, language, cause and effect. You are the student.',
     body:
-      'A baby\'s syllabus is short and non-negotiable: trust, through answered needs; language, through the thousands of words you narrate at them; cause and effect, through games and dropped spoons. Which means the actual student this year is you — learning your baby\'s cues, learning to read tiredness before it becomes despair, learning the difference between a hungry cry and a bored one. Study your child. Expertise in this particular human is the qualification everything later relies on.',
+      'Trust, through needs that get answered. Language, through the thousands of words you say at them. Cause and effect, through dropped spoons. The real student this year is you. Learning the cues. Reading tiredness before it turns into despair. Telling a hungry cry from a bored one. Expertise in this particular human is what everything later rests on.',
     actions: [
-      'Narrate your day to the baby in ordinary speech — the word count they hear this year is a real developmental input.',
-      'Learn your baby\'s specific tired cues and act on them early; you are learning to read the child God actually gave you, not the one in the book.',
+      'Narrate your day to the baby in ordinary speech. The word count is a real input.',
+      'Learn your baby\'s tired cues and act early. Read the child God gave you.',
     ],
     warrant: {
       passages: ['Proverbs 27:23', 'Proverbs 22:6'],
@@ -193,12 +197,13 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: ['early-toddler', 'toddler'] },
     voice: 'shared',
-    title: 'What a toddler is learning: the first yes',
+    title: 'The first yes',
+    lede: 'A toddler learns what you enforce, not what you announce.',
     body:
-      'Between one and three, a child can begin learning that a parent\'s word means something: come when called, stop at "stop," hands are not for hitting. Keep the list short and the follow-through total — a toddler learns what you enforce, not what you announce. This is not about breaking a will; it is about building the specific trust that lets a three-year-old stop at the curb because you said so, before they can understand why. First obedience is a safety feature and a spiritual foundation in the same skill.',
+      'Come when called. Stop at "stop." Hands are not for hitting. Keep the list short and the follow-through total, because a toddler learns what you enforce, not what you announce. Nobody is breaking a will here. You are building the trust that stops a three-year-old at the kerb because you said so, years before they can understand why. It is a safety feature and a spiritual foundation in one skill.',
     actions: [
-      'Train the safety commands deliberately, as games, in calm moments: "come," "stop," "hold my hand."',
-      'Never give an instruction you are not prepared to follow through on — every unenforced command teaches that your words are weather.',
+      'Train the safety commands as games, in calm moments. Come. Stop. Hold my hand.',
+      'Never give an instruction you will not follow through. Unenforced words become weather.',
     ],
     warrant: {
       passages: ['Ephesians 6:1-4'],
@@ -221,13 +226,14 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: ['preschool'] },
     voice: 'shared',
-    title: 'The age-five life curriculum',
+    title: 'The age-five curriculum',
+    lede: 'Every one of these is easier taught at five than at fifteen.',
     body:
-      'By around five, a child can be learning, with coaching and failure built in: telling the truth even when it costs; cleaning up what they got out; losing a game without melting down; please, thank you, and waiting a turn; the difference between kind and unkind words; basic body boundaries — who may touch them, and that no is a full sentence; and simple owned responsibilities done to completion. None of these arrive by birthday. All of them are teachable by repetition, modeling, and unhysterical correction — and every one is easier taught at five than at fifteen.',
+      'Tell the truth when it costs something. Clean up what you got out. Lose a game without melting down. Please, thank you, wait your turn. Kind words and unkind ones. Who may touch them, and that no is a full sentence. One job, done to the end. None of it arrives on a birthday. All of it comes by repetition, modelling and calm correction, and every one is easier at five than at fifteen.',
     actions: [
-      'Pick the weakest item on the list and make it this month\'s single coaching focus — one skill at a time, named and practised.',
-      'Teach truth-telling by making it cheap: when they confess, the consequence shrinks and the thanks is real.',
-      'Teach body boundaries matter-of-factly: correct names for body parts, which adults help with what, and that secrets about bodies are never kept.',
+      'Pick the weakest item and make it this month\'s focus. One skill, practised.',
+      'Make truth cheap. When they confess, the consequence shrinks and the thanks is real.',
+      'Teach body boundaries plainly. Correct names, who helps with what, and no body secrets.',
     ],
     warrant: {
       passages: ['Proverbs 1:8', 'Zechariah 8:16', 'Luke 16:10'],
@@ -253,13 +259,14 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['newborn', 'early-infancy', 'later-infancy', 'early-toddler', 'toddler'] },
     voice: 'shared',
-    title: 'The 0–3 foundation: God loves you',
+    title: 'God loves you',
+    lede: 'The whole theological curriculum for three years is one sentence.',
     body:
-      'The entire theological curriculum for the first three years is one sentence — God loves you — taught almost entirely without words. It is taught by reliable arms, by the sung grace, by the bedtime prayer they hear over themselves, by the tone the household uses when God comes up. Add the smallest verbal layer as language arrives: God made this. God loves you. We talk to God, and it is called praying. Thank you, God. That is the whole syllabus, and it is enough.',
+      'The whole curriculum for three years is one sentence, taught almost without words. Reliable arms. A sung grace. The bedtime prayer they hear said over them. The tone this house uses when God comes up. Add the smallest verbal layer as language arrives. God made this. God loves you. Talking to God is called praying. Thank you, God. That is enough.',
     actions: [
-      'Pray aloud over your child nightly — one sentence, same shape, their name in it.',
-      'Sing one worship song into the daily rhythm; melody carries theology years before syntax can.',
-      'Say table grace even for toddler snacks — gratitude to God, installed as furniture.',
+      'Pray over your child nightly. One sentence, same shape, their name in it.',
+      'Sing one worship song daily. Melody carries theology years before syntax can.',
+      'Say grace even for toddler snacks. Gratitude to God, installed as furniture.',
     ],
     warrant: {
       passages: ['Deuteronomy 6:4-7', '2 Timothy 3:15'],
@@ -283,13 +290,14 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['preschool'] },
     voice: 'shared',
-    title: 'The 4–6 layer: learning who God is',
+    title: 'Who God is like',
+    lede: 'Not only that God loves them. What God is actually like.',
     body:
-      'A preschooler is ready for the next layer: not just that God loves them, but what God is like. Good. Maker of everything. The one who forgives when we say sorry. The one Jesus shows us. Bible stories now do real work — creation, Noah, David, and above all Jesus: welcoming children, healing, dying and alive again, told plainly and often. Their questions will be enormous ("Who made God?", "Can God see me in the bathroom?") — answer simply and honestly, and treasure the asking. A child whose questions are welcomed at four brings the harder ones at fourteen.',
+      'Good. Maker of everything. The one who forgives when we say sorry. The one Jesus shows us. Bible stories start doing real work now. Creation, Noah, David, and above all Jesus welcoming children, healing, dying, alive again. Their questions will be enormous. "Who made God?" "Can God see me in the bathroom?" Answer simply and honestly. A child whose questions are welcome at four brings the harder ones at fourteen.',
     actions: [
-      'Read a Bible storybook a few nights a week — repetition of the same stories beats novelty.',
-      'Answer every God-question with respect, simply, and admit plainly when something is a mystery — "nobody knows; isn\'t that amazing?" is a faithful answer.',
-      'Begin sorry-prayers alongside thank-you prayers: forgiveness as an early, practised category.',
+      'Read a Bible storybook a few nights a week. Repetition beats novelty here.',
+      'Answer every God-question simply. "Nobody knows, and is that not amazing?" is faithful.',
+      'Start sorry-prayers alongside thank-you prayers. Forgiveness, practised early.',
     ],
     warrant: {
       passages: ['Psalm 78:4-7', 'Mark 10:14'],
@@ -315,12 +323,13 @@ export const CHILDHOOD_FORMATION_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: [...ALL_0_5] },
     voice: 'shared',
-    title: 'What the first five years are for',
+    title: 'What these five years are for',
+    lede: 'Not a happy toddler or a compliant preschooler. Those are weather.',
     body:
-      'The objective of these years is not a happy toddler or a compliant preschooler — those are weather. The objective is the foundation of a person: securely attached, beginning self-control, able to tell the truth, at home in a household where God is real. Everything this app has asked of you from birth to five serves that person — the twenty-one-year-old you are already, slowly, raising. Hold the direction loosely week to week and firmly year to year: increase, on all four axes — wisdom, stature, favour with God, favour with people.',
+      'Not a happy toddler. Not a compliant preschooler. Those are weather. You are laying the foundation of a person. Securely attached. Starting to govern themselves. Able to tell the truth. At home in a house where God is real. Everything asked of you from birth to five serves the twenty-one-year-old you are already raising. Hold it loosely week to week and firmly year to year.',
     actions: [
-      'Once a year, on their birthday, write the child a short letter: who they are becoming, what you saw this year. Eighteen of these become the Story of their childhood.',
-      'When a hard week comes, ask the directional question instead of the behavioural one: what does this child need to become — and what does that make this week\'s job?',
+      'Write them a short letter each birthday. Who they are becoming, what you saw.',
+      'In a hard week, ask what this child needs to become. Then what that makes your job.',
     ],
     warrant: {
       passages: ['Luke 2:52', 'Proverbs 22:6'],
