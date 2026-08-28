@@ -105,9 +105,26 @@ describe('child dashboard structure (section 21)', () => {
   });
 
   it('this-month actions favour opportunity-signalled units', () => {
+    /*
+     * Asserts the property, not the prose.
+     *
+     * This previously matched literal phrases from three units' action text
+     * ("coaching focus", "tradition", "first"), so it failed the moment those
+     * units were rewritten — a test that breaks on an editorial change it was
+     * never meant to police. What it actually claims is that THIS MONTH is
+     * drawn from units carrying section 21's opportunity signal, so that is
+     * what it now checks.
+     */
     const view = buildChildDashboard(emma, mother, units, ON);
-    // The preschool life-curriculum and firsts units carry opportunity signals.
-    expect(view.thisMonth.join(' ')).toMatch(/coaching focus|tradition|first/i);
+    expect(view.thisMonth.length).toBeGreaterThan(0);
+
+    const opportunityActions = new Set(
+      units
+        .filter((u) => u.signal?.opportunity)
+        .flatMap((u) => u.actions ?? []),
+    );
+    const fromOpportunity = view.thisMonth.filter((a) => opportunityActions.has(a));
+    expect(fromOpportunity.length).toBeGreaterThan(0);
   });
 });
 
