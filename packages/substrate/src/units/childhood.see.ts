@@ -176,7 +176,7 @@ export const CHILDHOOD_SEE_UNITS: readonly Unit[] = [
     title: 'Your toddler is quoting you',
     lede: 'Everything is imitated now. How you drive. Your face when plans change.',
     body:
-      'How you drive. What you say about the referee. Your face when dinner plans change. Whether your faith turns up on a Tuesday. A toddler cannot be taught to regulate. They catch it. The most valuable thing you model in these years is the repaired failure. You lose your temper, and then you apologise, out loud, where they can see. A child who watches a strong man apologise learns that strength and repentance live in the same body.',
+      'How you drive. What you say about the referee. Your face when dinner plans change. Whether your faith turns up on a Tuesday. A toddler cannot be taught to regulate. They catch it. What matters most here is the repaired failure. You lose your temper, then you apologise out loud where they can see. A child who watches a strong man apologise learns that strength and repentance live in one body.',
     actions: [
       'When you blow it, kneel to eye level and say it plainly. No "but."',
       'Let them catch your faith on an ordinary Tuesday. Witnessed, not performed.',

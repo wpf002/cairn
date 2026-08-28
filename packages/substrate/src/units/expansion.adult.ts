@@ -20,7 +20,7 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     title: 'Parents who actually changed',
     lede: 'They are watching whether you meant it about moving from authority to counsel.',
     body:
-      'The most persuasive thing a young adult sees is parents who meant it. Who moved from authority to counsel and stayed there. Who honour their household, money, calendar and decisions with no shadow campaign of hints. They are also watching how you age into faith, and whether what you taught them still holds you now the enforcing is over. Your marriage, your church, your giving. All still on display, now judged by an adult with something to compare it to.',
+      'The most persuasive thing a young adult sees is parents who meant it. Who moved from authority to counsel and stayed there. Who honour their household, money and decisions with no shadow campaign of hints. They are watching how you age into faith, and whether what you taught still holds you now the enforcing is over. All of it still on display, now judged by an adult with something to compare it to.',
     actions: [
       'Audit yourself quarterly. Where did counsel drift back into management? Repair it out loud.',
       'Let them see your faith continuing for its own sake, after the parenting reason expired.',
@@ -83,9 +83,9 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...ADULT] },
     voice: 'shared',
     title: 'Finish out loud',
-    lede: 'Almost no family marks this one, which is why the app walks you through it.',
+    lede: 'Almost no family marks this one. Cairn walks you through it.',
     body:
-      'This is where the parents say publicly that the formation work is finished and the relationship has changed. Almost no family marks it. Gather the circle who watched them grow. Letters, written to an adult. The words said plainly. "You are a man now." "You are a woman now." "We recognise it." Something they keep. And the Story of Their Childhood, both parents\' threads across twenty-one years, put into their hands.',
+      'Here the parents say publicly that the work is finished. Almost no family marks it. Gather the circle who watched them grow up. Letters, written to an adult. The words said plainly. "You are a man now." "You are a woman now." "We recognise it." Something they keep. And the Story of Their Childhood, both parents\' threads across twenty-one years, put into their hands.',
     actions: [
       'Set the date within the twenty-first year and treat it as immovable.',
       'Invite the same circle from the ceremony at thirteen, now speaking to an adult.',
@@ -118,7 +118,7 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     title: 'Respect, then trust',
     lede: 'Nothing announces a changed relationship like being asked for counsel and taken seriously.',
     body:
-      'Around eighteen: "I respect the person you are becoming." Say it to their judgement and their competence, not their behaviour. Around twenty-one: "I trust you," and the harder one, "I need your counsel on this." Then actually take the answer. Nothing announces a changed relationship like being consulted. Underneath both, the oldest rung still carries weight. A twenty-one-year-old still needs to hear you love them.',
+      'Say it around eighteen. "I respect the person you are becoming." Say it to their judgement and their competence, not their behaviour. Around twenty-one: "I trust you," and the harder one, "I need your counsel on this." Then actually take the answer. Nothing announces a changed relationship like being consulted. Underneath both, the oldest rung still carries weight. A twenty-one-year-old still needs to hear you love them.',
     actions: [
       'Say the respect sentence about something specific they handled as an adult.',
       'Ask their counsel on something real in your life. Let them see you weigh it.',
@@ -151,7 +151,7 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     title: 'A life someone can depend on',
     lede: 'Not can they run their own life. Could someone depend on the life they run.',
     body:
-      'The question matures. Not can they run their own life, but could someone depend on the life they run. File taxes. Carry insurance and know what it is for. Negotiate a lease and a salary. Build credit, and know what Proverbs says plainly about debt. Choose a church and commit to membership, not attendance. Give from real income. Keep commitments nobody checks. Ask for help without shame. Recover from one real failure with nobody absorbing the cost.',
+      'Not can they run their own life. Could someone depend on the life they run. File taxes. Carry insurance and know what it is for. Negotiate a lease and a salary. Build credit, knowing what Proverbs says about debt. Choose a church and commit to membership. Give from real income. Keep commitments nobody checks. Recover from one real failure with nobody absorbing the cost.',
     actions: [
       'Offer knowledge, not management. One tax walkthrough, one lease read. Then hands off.',
       'When the real failure comes, hold the line. Full support, zero absorption.',
@@ -216,7 +216,7 @@ export const EXPANSION_ADULT_UNITS: readonly Unit[] = [
     title: 'The empty room is the diploma',
     lede: 'If that person now exists, imperfect and standing, the work succeeded.',
     body:
-      'Twenty-one years ago you set out to raise a capable, wise, loving, responsible adult who could govern their own life. If that person now exists, imperfect and still growing but standing, the work succeeded. That includes every part of it that felt like failure at the time. The relationship does not end. It graduates. Peer with history. Friend with a portfolio. One day, God willing, grandparent. The empty room is the diploma.',
+      'You set out to raise an adult who could govern their own life. If that person now exists, imperfect and still growing but standing, the work succeeded. That includes every part of it that felt like failure at the time. The relationship does not end. It graduates. Peer with history. Friend with a portfolio. One day, God willing, grandparent. The empty room is the diploma.',
     actions: [
       'Say the completion out loud at the ceremony. Then privately, to each other.',
       'Start the new discipline that week. Relate to the adult, not the child you remember.',

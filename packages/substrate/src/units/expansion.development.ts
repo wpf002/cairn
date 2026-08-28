@@ -43,7 +43,7 @@ export const EXPANSION_DEVELOPMENT_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'Five to seven: industry begins',
     body:
-      'School entry reorganises a child\'s world around competence: reading, writing, rules, and the discovery that skills are compared. Concrete logic is arriving — fairness becomes an obsession because the mind can finally weigh it. Losing is still hard; the regulation machinery is better than at four and years from finished. Children this age typically believe what trusted adults say almost without filter, which is a responsibility more than a convenience.',
+      'School entry reorganises a child around competence. Reading, writing, rules, and the discovery that skills get compared. Concrete logic is arriving, so fairness becomes an obsession, because the mind can finally weigh it. Losing is still hard. Regulation is better than at four and years from finished. Children this age believe trusted adults almost without filter, which is a responsibility more than a convenience.',
     evidence: [CDC, AAP],
     provenance: MEDICAL,
     tags: ['understand-your-child'],
@@ -57,7 +57,7 @@ export const EXPANSION_DEVELOPMENT_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'Seven to nine: the age of comparison',
     body:
-      'Around this band children begin measuring themselves against peers in earnest — at sports, in reading groups, in friendship rank. Competence and identity start fusing: "I am good at" and "I am" blur. Friendships deepen and their ruptures genuinely hurt. Moral reasoning is rule-based and earnest; hypocrisy in adults is now noticed and filed. This is typically the last fully-open window before peer opinion begins competing with parental voice.',
+      'Children begin measuring themselves against peers in earnest. Sports, reading groups, friendship rank. Competence and identity start fusing, so "I am good at" and "I am" blur together. Friendships deepen and their ruptures genuinely hurt. Moral reasoning is rule-based and earnest. Hypocrisy in adults gets noticed and filed. This is typically the last fully open window before peer opinion competes with a parent\'s voice.',
     evidence: [CDC],
     provenance: MEDICAL,
     tags: ['understand-your-child', 'comparison'],
@@ -69,9 +69,10 @@ export const EXPANSION_DEVELOPMENT_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'shared',
-    title: 'Nine to eleven: the door begins to swing',
+    title: 'Nine to eleven years',
+    lede: 'What feels too early in this window will feel too late in the next.',
     body:
-      'Puberty\'s earliest changes commonly begin in this band — for many girls from around eight to ten, boys typically a year or two later — alongside a cognitive shift toward abstraction. Self-consciousness rises sharply; the imagined audience arrives. Peer belonging starts reorganising choices. Children this age still want parental closeness and are beginning to be embarrassed by it in public, both at once, and both sincerely. Whatever conversations feel too early in this window will feel too late in the next.',
+      'Puberty\'s earliest changes commonly begin now. For many girls from around eight to ten, boys typically a year or two later. A cognitive shift toward abstraction arrives alongside it. Self-consciousness rises sharply and the imagined audience appears. Peer belonging starts reorganising choices. Children this age want parental closeness and are embarrassed by it in public, both at once, both sincerely.',
     evidence: [CDC, AAP],
     provenance: MEDICAL,
     tags: ['understand-your-child', 'puberty'],
@@ -85,7 +86,7 @@ export const EXPANSION_DEVELOPMENT_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'Eleven to thirteen: renovation begins',
     body:
-      'The adolescent brain begins a decade-long renovation: the emotional and reward systems mature years ahead of the prefrontal control systems, which is why a bright thirteen-year-old can reason like an adult at dinner and decide like a child at a sleepover. Sleep timing genuinely shifts later. Peer acceptance temporarily rivals almost everything for motivational force. Mood swings are largely hardware, not character — and the teenager finds them as bewildering as you do.',
+      'The adolescent brain begins a decade-long renovation. Emotional and reward systems mature years ahead of the prefrontal control systems. A bright thirteen-year-old can reason like an adult at dinner and decide like a child at a sleepover. Sleep timing genuinely shifts later. Peer acceptance temporarily rivals almost everything for motivational force. Mood swings are largely hardware rather than character, and the teenager finds them as bewildering as you do.',
     evidence: [NIMH, AAP],
     provenance: MEDICAL,
     tags: ['understand-your-child', 'teen-brain'],
@@ -99,7 +100,7 @@ export const EXPANSION_DEVELOPMENT_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'Thirteen to fifteen: identity under construction',
     body:
-      'Identity work moves to centre stage: trying on styles, opinions, and allegiances is the developmental task, not instability of character. Risk appetite peaks in the presence of peers specifically — the same teen alone is measurably more cautious. Abstract idealism arrives, and with it the capacity to be genuinely disappointed in institutions, parents included. Arguments are often reasoning practice; the debater usually still holds most of your values underneath the position-testing.',
+      'Identity work moves to centre stage. Trying on styles, opinions and allegiances is the developmental task rather than instability of character. Risk appetite peaks specifically in the presence of peers. The same teenager alone is measurably more cautious. Abstract idealism arrives, and with it the capacity to be genuinely disappointed in institutions, parents included. Arguments are often reasoning practice.',
     evidence: [NIMH, CDC],
     provenance: MEDICAL,
     tags: ['understand-your-child', 'identity'],
@@ -113,7 +114,7 @@ export const EXPANSION_DEVELOPMENT_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'Fifteen to eighteen: the near-adult',
     body:
-      'Reasoning capacity approaches adult levels in calm conditions well before it stabilises under stress, fatigue, or peer presence. Long-term planning becomes genuinely possible and genuinely practised. Romantic relationships carry real weight now. Independence claims accelerate; research consistently finds late adolescents make better decisions when they hold real responsibility with real consequences than when tightly managed. The parent\'s leverage is shifting, measurably, from control to relationship.',
+      'Reasoning approaches adult levels in calm conditions. It stabilises under stress, fatigue and peer presence considerably later. Long-term planning becomes genuinely possible and genuinely practised. Romantic relationships carry real weight now. Independence claims accelerate. Research consistently finds late adolescents decide better holding real responsibility with real consequences than when tightly managed. Your leverage is shifting from control to relationship.',
     evidence: [NIMH, AAP],
     provenance: MEDICAL,
     tags: ['understand-your-child'],
@@ -141,7 +142,7 @@ export const EXPANSION_DEVELOPMENT_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'Twenty to twenty-one: consolidation',
     body:
-      'The identity exploration of the late teens typically begins consolidating: commitments — vocational, relational, spiritual — start being made rather than sampled. Executive function is near its adult plateau. Financial and residential independence usually arrive unevenly, in stages, and a young adult moving between dependence and independence is following the modern norm, not failing at adulthood. What most predicts a strong parent-child relationship from here is whether the parent has actually changed roles.',
+      'Identity work starts consolidating now. Vocational, relational and spiritual commitments get made rather than sampled. Executive function is near its adult plateau. Financial and residential independence usually arrive unevenly, in stages. A young adult moving between dependence and independence is following the modern norm rather than failing at adulthood. What most predicts a strong relationship from here is whether the parent actually changed roles.',
     evidence: [NIMH, CDC],
     provenance: MEDICAL,
     tags: ['understand-your-child'],

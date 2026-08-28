@@ -58,17 +58,27 @@ function main(): void {
     }
   }
 
-  // Voice gate. Reported, not yet enforced: the corpus predates it and the
-  // rewrite is in flight. Flip this to process.exit(1) when the count hits
-  // zero, and it becomes as binding as the provenance gate.
+  /*
+   * Voice gate. Blocking, as of the completed copy pass.
+   *
+   * It shipped as report-only at 706 errors because the whole corpus predated
+   * it. At zero it becomes as binding as the provenance gate, which is the
+   * point: prose quality is now a property the build enforces rather than one
+   * that decays quietly between reviews.
+   */
   const voice = lintCorpusVoice(units);
-  console.log(`\n${DIM}Voice gate (reporting only)${RESET}`);
+  console.log(`\n${DIM}Voice gate${RESET}`);
   console.log(`  median body: ${voice.medianBodyWords} words`);
   console.log(`  errors: ${voice.errors}   warnings: ${voice.warnings}`);
   const byRule = new Map<string, number>();
   for (const f of voice.findings) byRule.set(f.rule, (byRule.get(f.rule) ?? 0) + 1);
   for (const [rule, n] of [...byRule.entries()].sort((a, b) => b[1] - a[1])) {
     console.log(`  ${DIM}${String(n).padStart(4)}${RESET} ${rule}`);
+  }
+
+  if (voice.errors > 0) {
+    console.log(`\n${RED}Voice gate failed.${RESET} ${voice.errors} error(s).`);
+    process.exit(1);
   }
 
   if (report.errors > 0) {

@@ -318,7 +318,7 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     title: 'What you say after the argument',
     lede: 'Adolescents replay the ending. Most of your speech now happens inside disagreement.',
     body:
-      'Much of your speech now happens inside a disagreement. That is what gets remembered. Do not avoid the conflict. A mother who concedes to keep the peace has taught that pressure works. The ninety seconds after is what matters. Adolescents replay the ending. "I am not changing my answer, and I am not going anywhere" teaches what a slammed door cannot. Your love is not one of the things being negotiated.',
+      'Much of your speech now happens inside a disagreement. Those ninety seconds get remembered. Do not avoid the conflict. A mother who concedes to keep the peace has taught that pressure works. The ninety seconds after is what matters. Adolescents replay the ending. "I am not changing my answer, and I am not going anywhere" teaches what a slammed door cannot. Your love is not one of the things being negotiated.',
     actions: [
       'End every argument with the same sentence, separating the ruling from the relationship.',
       'Apologise for your tone when it was wrong. Do not withdraw the boundary.',

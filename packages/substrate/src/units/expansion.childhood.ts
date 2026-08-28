@@ -52,7 +52,7 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     title: 'How a woman speaks',
     lede: 'Your child is learning the inner voice they will use on themselves. Mostly from yours.',
     body:
-      'Your child is building the voice they will use on themselves, and they are building it out of yours. How you talk about your body. Your mistakes. Other women. The person who annoyed you in the car park. It goes in verbatim. A daughter learns what womanhood sounds like from inside your sentences. A son learns what women are owed by how you expect to be spoken to.',
+      'Your child is building the voice they will use on themselves. Out of yours. How you talk about your body. Your mistakes. Other women. The person who annoyed you in the car park. It goes in verbatim. A daughter learns what womanhood sounds like from inside your sentences. A son learns what women are owed by how you expect to be spoken to.',
     actions: [
       'Stop running yourself down in front of them. They are taking dictation.',
       'Let them hear you speak kindly about someone who wronged you. Once, on purpose.',
@@ -150,7 +150,7 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     title: 'Say the specific thing',
     lede: 'Your child lives among rankings now. Generic praise has stopped landing.',
     body:
-      'Your child lives among rankings now, and they can hear the emptiness in "good job, buddy." Get specific. "You kept your temper when the call went against you." "You told the truth when it cost you." Praise aimed at talent produces a child who protects a reputation. Praise aimed at character produces a child who goes after character. And "I love you" still runs daily underneath all of it.',
+      'Your child lives among rankings now. They hear the emptiness in "good job, buddy." Get specific. "You kept your temper when the call went against you." "You told the truth when it cost you." Praise aimed at talent produces a child who protects a reputation. Praise aimed at character produces a child who goes after character. And "I love you" still runs daily underneath all of it.',
     actions: [
       'Name one true specific thing a day. Effort or character, never talent.',
       'Keep the "I love you" anchors, especially after the lost game and the bad grade.',
@@ -214,9 +214,9 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'The 7–9 layer: understanding faith',
     body:
-      'The syllabus deepens: sin as a real category that includes them and you; grace as the answer sin actually gets; salvation as Jesus\'s doing, not their behaving; conscience as a gift to be trained, not a tyrant to obey raw. Children this age often ask to pray, to be baptised, to know if they are "in" — treat these stirrings with full seriousness and zero pressure. The catechism question of this band is not "are you good?" but "what has God done?"',
+      'The syllabus deepens. Sin as a real category that includes them and you. Grace as the answer sin actually gets. Salvation as Jesus\'s doing rather than their behaving. Conscience as a gift to be trained. Children this age often ask to pray, to be baptised, to know whether they are in. Take it seriously and apply no pressure. The question of this band is not "are you good?" but "what has God done?"',
     actions: [
-      'When you sin against them — temper, broken promise — confess it as sin and ask their forgiveness. It is the most vivid grace lesson available.',
+      'When you sin against them, confess it and ask their forgiveness.',
       'Move from story reading to story questions: "why do you think Peter lied?" — comprehension is turning into theology.',
       'Take their faith questions and stirrings seriously enough to involve your church\'s children\'s ministry rather than deflecting.',
     ],
@@ -244,9 +244,9 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'The 10–12 layer: understanding why',
     body:
-      'The question underneath everything shifts from "what do we believe?" to "why do we believe it?" — and it must be welcomed before adolescence makes it adversarial. Begin apologetics as conversation, not ammunition: why Christians trust the Gospels, what makes Christianity different, why suffering does not disprove God. Introduce biblical worldview as a lens they can test. A pre-teen whose "why" is honoured at ten brings their "I doubt" to you at fifteen; one whose why was shushed takes it elsewhere.',
+      'The question shifts from what we believe to why we believe it. Welcome it now, before adolescence makes it adversarial. Start apologetics as conversation rather than ammunition. Why Christians trust the Gospels. What makes Christianity different. Why suffering does not disprove God. A pre-teen whose why is honoured at ten brings their doubt to you at fifteen. One who got shushed takes it elsewhere.',
     actions: [
-      'Institute the question jar or its equivalent: any faith question, no penalty, answered honestly within the week — including with "I don\'t know, let\'s find out."',
+      'Start a question jar. Any question, no penalty, answered honestly that week.',
       'Read one age-level apologetics resource together this year and let them argue with it.',
       'Ask their opinion on a real ethical question monthly and take the answer seriously before adding yours.',
     ],
@@ -276,9 +276,9 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     voice: 'shared',
     title: 'What the coach years are for',
     body:
-      'The objective of five-to-eleven is not grades, trophies, or compliance. It is a person who: works and finishes; loses and recovers; tells the truth under pressure; owns money, mistakes, and responsibilities at growing scale; knows what their family believes and is starting to know why; and has felt, a thousand specific times, that they are loved for who they are and encouraged for who they are becoming. Wisdom, stature, favour with God, favour with people — the four axes, coached.',
+      'Not grades. Not trophies. Not compliance. You are aiming at a person who works and finishes. Who loses and recovers. Who tells the truth under pressure. Who owns money, mistakes and responsibilities at growing scale. Who knows what this family believes and is starting to know why. And who has felt, a thousand specific times, that they are loved for who they are.',
     actions: [
-      'At each birthday in this band, write the annual letter and privately answer: which of the four axes got the least from us this year?',
+      'Write the birthday letter. Ask which axis got least from you this year.',
       'Choose next year\'s single formation focus per child — one, named, shared between parents.',
     ],
     warrant: {

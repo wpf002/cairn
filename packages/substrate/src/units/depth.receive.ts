@@ -27,7 +27,7 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     title: 'Give them the words',
     lede: 'A five-year-old with no word for frustration uses their body instead.',
     body:
-      'A five-year-old with no word for frustration uses their body instead. It is the only channel open. Naming a feeling is equipment, not indulgence. A child who can say "I am frustrated because it will not fit" has a route that does not run through the floor. Do the naming out loud, several hundred times, until they can. Not "calm down." Try "you are angry, you are allowed to be angry, and you are not allowed to throw that."',
+      'A five-year-old with no word for frustration uses their body instead. Naming a feeling is equipment, not indulgence. A child who can say "I am frustrated because it will not fit" has a route that does not run through the floor. Do the naming out loud, several hundred times. Not "calm down." Try "you are angry, you are allowed to be angry, and you may not throw that."',
     actions: [
       'Name the feeling before you address the behaviour. Both, in that order, every time.',
       'Separate the feeling from the conduct out loud. One is allowed, one is not.',
@@ -91,7 +91,7 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     title: 'When her body starts changing',
     lede: 'The instinct is withdrawal. She reads it accurately as embarrassment, inaccurately as about her.',
     body:
-      'You are often the first man whose reaction she registers, and the instinct is withdrawal. The hugs stop. The tone changes. You leave the room. She reads that accurately as embarrassment and inaccurately as being about her. What she needs is continuity. Same affection, same ease, same presence, plus words saying her worth has not moved to her appearance. Go quiet and you hand the question to boys her own age and to the internet.',
+      'You are often the first man whose reaction she registers. The instinct is withdrawal. The hugs stop. The tone changes. You leave the room. She reads that accurately as embarrassment and inaccurately as being about her. What she needs is continuity. Same affection, same ease, same presence, plus words saying her worth has not moved to her appearance. Go quiet and you hand the question to boys her own age and to the internet.',
     actions: [
       'Do not withdraw affection. Adjust the form if you must. Keep the warmth.',
       'Say more than once that her worth has not moved as her body changed.',
@@ -123,7 +123,7 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     title: 'How women get spoken of here',
     lede: 'The locker-room register arrives around nine, and it arrives as jokes.',
     body:
-      'The locker-room register arrives around nine, as jokes. A son learns what women are for from how his mother is treated and from what she lets be said in her hearing. Tell him, unembarrassed, why a joke that reduces a woman to a body is not funny here. Do not shame him for repeating one. Tell him plainly what is coming too. He will be shown images he did not go looking for, and he will not be in trouble for saying so.',
+      'The locker-room register arrives around nine, as jokes. A son learns what women are for from how his mother is treated and what she lets be said near her. Tell him, unembarrassed, why a joke reducing a woman to a body is not funny here. Do not shame him for repeating one. He will be shown images he did not seek, and he will not be in trouble for saying so.',
     actions: [
       'Name the standard before he brings the first joke home.',
       'Tell him he can report something he did not seek, and will not be punished.',
@@ -187,7 +187,7 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     title: 'When the attention starts',
     lede: 'Some of it from boys, some from grown men, most of it confusing.',
     body:
-      'Around twelve she starts getting attention she did not get before. Some from boys, some from grown men, most of it confusing. She does not need surveillance, and she does not need a campaign about male intent, which teaches fear rather than judgement. She needs a frank account from a man, without panic, and one clear sentence. She never owes anyone politeness at the cost of her own comfort. Tighten restrictions instead of talking and she stops reporting.',
+      'Around twelve she starts getting attention she did not get before. Some from boys, some from grown men, most of it confusing. She does not need surveillance, and a campaign about male intent teaches fear rather than judgement. She needs a frank account from a man, without panic. And one sentence. She never owes anyone politeness at the cost of her own comfort.',
     actions: [
       'Tell her she can be rude, leave, or refuse, and you will back her without asking why.',
       'Explain what some of it means without making all men threats.',
@@ -218,7 +218,7 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     title: 'An ethic with its reasons attached',
     lede: 'A rule delivered bare does not survive contact with a real relationship at seventeen.',
     body:
-      'A bare prohibition does not survive contact with a real relationship at seventeen. Three things go together, and dropping one breaks the other two. What Christians have held about sex, and why. Consent in concrete terms, taught to sons and daughters alike, as both a duty and a right. And the plain statement that someone who has already crossed the line is not disqualified from anything. The third is what stops the first two producing secrecy.',
+      'A bare prohibition does not survive a real relationship at seventeen. Three things go together, and dropping one breaks the others. What Christians have held about sex, and why. Consent in concrete terms, to sons and daughters alike, as a duty and a right. And the plain statement that someone who already crossed the line is not disqualified. The third stops the first two producing secrecy.',
     actions: [
       'Give the reasons, not just the rule. A bare rule gets dropped the first time it costs something.',
       'Teach consent to sons and daughters alike. What it is, how it is asked, how it is withdrawn.',
@@ -312,7 +312,7 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     title: 'Evaluating for marriage',
     lede: 'A young adult told only to guard their heart has not been given a skill.',
     body:
-      'This is a skill, and a young adult told only to guard their heart has not been given it. You are the Counselor now, so wait to be asked. Then give questions rather than a verdict. How does this person behave when thwarted. What do they do with money. How do they treat people who serve them. What happens after they are wrong. Is their faith theirs. Offer the questions. Do not deliver the answer.',
+      'This is a skill. A young adult told only to guard their heart has not been given it. You are the Counselor now, so wait to be asked. Then give questions rather than a verdict. How does this person behave when thwarted. What do they do with money. How do they treat people who serve them. What happens after they are wrong. Is their faith theirs. Offer the questions. Do not deliver the answer.',
     actions: [
       'Give them the questions, not your assessment of the person.',
       'State a reservation once, privately. Then stop, and honour their decision.',

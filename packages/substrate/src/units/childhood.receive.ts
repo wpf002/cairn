@@ -135,7 +135,7 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     title: 'Names for the storm',
     lede: 'Feelings the size of weather systems, and a vocabulary the size of a shoebox.',
     body:
-      'Your two-year-old has feelings the size of weather systems and a vocabulary the size of a shoebox. Do the naming. "You are angry. The tower fell." "You are sad. Grandma left." Over hundreds of repetitions a named feeling becomes a manageable one. The psalms do exactly this, taking the full range of human emotion to a listening God rather than suppressing it. Correction can wait until the storm has a name.',
+      'Your two-year-old has weather-system feelings and a shoebox vocabulary. Do the naming. "You are angry. The tower fell." "You are sad. Grandma left." Over hundreds of repetitions a named feeling becomes a manageable one. The psalms do exactly this, taking the full range of human emotion to a listening God rather than suppressing it. Correction can wait until the storm has a name.',
     actions: [
       'Name the feeling before the behaviour. "You are furious. And we do not hit."',
       'Ask how a character feels while reading. Vocabulary is built calm and spent hard.',
@@ -164,7 +164,7 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     title: 'Real jobs, real praise',
     lede: 'Genuine contribution, which no amount of entertainment supplies.',
     body:
-      'Setting the table. Feeding the dog. Carrying the small bag. Done imperfectly, owned completely. A preschooler needs genuine contribution, which no amount of entertainment supplies. This is the on-ramp to a twenty-year transfer of responsibility, and it starts earlier than most parents guess. Pair it with praise for effort and character. "You kept trying." "That was kind." Praise for talent builds performers instead.',
+      'Setting the table. Feeding the dog. Carrying the small bag. Done imperfectly, owned completely. A preschooler needs genuine contribution, which no amount of entertainment supplies. The twenty-year transfer of responsibility starts here, earlier than most parents guess. Pair it with praise for effort and character. "You kept trying." "That was kind." Praise for talent builds performers instead.',
     actions: [
       'Give one real job they fully own. Low standards, and no redoing it in front of them.',
       'Praise the effort and the character move, in earshot of the other parent.',

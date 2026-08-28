@@ -25,7 +25,7 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     title: 'Sin and grace, without terror',
     lede: 'Around five a child develops a working conscience. The gospel becomes intelligible.',
     body:
-      'Around five a child gets a working conscience. They know when they have done wrong and they feel it. The gospel becomes intelligible, and so does real damage. Skip sin entirely and grace solves nothing. Teach sin heavily and a five-year-old decides God is mostly angry with them. Keep it short, concrete, and always finished. Here is what we did wrong. Here is what Jesus did about it. Here is why we are not afraid of God.',
+      'Around five a child gets a working conscience. They know when they have done wrong and they feel it. The gospel becomes intelligible, and so does real damage. Skip sin and grace solves nothing. Teach sin heavily and a five-year-old decides God is mostly angry. Keep it short, concrete and always finished. Here is what we did wrong. Here is what Jesus did. Here is why we are not afraid.',
     actions: [
       'Name the wrong and the forgiveness in one conversation. Never sleep on half.',
       'Answer "is God angry with me?" directly and warmly, every time it comes up.',
@@ -55,7 +55,7 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     title: 'From stories to one story',
     lede: 'A flood, a giant, a fish, a manger. Filed alongside every other tale they were told.',
     body:
-      'A flood. A giant. A fish. A manger. By eight your child has a warehouse of disconnected episodes filed beside every other tale they were told. Assemble them. Show that these are chapters of one account that goes somewhere and makes claims about actual events. A child who reaches eleven with Bible stories still shelved next to fables starts discarding them off the same shelf. Be honest that some of it is hard. They are about to notice.',
+      'A flood. A giant. A fish. A manger. By eight your child has a warehouse of disconnected episodes filed beside every other tale. Assemble them. Show that these are chapters of one account that goes somewhere and makes claims about real events. A child who reaches eleven with Bible stories shelved next to fables discards them off the same shelf.',
     actions: [
       'Read one whole book together instead of more isolated stories.',
       'When a passage troubles you, say so. "That is hard" is a real answer.',
@@ -178,7 +178,7 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     title: 'Practised without you',
     lede: 'The strongest predictor of faith surviving is whether any of it was ever practised alone.',
     body:
-      'The strongest predictor of faith surviving the move out is whether any of it was ever practised alone. A seventeen-year-old whose whole Christian life was family-scheduled has no practice of their own to continue. Only a routine to stop. Your church. Your service. Your devotions. Transfer ownership while they are still close enough to support. Their gathering. Their giving, from their money. A commitment they made and you did not.',
+      'Faith survives the move out if any of it was ever practised alone. A seventeen-year-old whose whole Christian life was family-scheduled has no practice of their own to continue. Only a routine to stop. Your church. Your service. Your devotions. Transfer ownership while they are still close enough to support. Their gathering. Their giving, from their money. A commitment they made and you did not.',
     actions: [
       'Let them choose where they serve, even if it is not where you would.',
       'Have them give from their own earnings, at an amount they set.',
@@ -240,7 +240,7 @@ export const DEPTH_BELIEVE_UNITS: readonly Unit[] = [
     title: 'Faith that is theirs',
     lede: 'The strongest signal is that they have started discipling somebody else.',
     body:
-      'The destination was never "my parents are Christians." It is "I know what I believe, and I can choose whether to follow Christ." At twenty-one that is testable. A church they chose and committed to. Giving from their own income. A faith crisis handled with no parent in the room. And the strongest signal, discipling someone else. When they start teaching this to someone junior, the transfer is complete.',
+      'It is theirs or it is nothing. "I know what I believe, and I can choose whether to follow Christ." At twenty-one that is testable. A church they chose. Giving from their own income. A faith crisis handled with no parent in the room. And the strongest signal, discipling someone else. When they teach this to someone junior, the transfer is complete.',
     actions: [
       'Ask what they are learning. Receive it as information, not as something to assess.',
       'Answer a theological question as a peer would, including where you are unsure.',

@@ -56,7 +56,7 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     title: 'Serve, and make it right',
     lede: 'Both are experiences, not conversations. Neither transfers by being explained.',
     body:
-      'Seven is when a child can hold someone else\'s situation in mind well enough for service to mean anything. Two experiences belong here. Serving a person who cannot usefully thank them, with the child doing real work rather than watching adults do it. And making right something they broke, in person, including the uncomfortable part where they say it themselves. Neither transfers by being explained.',
+      'By seven a child can hold another person in mind. Two experiences belong here. Serving a person who cannot usefully thank them, with the child doing real work rather than watching adults do it. And making right something they broke, in person, including the uncomfortable part where they say it themselves. Neither transfers by being explained.',
     actions: [
       'Do one service commitment as a family where your child does real work, not decoration.',
       'When they break something of someone else\'s, walk them through repaying it.',
@@ -118,7 +118,7 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     title: 'The first rite of passage',
     lede: 'Most families skip this one, and adolescence arrives as unmarked concessions instead.',
     body:
-      'Most families skip this, and adolescence arrives as a series of unmarked concessions instead of a recognised transition. The form matters less than the fact of it. Other adults present. Something said out loud about what is changing. Something given that lasts. A thirteen-year-old told in front of witnesses that they have entered a new standing behaves differently from one who simply got a later curfew.',
+      'Most families skip this. Adolescence then arrives as a series of unmarked concessions. The form matters less than the fact of it. Other adults present. Something said out loud about what is changing. Something given that lasts. A thirteen-year-old told in front of witnesses that they have entered a new standing behaves differently from one who simply got a later curfew.',
     actions: [
       'Plan a marked event at thirteen. Invite three or four adults who are not you.',
       'Ask each adult to name one thing they see forming in this young person.',
@@ -147,9 +147,9 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'shared',
     title: 'Let the consequence land',
-    lede: 'A missed deadline costs a grade, not a job. This is the cheapest it gets.',
+    lede: 'A missed deadline costs a grade, not a job. It never gets cheaper.',
     body:
-      'This is the last stage where a bad decision is cheap. A missed deadline costs a grade, not a job. A friendship handled badly costs a term, not a marriage. The Consultant lets real consequences arrive when it is safe, and safe is widest right now. The emailed teacher, the covered shift, the paid-off debt. None of those prevent the lesson. They defer it to an age where it costs far more.',
+      'Bad decisions are still cheap at this stage. A missed deadline costs a grade, not a job. A friendship handled badly costs a term, not a marriage. The Consultant lets real consequences arrive when it is safe, and safe is widest right now. The emailed teacher, the covered shift, the paid-off debt. None of those prevent the lesson. They defer it to an age where it costs far more.',
     actions: [
       'Pick one consequence this term to let land. Decide in advance not to intervene.',
       'Debrief without saying you were right. Ask what they would do differently.',
@@ -180,7 +180,7 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     title: 'Rehearse the leaving',
     lede: 'The failures that happen while they still live with you are the cheapest they will get.',
     body:
-      'A young person who has never booked an appointment, sorted a billing error, or run a household week unsupervised is not ready to do all of it at once in a new city. Hand over whole domains, not tasks. Not "call the dentist this once" but "your health admin is yours now." The failures that happen while they still live with you are the cheapest they will ever be.',
+      'They have never booked an appointment or sorted a billing error. Doing all of it at once, in a new city, is a lot. Hand over whole domains, not tasks. Not "call the dentist this once" but "your health admin is yours now." The failures that happen while they still live with you are the cheapest they will ever be.',
     actions: [
       'Transfer one whole domain. Health admin, transport, or a week of their own food.',
       'Have them run the household a week. Budget, shopping, cooking. Do not step in.',
@@ -211,7 +211,7 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     title: 'Invited, not summoned',
     lede: 'Shared time stops being a household default and becomes a decision they make.',
     body:
-      'Once a child lives elsewhere, shared time stops being a default and becomes a decision they make. Invitations work. Summonses do not. "You come every Sunday" converts a relationship into compliance, and compliance is what erodes first. What holds is a few things they actually want to attend, plus an open door with no ledger about who visited whom last. The parent who stops counting is the parent who gets visited.',
+      'Once a child lives elsewhere, shared time becomes a decision they make. Invitations work. Summonses do not. "You come every Sunday" converts a relationship into compliance, and compliance is what erodes first. What holds is a few things they actually want to attend, plus an open door with no ledger about who visited whom last. The parent who stops counting is the parent who gets visited.',
     actions: [
       'Build one annual thing worth travelling for. Make it enjoyable, not obligatory.',
       'Stop keeping score of contact frequency. Say so out loud, once.',
@@ -242,7 +242,7 @@ export const DEPTH_EXPERIENCE_UNITS: readonly Unit[] = [
     title: 'Recognize, at twenty-one',
     lede: 'Not confer. Not celebrate. Recognition acknowledges something already true.',
     body:
-      'Not confer. Not celebrate. Recognition acknowledges what is already true, and it is the milestone most Christian families never mark. Make it public and specific. Adults who have known them for two decades saying what they see. A parent stating plainly that the formation work is finished and the relationship has changed. Something given that will still exist in forty years.',
+      'Not confer. Not celebrate. Recognition acknowledges what is already true. Most Christian families never mark it. Make it public and specific. Adults who have known them for two decades saying what they see. A parent stating plainly that the formation work is finished and the relationship has changed. Something given that will still exist in forty years.',
     actions: [
       'Plan it months ahead. Invite the people who were actually present.',
       'Ask each to write rather than only speak, so the words survive the evening.',

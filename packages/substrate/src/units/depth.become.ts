@@ -56,7 +56,7 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     title: 'Good at something, and kind',
     lede: 'Skill buys status, and status can be spent on cruelty.',
     body:
-      'A child who is good at something learns fast that skill buys status, and status can be spent on cruelty. You are forming the pairing. Real competence, developed seriously, held by someone who does not use it as a weapon or a ruler for other people. The pairing does not happen by default. Name it, because the culture around them will reliably teach only the first half.',
+      'A child good at something learns fast that skill buys status. Status can be spent on cruelty. You are forming the pairing. Real competence, developed seriously, held by someone who does not use it as a weapon or a ruler for other people. The pairing does not happen by default. Name it, because the culture around them will reliably teach only the first half.',
     actions: [
       'Let them go deep on one thing rather than sampling six.',
       'Name it when skill gets used to diminish someone, including when they win.',
@@ -118,7 +118,7 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     title: 'Distinct, not compliant',
     lede: 'They are building a self that is not an extension of this household.',
     body:
-      'They are building a self that is not an extension of this household, and it is uncomfortable by design. Read it as rebellion and suppress it, and you get one of two outcomes. A compliant adolescent who defers all this to twenty-five and does it destructively. Or a young person who concludes that being themselves and being loved cannot both happen. Aim at someone genuinely distinct from you and still connected to you.',
+      'They are building a self that is not an extension of you. It is uncomfortable by design. Read it as rebellion and suppress it, and you get one of two outcomes. A compliant adolescent who defers all this to twenty-five and does it destructively. Or a young person who concludes that being themselves and being loved cannot both happen. Aim at someone genuinely distinct from you and still connected to you.',
     actions: [
       'Let them differ from you visibly on something that does not matter. No commentary.',
       'Separate a moral boundary from your preference out loud. Enforce one, concede the other.',
@@ -239,9 +239,9 @@ export const DEPTH_BECOME_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['young-adult'] },
     voice: 'shared',
     title: 'The whole aim',
-    lede: 'Some of it did not happen. That is the ordinary experience of every parent who finished.',
+    lede: 'Some of it did not happen. Every parent who has finished says the same.',
     body:
-      'You set out to help a completely dependent newborn become someone capable, wise, loving, responsible, honest, disciplined, humble, and able to run their own life. At twenty-one you can look at that list and see which of it happened. Some did not. That is the ordinary experience of every parent who has ever finished. Nobody needs a perfect result. The work was aimed somewhere, and now the aim gets handed to the person who will finish it.',
+      'You aimed at someone capable, wise and able to run their own life. At twenty-one you can see which of it happened. Some did not. Every parent who has finished says the same. Nobody needs a perfect result. The work was aimed somewhere, and the aim now passes to the person who will finish it.',
     actions: [
       'Say what you were aiming at for twenty-one years, and where you fell short.',
       'Hand the remaining work over explicitly. Saying so is the release.',
