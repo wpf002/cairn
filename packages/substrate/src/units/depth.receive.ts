@@ -24,12 +24,13 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['early-childhood'] },
     voice: 'shared',
-    title: 'Words for what is happening inside them',
+    title: 'Give them the words',
+    lede: 'A five-year-old with no word for frustration uses their body instead.',
     body:
-      'A five-year-old with no vocabulary for frustration expresses it with their body, because that is the only channel available. Naming feelings is not therapeutic indulgence — it is equipment. A child who can say "I am frustrated because it will not fit" has a route that does not run through the floor. What they need to receive here is the naming done for them, out loud, hundreds of times, until they can do it themselves: not "calm down" but "you are angry, and you are allowed to be angry, and you are not allowed to throw that."',
+      'A five-year-old with no word for frustration uses their body instead. It is the only channel open. Naming a feeling is equipment, not indulgence. A child who can say "I am frustrated because it will not fit" has a route that does not run through the floor. Do the naming out loud, several hundred times, until they can. Not "calm down." Try "you are angry, you are allowed to be angry, and you are not allowed to throw that."',
     actions: [
       'Name the feeling before you address the behaviour. Both, in that order, every time.',
-      'Separate the emotion from the conduct out loud: the feeling is permitted, the action is not.',
+      'Separate the feeling from the conduct out loud. One is allowed, one is not.',
     ],
     warrant: {
       passages: ['Ephesians 4:26', 'Psalm 62:8'],
@@ -53,13 +54,14 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'shared',
-    title: 'Their own money, and their own friendship conflicts',
+    title: 'Their money, their conflicts',
+    lede: 'A child who has never wasted money has never learned anything from money.',
     body:
-      'Section 13 puts handling money and resolving friendship conflict on the age-ten curriculum, and seven to nine is where both begin. Money first: an amount that is genuinely theirs, spendable on things you consider foolish, because a child who has never wasted money has never learned anything from money. Conflict second, and harder: friendship disputes at this age are survivable and instructive, and a parent who intervenes directly — contacting the other child\'s parent, arranging the resolution — removes the practice at exactly the age it is cheapest to get wrong.',
+      'Money first. An amount that is genuinely theirs, spendable on things you consider foolish. A child who has never wasted money has never learned anything from money. Conflict second, and harder. Friendship disputes at this age are survivable and instructive. A parent who phones the other child\'s parent and arranges the resolution has removed the practice at the exact age it is cheapest to get wrong.',
     actions: [
       'Give a fixed amount that is fully theirs, including the freedom to waste it.',
-      'Coach the conflict from the sideline; do not enter the field. Ask what they will say, then let them say it.',
-      'Introduce giving from their own money, at an amount they decide.',
+      'Coach from the sideline. Ask what they will say, then let them say it.',
+      'Start giving from their own money, at an amount they choose.',
     ],
     warrant: {
       passages: ['Matthew 18:15', 'Proverbs 21:20'],
@@ -86,13 +88,14 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'father',
     pairedWith: 'receive.mother.pre-adolescence.son-respect',
-    title: 'What a father says to a daughter about her changing body',
+    title: 'When her body starts changing',
+    lede: 'The instinct is withdrawal. She reads it accurately as embarrassment, inaccurately as about her.',
     body:
-      'A father is often the first man whose reaction to a daughter\'s developing body she registers, and his instinct is usually withdrawal — the hugs stop, the tone changes, the room is left. She reads that accurately as embarrassment and inaccurately as being about her. What she needs to receive is continuity: the same affection, the same ease, the same presence, plus explicit words that her worth is not relocating to her appearance. Fathers who go quiet here hand the entire question of what men think of her body to boys her own age and to the internet, both of which will answer it.',
+      'You are often the first man whose reaction she registers, and the instinct is withdrawal. The hugs stop. The tone changes. You leave the room. She reads that accurately as embarrassment and inaccurately as being about her. What she needs is continuity. Same affection, same ease, same presence, plus words saying her worth has not moved to her appearance. Go quiet and you hand the question to boys her own age and to the internet.',
     actions: [
-      'Do not withdraw physical affection. Adjust the form if you need to; do not reduce the warmth.',
-      'Say plainly, more than once, that she is not becoming more valuable or less valuable as her body changes.',
-      'Never comment on her weight, and never joke about her appearance. Not once — these are remembered verbatim.',
+      'Do not withdraw affection. Adjust the form if you must. Keep the warmth.',
+      'Say more than once that her worth has not moved as her body changed.',
+      'Never comment on her weight. Never joke about her appearance. Not once.',
     ],
     warrant: {
       passages: ['1 Samuel 16:7', 'Song of Solomon 4:7'],
@@ -117,13 +120,14 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'mother',
     pairedWith: 'receive.father.pre-adolescence.daughter-body-image',
-    title: 'What a mother teaches a son about how women are spoken of',
+    title: 'How women get spoken of here',
+    lede: 'The locker-room register arrives around nine, and it arrives as jokes.',
     body:
-      'A son learns what women are for partly from how his mother is treated and partly from what she permits to be said in her hearing. Nine to eleven is when the locker-room register arrives, and it arrives as jokes. What he needs to receive from his mother specifically is a clear, unembarrassed account of why a joke that reduces a woman to a body is not funny in this house — delivered without shaming him for having heard it or repeated it. This is also the stage to tell him plainly what is coming: that he will be shown images he did not seek, and that when it happens he is not in trouble and can say so.',
+      'The locker-room register arrives around nine, as jokes. A son learns what women are for from how his mother is treated and from what she lets be said in her hearing. Tell him, unembarrassed, why a joke that reduces a woman to a body is not funny here. Do not shame him for repeating one. Tell him plainly what is coming too. He will be shown images he did not go looking for, and he will not be in trouble for saying so.',
     actions: [
-      'Name the standard for how women are spoken of here, before he brings the first joke home.',
-      'Tell him explicitly that if he sees something he did not go looking for, he can tell you and will not be punished.',
-      'Do not react with shock when something does surface. The reaction sets whether there is a second conversation.',
+      'Name the standard before he brings the first joke home.',
+      'Tell him he can report something he did not seek, and will not be punished.',
+      'Do not react with shock when it surfaces. That decides whether there is a second talk.',
     ],
     warrant: {
       passages: ['1 Timothy 5:2', 'Genesis 1:27'],
@@ -148,13 +152,14 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'mother',
     pairedWith: 'receive.father.early-adolescence.daughter-attention',
-    title: 'A mother talking to her son about pornography',
+    title: 'A mother, on pornography',
+    lede: 'The usual arrangement leaves a son with one channel. At thirteen it can be closed.',
     body:
-      'Section 16b names this cross-voiced pair specifically. The usual arrangement — father handles it, mother stays out — leaves a son with one channel, and if the relationship with his father is strained at thirteen, that channel is closed. A mother\'s voice here carries something a father\'s cannot: she is a woman saying what this does to how he will see women, and she is unmistakably not ashamed of him. The content is short and repeatable. It is not a one-time talk, it is a standing subject, and the goal is that discovery is followed by disclosure rather than by two years of secrecy.',
+      'Father handles it and mother stays out. That leaves a son one channel, and at thirteen it can be closed. Your voice carries what his father\'s cannot. A woman telling him what this does to how he will see women, who is plainly not ashamed of him. Keep it short and repeatable. Not a talk, a standing subject. The aim is that discovery gets followed by disclosure instead of two years of secrecy.',
     actions: [
       'Say it before it happens, not after. Assume exposure is when, not if.',
-      'Make the standing offer explicit: telling you costs him nothing, every time, permanently.',
-      'If it surfaces, respond to the disclosure before the content. What you do in the first ten seconds determines whether there is a next disclosure.',
+      'Make the offer explicit. Telling you costs him nothing, every time.',
+      'Respond to the disclosure before the content. The first ten seconds decide the next one.',
     ],
     warrant: {
       passages: ['Matthew 5:28', 'Romans 8:1'],
@@ -179,13 +184,14 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'father',
     pairedWith: 'receive.mother.early-adolescence.son-pornography',
-    title: 'A father talking to his daughter about the attention that has started',
+    title: 'When the attention starts',
+    lede: 'Some of it from boys, some from grown men, most of it confusing.',
     body:
-      'Around twelve or thirteen a daughter begins receiving attention of a kind she did not previously receive, some of it from boys, some of it from adult men, and much of it confusing. What she needs from her father is not surveillance and not a warning campaign about male intent, which teaches fear rather than judgement. It is a frank account from a man of what some of it means, delivered without panic, plus the unambiguous statement that she never owes anyone politeness at the cost of her own discomfort. Fathers who handle this by tightening restrictions instead of talking produce daughters who stop reporting.',
+      'Around twelve she starts getting attention she did not get before. Some from boys, some from grown men, most of it confusing. She does not need surveillance, and she does not need a campaign about male intent, which teaches fear rather than judgement. She needs a frank account from a man, without panic, and one clear sentence. She never owes anyone politeness at the cost of her own comfort. Tighten restrictions instead of talking and she stops reporting.',
     actions: [
-      'Tell her plainly she can be rude, leave, or refuse, and that you will back her every time without asking what she did.',
-      'Explain what some attention means without characterising all men as threats.',
-      'Respond to a report with belief and calm. Escalating in fury teaches her the cost of telling you.',
+      'Tell her she can be rude, leave, or refuse, and you will back her without asking why.',
+      'Explain what some of it means without making all men threats.',
+      'Meet a report with belief and calm. Fury teaches her what telling you costs.',
     ],
     warrant: {
       passages: ['Proverbs 31:8-9', 'Esther 4:14'],
@@ -209,13 +215,14 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'shared',
-    title: 'Dating, consent, and a sexual ethic that has reasons behind it',
+    title: 'An ethic with its reasons attached',
+    lede: 'A rule delivered bare does not survive contact with a real relationship at seventeen.',
     body:
-      'Thirteen to fifteen needs a Christian sexual ethic that is stated with its reasons attached, because an ethic delivered as a bare prohibition does not survive contact with a real relationship at seventeen. Three things have to be received together, and dropping any one of them breaks the other two: what Christians have historically held about sex and why; consent, in concrete terms, taught to sons and daughters equally as both a duty and a right; and the clear statement that a person who has already crossed the line they were taught is not disqualified from anything. The third is what keeps the first two from producing secrecy.',
+      'A bare prohibition does not survive contact with a real relationship at seventeen. Three things go together, and dropping one breaks the other two. What Christians have held about sex, and why. Consent in concrete terms, taught to sons and daughters alike, as both a duty and a right. And the plain statement that someone who has already crossed the line is not disqualified from anything. The third is what stops the first two producing secrecy.',
     actions: [
-      'Give the reasons, not just the rule. A rule without reasons is discarded the first time it costs something.',
-      'Teach consent concretely and to both sons and daughters: what it is, how it is asked, how it is withdrawn.',
-      'Say explicitly that failure here does not end their standing with God or with you.',
+      'Give the reasons, not just the rule. A bare rule gets dropped the first time it costs something.',
+      'Teach consent to sons and daughters alike. What it is, how it is asked, how it is withdrawn.',
+      'Say that failure here ends their standing with neither God nor you.',
     ],
     warrant: {
       passages: ['1 Corinthians 6:19-20', 'John 8:10-11'],
@@ -239,14 +246,15 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'shared',
-    title: 'The unglamorous competences that decide the first year away',
+    title: 'The unglamorous competences',
+    lede: 'None of it is lofty. All of it decides whether the first year away is survivable.',
     body:
-      'Section 13 lists what a fifteen-year-old should be learning and it is deliberately mundane: cook several meals, use a bank account, understand credit, interview for a job, recognise an unhealthy relationship, understand digital permanence. None of it is formation in the lofty sense and all of it determines whether the first year away is survivable. The failure mode is a household that has taught theology thoroughly and never taught a young person to register with a doctor. Both are the parent\'s job, and only one of them gets attention at church.',
+      'Cook several meals. Run a bank account. Understand credit. Sit a job interview. Recognise an unhealthy relationship. Understand digital permanence. None of it is lofty and all of it decides whether the first year away is survivable. The failure mode is a household that taught theology thoroughly and never taught a young person to register with a doctor. Both are your job. Only one gets attention at church.',
     actions: [
       'Six meals they can cook unaided. Actually cooked, not watched.',
-      'Their own bank account, managed by them, including one month where it goes badly.',
+      'Their own bank account, run by them, including a month that goes badly.',
       'A real job application and interview, whatever the outcome.',
-      'Walk through what credit is and what a debt actually costs over time.',
+      'Walk through what credit is and what a debt costs over time.',
     ],
     warrant: {
       passages: ['Proverbs 22:7', '1 Timothy 5:8'],
@@ -270,13 +278,14 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['emerging-adult'] },
     voice: 'shared',
-    title: 'The paperwork of an adult life, taught once and properly',
+    title: 'The paperwork of an adult life',
+    lede: 'Teachable in a handful of sittings, and almost never taught.',
     body:
-      'Section 13 lists what nineteen to twenty-one actually requires: file taxes, carry insurance, negotiate a lease and a salary, build and repair credit, choose a church and commit to it, give consistently. This is teachable in a handful of sittings and almost never taught, because it falls between school and church and neither claims it. Do it deliberately and do it once, with them driving and you advising — which is also the Counselor role rehearsed on low-stakes material. Being asked for help with a lease is a good sign, not a failure of independence.',
+      'File taxes. Carry insurance. Negotiate a lease and a salary. Build credit and repair it. Choose a church and commit to it. Give consistently. All teachable in a handful of sittings, and almost never taught, because it falls between school and church and neither claims it. Do it once, deliberately, with them driving and you advising. Being asked for help with a lease is a good sign.',
     actions: [
-      'Sit with them through one tax filing, with them doing it.',
+      'Sit through one tax filing with them. They do it.',
       'Read one lease together, line by line, before they sign it.',
-      'Teach salary negotiation explicitly, including the script. Most people are never taught this at all.',
+      'Teach salary negotiation, including the script. Most people never get taught it.',
     ],
     warrant: {
       passages: ['Luke 14:28', 'Proverbs 27:23'],
@@ -300,12 +309,13 @@ export const DEPTH_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['young-adult'] },
     voice: 'shared',
-    title: 'Evaluating a relationship for marriage rather than for feeling',
+    title: 'Evaluating for marriage',
+    lede: 'A young adult told only to guard their heart has not been given a skill.',
     body:
-      'Section 13 states it precisely: at twenty-one the task is evaluating a romantic relationship for marriage rather than for feeling. That is a skill, and a young adult who has only ever been told to guard their heart has not been given it. What they need to receive — if and when they ask, since you are the Counselor now — is a set of questions rather than a verdict: how does this person behave when thwarted, what do they do with money, how do they treat people who serve them, what happens after they are wrong, is their faith theirs. Offer the questions. Do not deliver the answer.',
+      'This is a skill, and a young adult told only to guard their heart has not been given it. You are the Counselor now, so wait to be asked. Then give questions rather than a verdict. How does this person behave when thwarted. What do they do with money. How do they treat people who serve them. What happens after they are wrong. Is their faith theirs. Offer the questions. Do not deliver the answer.',
     actions: [
-      'Give them the questions to ask themselves rather than your assessment of the person.',
-      'State your reservation once, privately, if you have one. Then stop and honour their decision.',
+      'Give them the questions, not your assessment of the person.',
+      'State a reservation once, privately. Then stop, and honour their decision.',
       'Say plainly that you will treat their choice as family regardless.',
     ],
     warrant: {
