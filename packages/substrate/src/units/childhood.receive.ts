@@ -14,12 +14,13 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['newborn'] },
     voice: 'shared',
-    title: 'What a newborn needs: reliable response',
+    title: 'Reliable response',
+    lede: 'Thousands of small answered needs teach a person that the world is trustworthy.',
     body:
-      'A newborn needs exactly one thing from you that no one else can supply at scale: reliable response. Fed when hungry, held when crying, warmed when cold — thousands of small answered needs are how a human being first learns that the world is trustworthy and that they are worth responding to. This is also the first theology your child will ever absorb: before any words about a faithful God, they will have data about faithful parents.',
+      'Fed when hungry. Held when crying. Warmed when cold. Thousands of small answered needs are how a person first learns the world is trustworthy and that they are worth answering. This is also the first theology your child absorbs. Long before any words about a faithful God, they will have evidence about faithful parents.',
     actions: [
-      'Respond to cries promptly and without fear of spoiling — responsiveness in this stage builds security, not dependence.',
-      'Split the responding so both parents are known responders — babies attach to those who answer.',
+      'Answer cries promptly. Responsiveness at this stage builds security, not dependence.',
+      'Split the responding. Babies attach to whoever answers.',
     ],
     warrant: {
       passages: ['1 Thessalonians 2:7-8', 'Isaiah 49:15'],
@@ -43,12 +44,13 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['early-infancy'] },
     voice: 'shared',
-    title: 'What a three-to-six-month-old needs: your delight',
+    title: 'Your delight',
+    lede: 'A smile served, awaiting your return. What they need is a face that lights up.',
     body:
-      'Your baby has begun the serve-and-return game — a smile served, awaiting your return. What they need in this window is a face that lights up when they appear. Delight is not the decoration on attachment; it is the mechanism: the baby who repeatedly sees joy on the faces that matter concludes something about their own worth that no later argument easily removes. Zephaniah pictures God rejoicing over his people with singing. Your baby is learning that category from you.',
+      'Your baby has started the serve-and-return game. A smile served, waiting on yours. What they need is a face that lights up when they appear. Delight is the mechanism of attachment, not its decoration. A baby who repeatedly sees joy on the faces that matter concludes something about their worth that no later argument removes easily. Zephaniah pictures God rejoicing over his people with singing.',
     actions: [
-      'Play the return game daily: exaggerated faces, imitated sounds, unhurried turns. This is brain-building, not killing time.',
-      'Let your face show the gladness — the deliberately lit-up greeting when they wake is a formative event, twice a day, free.',
+      'Play the return game daily. Big faces, copied sounds, unhurried turns.',
+      'Light up when they wake. A formative event, twice a day, free.',
     ],
     warrant: {
       passages: ['Zephaniah 3:17'],
@@ -71,12 +73,13 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['later-infancy'] },
     voice: 'shared',
-    title: 'What a six-to-twelve-month-old needs: a base to explore from',
+    title: 'A base to explore from',
+    lede: 'Crawl away, look back, check the face, continue.',
     body:
-      'Your baby is becoming mobile, and mobility reveals the architecture of attachment: crawl away, look back, check the face, continue. What they need now is a secure base — a parent who is reliably there to return to, and visibly glad at both the leaving and the returning. The pattern being set here is the pattern of the next twenty years: they will always be leaving you in larger and larger circles, and how the small circles go teaches them whether leaving is safe.',
+      'Crawl away. Look back. Check the face. Continue. Mobility exposes the architecture of attachment, and what they need now is a base. A parent reliably there to come back to, visibly glad at the leaving and at the returning. The pattern set here runs for twenty years. They will keep leaving you in larger and larger circles, and the small ones teach them whether leaving is safe.',
     actions: [
-      'Be findable: when they look back mid-crawl, be looking. The glance-and-check is attachment doing its work.',
-      'Welcome the separations of this age (another room, a sitter, the church nursery) as practice — brief, warm goodbyes rather than escapes while distracted.',
+      'Be findable. When they look back mid-crawl, be looking.',
+      'Treat small separations as practice. Brief warm goodbyes, never escapes while distracted.',
     ],
     warrant: {
       passages: ['Psalm 62:5-8'],
@@ -99,12 +102,13 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['early-toddler'] },
     voice: 'shared',
-    title: 'What a one-to-two-year-old needs: warm walls',
+    title: 'Warm walls',
+    lede: 'A railing is not punishment for climbing. It is what makes climbing safe.',
     body:
-      'A newly walking child needs boundaries the way a stairwell needs a railing — not as punishment for climbing but as the structure that makes climbing safe. What they need from you now is a small number of consistent limits, warmly and boringly enforced: the outlet is always off-limits, the hand is always held in the parking lot, bedtime is always bedtime. Consistency is the kindness; a limit that moves with your mood teaches negotiation with reality itself.',
+      'A stairwell needs a railing. Not to punish climbing, but to make climbing safe. A newly walking child needs a small number of limits, warmly and boringly enforced. The outlet is always off-limits. The hand is always held in the car park. Bedtime is always bedtime. Consistency is the kindness. A limit that moves with your mood teaches a child to negotiate with reality itself.',
     actions: [
-      'Choose few limits and hold all of them: safety, sleep, and how people are treated. Everything else can flex.',
-      'Enforce without heat — the tone says "this is how the world is," not "you are in trouble for testing it." Testing is their job.',
+      'Choose few limits and hold all of them. Safety, sleep, how people are treated.',
+      'Enforce without heat. Your tone says how the world is, not that they are in trouble.',
     ],
     warrant: {
       passages: ['Proverbs 3:11-12'],
@@ -128,12 +132,13 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['toddler'] },
     voice: 'shared',
-    title: 'What a two-to-three-year-old needs: names for the storm',
+    title: 'Names for the storm',
+    lede: 'Feelings the size of weather systems, and a vocabulary the size of a shoebox.',
     body:
-      'Your two-year-old has feelings the size of weather systems and a vocabulary the size of a shoebox. What they need from you is the naming: "You\'re angry — the tower fell." "You\'re sad — Grandma left." A named feeling becomes, over hundreds of repetitions, a manageable one; the psalms model exactly this — the full range of human emotion, spoken to a listening God rather than suppressed or obeyed. Correction can wait until the storm has a name.',
+      'Your two-year-old has feelings the size of weather systems and a vocabulary the size of a shoebox. Do the naming. "You are angry. The tower fell." "You are sad. Grandma left." Over hundreds of repetitions a named feeling becomes a manageable one. The psalms do exactly this, taking the full range of human emotion to a listening God rather than suppressing it. Correction can wait until the storm has a name.',
     actions: [
-      'Name the feeling before addressing the behaviour, every time you can manage it: "You\'re furious. And we don\'t hit."',
-      'Read the feelings out loud in books: "How do you think he feels?" Emotional vocabulary is built in calm moments and spent in hard ones.',
+      'Name the feeling before the behaviour. "You are furious. And we do not hit."',
+      'Ask how a character feels while reading. Vocabulary is built calm and spent hard.',
     ],
     warrant: {
       passages: ['Psalm 62:8', 'Ephesians 4:26'],
@@ -156,12 +161,13 @@ export const CHILDHOOD_RECEIVE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: ['preschool'] },
     voice: 'shared',
-    title: 'What a three-to-five-year-old needs: real jobs, real praise',
+    title: 'Real jobs, real praise',
+    lede: 'Genuine contribution, which no amount of entertainment supplies.',
     body:
-      'A preschooler needs something no amount of entertainment supplies: genuine contribution. Setting the table, feeding the dog, carrying the small bag — done imperfectly, owned completely. This is the on-ramp of the twenty-year transfer of responsibility this app is built around, and it starts smaller and earlier than most parents guess. Pair it with praise aimed at effort and character ("you kept trying," "that was kind") rather than talent — the kind of praise that builds workers rather than performers.',
+      'Setting the table. Feeding the dog. Carrying the small bag. Done imperfectly, owned completely. A preschooler needs genuine contribution, which no amount of entertainment supplies. This is the on-ramp to a twenty-year transfer of responsibility, and it starts earlier than most parents guess. Pair it with praise for effort and character. "You kept trying." "That was kind." Praise for talent builds performers instead.',
     actions: [
-      'Give one real household job they fully own — with a visual reminder, low standards, and zero rescue-redoing in front of them.',
-      'Praise the effort and the character move, specifically, within earshot of the other parent when possible.',
+      'Give one real job they fully own. Low standards, and no redoing it in front of them.',
+      'Praise the effort and the character move, in earshot of the other parent.',
     ],
     warrant: {
       passages: ['Luke 16:10', 'Colossians 3:23'],

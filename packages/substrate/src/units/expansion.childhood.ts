@@ -81,12 +81,13 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: [...BAND_5_11] },
     voice: 'shared',
-    title: 'What they need now: real coaching — practice, correction, and manageable failure',
+    title: 'Coaching, not carrying',
+    lede: 'A coach demonstrates, lets the player try, allows the miss, and debriefs it.',
     body:
-      'The parental role has shifted: less carrying, more coaching. A coach demonstrates, lets the player try, allows the miss, and debriefs it without shame. What a child this age needs to receive is competence built this way — chores fully owned, skills practised past frustration, failures allowed to land at survivable size and then talked through. Rescue at this age is a withdrawal from the account resilience is paid from.',
+      'Less carrying now, more coaching. A coach demonstrates, lets the player try, allows the miss, then debriefs it without shame. Competence gets built that way. Chores fully owned. Skills practised past frustration. Failures allowed to land at survivable size and then talked through. A rescue at this age is a withdrawal from the account resilience gets paid from.',
     actions: [
-      'Let one age-sized failure happen this month without intercepting it — the forgotten homework, the spent allowance — and debrief it warmly afterward.',
-      'Upgrade their responsibilities annually on their birthday: visible, named, real.',
+      'Let one age-sized failure land this month. Forgotten homework, spent allowance. Debrief it warmly.',
+      'Upgrade their responsibilities each birthday. Visible, named, real.',
       'Correct in private, praise specifics in public.',
     ],
     warrant: {
@@ -113,13 +114,14 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: [...BAND_5_11] },
     voice: 'shared',
-    title: 'Experiences to create in the coach years',
+    title: 'Experiences to engineer now',
+    lede: 'The one-on-one window opens at nine and never closes again.',
     body:
-      'From the roadmap\'s age-seven list, expanded across the band: take them somewhere one-on-one, regularly — the worksheet opens the special-one-on-one-times window at nine and it never closes again. Give them a household responsibility they completely own. Let them buy something with money they earned and feel the trade-off. Teach them to lose graciously by losing to people. Let them see you apologise when you are wrong. Put them in front of real service — not a photo-op, a shift.',
+      'Take them somewhere one-on-one, regularly. That window opens at nine and never closes again. Give them a household job they completely own. Let them buy something with money they earned and feel the trade-off. Teach them to lose graciously by losing to people. Let them watch you apologise when you are wrong. Put them in front of real service. Not a photo opportunity. A shift.',
     actions: [
-      'Establish the recurring one-on-one: same child, same parent, a rhythm they can count on. Guard it above sport schedules.',
-      'Open the earned-money loop this year: work, wages, a purchase they choose, and the arithmetic of what it cost in hours.',
-      'Serve somewhere as a family where your child does actual work a stranger benefits from.',
+      'Set the recurring one-on-one. Same child, same parent, a rhythm they can count on.',
+      'Open the earned-money loop. Work, wages, a purchase, and what it cost in hours.',
+      'Serve somewhere your child does actual work a stranger benefits from.',
     ],
     warrant: {
       passages: ['Deuteronomy 6:20-25', 'Luke 2:41-52'],
@@ -177,13 +179,14 @@ export const EXPANSION_CHILDHOOD_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: [...BAND_5_11] },
     voice: 'shared',
-    title: 'The age-ten life curriculum',
+    title: 'The age-ten curriculum',
+    lede: 'Earn, save, give, spend. In that order of instruction.',
     body:
-      'By around ten, coached and practised: handle money — earn, save, give, spend, in that order of instruction. Complete household responsibilities without reminders. Recognise manipulation, in ads and in friends. Resolve a friendship conflict with words. Understand internet safety as concretely as street safety. Begin understanding puberty before it begins — from you, calmly, not from the bus. Take responsibility for mistakes without collapse or blame-shifting. Build study habits that survive without supervision.',
+      'Handle money. Earn, save, give, spend, in that order of instruction. Finish household jobs without reminders. Spot manipulation, in adverts and in friends. Settle a friendship conflict with words. Understand internet safety as concretely as street safety. Learn about puberty before it starts, from you, calmly, not from the bus. Own a mistake without collapsing or blaming. Build study habits that survive without supervision.',
     actions: [
-      'Open the four-jar money system (give, save, spend, goal) with real earned income.',
-      'Have the first puberty conversation this year if you have not — short, calm, book in hand, door open for more.',
-      'Teach one manipulation pattern per month, from real ads: scarcity, flattery, everyone-has-it.',
+      'Open the four-jar system. Give, save, spend, goal, with real earned income.',
+      'Have the first puberty conversation this year. Short, calm, book in hand.',
+      'Teach one manipulation pattern a month from real adverts. Scarcity, flattery, everyone-has-it.',
     ],
     warrant: {
       passages: ['Proverbs 22:6', 'Proverbs 1:10', 'Luke 16:10'],
