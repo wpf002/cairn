@@ -96,7 +96,7 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     title: 'Name the skill, not the child',
     lede: 'School has started issuing evidence about who your child is. Graded, weekly.',
     body:
-      'Seven is when a child starts deciding who they are from what they can do, and school issues that evidence weekly. Get technical. "Your second attempt was slower and that is why it held." A child can tell the difference between a parent who is impressed and a parent who was watching. Only the second builds anything durable. "You are so smart" does the opposite, and makes every future failure a verdict.',
+      'Seven is when a child decides who they are from what they can do. School issues that evidence weekly. Get technical. "Your second attempt was slower and it held." A child can tell the difference between a parent who is impressed and a parent who was watching. Only the second builds anything durable. "You are so smart" does the opposite, and makes every future failure a verdict.',
     actions: [
       'Praise what they adjusted, repeated, or chose. Not what they are.',
       'Let them overhear you describe a real skill of theirs to another adult.',
@@ -124,12 +124,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-childhood'] },
     voice: 'mother',
     pairedWith: 'hear.father.middle-childhood',
-    title: 'Say the character thing, in the season the world starts grading',
+    title: 'Say the character thing',
+    lede: 'Something outside your home now tells your child daily how they rank.',
     body:
-      'From about seven, an institution outside your home begins telling your child daily how they rank. School is not wrong to assess, but it assesses a narrow band and reports it constantly. Your counterweight is not to dispute the grades — it is to be the voice naming the things no report card measures and no teacher saw: that she went back for the child left behind, that she told the truth when a lie was free. Character praise from a mother at this age is remembered with unusual durability, partly because it is often the only assessment the child receives that is not comparative.',
+      'Something outside your home now tells your child daily how they rank. School is right to assess. It just assesses a narrow band, loudly. Do not dispute the grades. Be the voice naming what no report card measures. She went back for the child left behind. She told the truth when a lie was free. This is often the only assessment your child gets that is not comparative, and it lasts.',
     actions: [
-      'Name one act of character each week, described concretely, with no mention of achievement.',
-      'On a bad-grade day, lead with something true about who they are before you discuss the grade at all.',
+      'Name one act of character a week, concretely, with no mention of achievement.',
+      'On a bad-grade day, say something true about who they are first.',
     ],
     warrant: {
       passages: ['1 Samuel 16:7', 'Proverbs 31:28'],
@@ -156,12 +157,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'father',
     pairedWith: 'hear.mother.pre-adolescence',
-    title: 'The last window where they take it face-on',
+    title: 'They still take it face-on',
+    lede: 'In eighteen months the same sentence gets a shrug. Say it now.',
     body:
-      'Nine to eleven is the closing edge of a real window: your child can still receive direct, eye-contact affirmation without deflecting it. In eighteen months the same sentence will get a shrug, a joke, or a phone raised between you — not because it stopped mattering, but because taking praise face-on becomes socially costly. Fathers frequently wait, assuming there is time and that it will be less awkward later. It will not be. Say the admiring thing now, plainly, while it can still be received in the open, and keep saying it afterwards into what looks like an unresponsive surface.',
+      'Your child can still take direct, eye-contact affirmation without deflecting it. In eighteen months the same sentence gets a shrug, a joke, or a phone raised between you. Not because it stopped mattering. Taking praise face-on becomes socially expensive. Fathers wait, assuming it gets less awkward later. It does not. Say it now, plainly, and keep saying it into what will look like an unresponsive surface.',
     actions: [
-      'Say one direct, unhedged admiring sentence, looking at them, with no joke attached to soften it.',
-      'Write one down. In three years they will not remember hearing it and will still have the paper.',
+      'Say one admiring sentence, looking at them, with no joke to soften it.',
+      'Write one down. In three years they will still have the paper.',
     ],
     warrant: {
       passages: ['Proverbs 27:5', 'Matthew 3:17'],
@@ -186,12 +188,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['pre-adolescence'] },
     voice: 'mother',
     pairedWith: 'hear.father.pre-adolescence',
-    title: 'What you say about bodies — theirs, and your own',
+    title: 'What you say about bodies',
+    lede: 'Two speech habits matter more than any conversation you plan.',
     body:
-      'Puberty is beginning for many children in this band, and your child is now listening to how you talk about bodies with an attention they did not previously have. Two speech habits matter more than any conversation you plan. First: what you say about their changing body — neutral, warm, unstartled, never teasing, because a joke about a developing body is remembered verbatim for decades. Second, and larger: what you say about your own. A daughter watching her mother narrate self-disgust at a mirror learns the appraisal system she will apply to herself, and no amount of "you are beautiful" outweighs it. The most protective thing many mothers can do at this stage is stop saying something.',
+      'Two speech habits matter more than any conversation you plan. First, what you say about their changing body. Warm, unstartled, never teasing. A joke about a developing body is remembered for decades. Second, what you say about your own. A daughter watching her mother at a mirror learns the system she will use on herself. No amount of "you are beautiful" outweighs it. The strongest move here is to stop saying something.',
     actions: [
-      'Stop the audible self-criticism about your own body in their hearing. This is the intervention with the largest effect.',
-      'Answer body questions in the same tone you would answer a question about weather — informative, unembarrassed, brief.',
+      'Stop the out-loud self-criticism about your body in their hearing.',
+      'Answer body questions the way you would answer one about the weather.',
     ],
     warrant: {
       passages: ['Psalm 139:13-14', 'Genesis 1:27'],
@@ -218,12 +221,12 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'father',
     pairedWith: 'hear.mother.early-adolescence',
-    title: '"I\'m proud of you" opens here — and the face will not show it landing',
+    title: 'The face will not show it',
     body:
-      'The worksheet starts "I\'m proud of you" at thirteen and does not run it earlier, which is a deliberate claim: competence-based affirmation needs a self that has done enough to recognise itself. That self is arriving now. What also arrives is the flat response — the shrug, the "okay," the immediate subject change. Read that correctly. Adolescents receive affirmation with the audience in mind even when there is no audience; visible pleasure at a parent\'s praise is socially expensive, so it goes underground, not away. Fathers commonly stop at exactly this point because the feedback loop has gone quiet, and quiet is the worst possible reason to stop.',
+      '"I am proud of you" starts working at thirteen. A thirteen-year-old has done enough to recognise their own effort. What also starts is the flat response. The shrug, the "okay," the subject change. Read it correctly. Visible pleasure at a parent\'s praise is socially expensive, so it goes underground rather than away. Fathers stop here because the feedback went quiet. Quiet is the worst reason to stop.',
     actions: [
       'Say it and do not wait for a reaction. Change the subject yourself so no response is owed.',
-      'Send it in writing sometimes — a text can be re-read privately, which is where it is actually received.',
+      'Send it in writing sometimes. A text gets re-read privately, which is where it lands.',
     ],
     warrant: {
       passages: ['Matthew 3:17', 'Hebrews 3:13'],
@@ -248,12 +251,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'mother',
     pairedWith: 'hear.father.early-adolescence',
-    title: 'Speaking to the version of them that has started hiding',
+    title: 'They have started hiding',
+    lede: 'Around twelve a child begins curating which parts of themselves you get to see.',
     body:
-      'Around twelve a child begins curating which parts of themselves a parent gets to see, and mothers usually notice first because they lose the most access. The instinct is to pursue — more questions, more attempts to draw them out — and pursuit reliably accelerates the withdrawal. What works better is speaking accurately to the parts still visible, without making the speech a bid for entry. "You were kind to your brother tonight and I do not think you wanted to be" costs them nothing to receive. It also tells them the thing that keeps a door open at fifteen: that you are still watching accurately, and that being seen by you is not dangerous.',
+      'Around twelve a child starts curating what you get to see. Mothers notice first, because they lose the most access. The instinct is to pursue. More questions. More drawing out. Pursuit speeds the withdrawal every time. Speak accurately to what is still visible instead. "You were kind to your brother tonight and I do not think you wanted to be." That costs them nothing and keeps a door open at fifteen.',
     actions: [
-      'Say one accurate observation a week that asks for no response and opens no conversation.',
-      'When they volunteer something, respond to what they said, not to what you want to know next.',
+      'Say one accurate observation a week that asks for no response.',
+      'When they volunteer something, answer what they said. Not what you want next.',
     ],
     warrant: {
       passages: ['Proverbs 20:5', '1 Thessalonians 2:7'],
@@ -280,12 +284,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'father',
     pairedWith: 'hear.mother.middle-adolescence',
-    title: '"I admire this about you" — the rung most fathers skip',
+    title: 'The rung most fathers skip',
+    lede: 'Pride is about you. Admiration concedes something.',
     body:
-      'Admiration is a different act from pride, and the worksheet lists it as its own row for that reason. Pride looks at what your child did and is, at some level, about you: your investment returned. Admiration looks at a quality inside them and concedes something — that they possess it more than you do, or came to it without you. "You are more patient with your sister than I have ever been." Fathers skip this rung because it involves standing down. It is also, at fourteen, the single most powerful sentence available to you, because the child is actively asking whether they are becoming a distinct person, and admiration is the only affirmation that answers yes.',
+      'Pride looks at what your child did and quietly counts it as yours. Admiration looks at something in them you do not have. "You are more patient with your sister than I have ever been." Saying that means standing down. Most fathers skip it. At fourteen your child is asking whether they are becoming a distinct person. Admiration is the only affirmation that answers yes.',
     actions: [
-      'Name one quality they have that you do not, and say it without qualifying it.',
-      'Ask their opinion on something real and then act on it, where they can see you did.',
+      'Name one quality they have that you do not. Do not qualify it.',
+      'Ask their opinion on something real, then act on it where they can see.',
     ],
     warrant: {
       passages: ['Romans 12:10', 'Philippians 2:3'],
@@ -310,12 +315,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['middle-adolescence'] },
     voice: 'mother',
     pairedWith: 'hear.father.middle-adolescence',
-    title: 'Words in the middle of conflict, which is where they now live',
+    title: 'What you say after the argument',
+    lede: 'Adolescents replay the ending. Most of your speech now happens inside disagreement.',
     body:
-      'At fourteen, a meaningful share of your total speech happens inside disagreement, and that is the speech being remembered. This is not an argument for avoiding conflict — the boundaries still hold, and a mother who concedes to keep the peace teaches that pressure works. It is an argument about what is said in the ninety seconds after. Adolescents replay the ending. A conflict that closes with "I am not changing my answer, and I am not going anywhere" teaches something a conflict that closes with silence or a slammed door does not: that your love is not one of the things being negotiated.',
+      'Much of your speech now happens inside a disagreement. That is what gets remembered. Do not avoid the conflict. A mother who concedes to keep the peace has taught that pressure works. The ninety seconds after is what matters. Adolescents replay the ending. "I am not changing my answer, and I am not going anywhere" teaches what a slammed door cannot. Your love is not one of the things being negotiated.',
     actions: [
-      'Close every argument with a sentence that separates the ruling from the relationship. Same words each time, so it becomes recognisable.',
-      'Apologise specifically for your tone when your tone was wrong, without withdrawing the boundary.',
+      'End every argument with the same sentence, separating the ruling from the relationship.',
+      'Apologise for your tone when it was wrong. Do not withdraw the boundary.',
     ],
     warrant: {
       passages: ['Ephesians 4:26', 'Proverbs 15:1'],
@@ -342,12 +348,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'father',
     pairedWith: 'hear.mother.late-adolescence',
-    title: 'Say it before the leaving, not at the leaving',
+    title: 'Say it before the leaving',
+    lede: 'What you would say in the car at eighteen should be said across three ordinary years.',
     body:
-      'There is a specific failure that repeats in Christian families: the father who intends to say the important things and schedules them, implicitly, for the graduation dinner or the drive to the dorm. Two problems. The occasion is saturated — nothing said there is heard cleanly. And the years between fifteen and eighteen are precisely when a young man or woman is deciding what a father thinks of them, using the evidence available, and silence is read as evidence. Front-load it. What you would say in the car at eighteen should be said, in pieces, across three ordinary years, so that the drive is a confirmation of something already known rather than the first delivery of it.',
+      'Fathers save the important things for the drive to the dorm. Two problems. The occasion is saturated, so nothing said there is heard cleanly. And between fifteen and eighteen your child is deciding what you think of them from the evidence available. Silence counts as evidence. Say it in pieces across three ordinary years, so the drive confirms something they already knew.',
     actions: [
-      'Write the letter you would give at eighteen. Then say a paragraph of it this month, in an ordinary conversation.',
-      'Tell them one specific thing you got wrong as their father, and what you would do differently. Being trusted with that is itself an affirmation.',
+      'Write the letter you would give at eighteen. Say a paragraph of it this month.',
+      'Tell them one thing you got wrong as their father, and what you would change.',
     ],
     warrant: {
       passages: ['Genesis 27:1-4', '2 Timothy 4:6-8'],
@@ -372,12 +379,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'mother',
     pairedWith: 'hear.father.late-adolescence',
-    title: 'Talking to someone who is leaving, without making them manage your grief',
+    title: 'Do not hand them your grief',
+    lede: 'Something real is ending. Keep it off your child\'s ledger.',
     body:
-      'These three years carry a genuine loss for most mothers, and the loss is legitimate — something real is ending. The discipline is keeping it off the child\'s ledger. A seventeen-year-old who senses that their independence is costing their mother will do one of two things: manage her by staying smaller, or push away hard enough to make leaving survivable. Both are expensive. Say the affectionate things in the present tense, about who they are now, and take the grief to your husband, a friend, a counsellor, or God — all of whom can carry it, which your child cannot and should not.',
+      'These three years carry a real loss, and the loss is legitimate. The discipline is keeping it off your child\'s ledger. A seventeen-year-old who senses their independence is costing you will either stay smaller to manage you, or push away hard enough to make leaving survivable. Both are expensive. Say the affectionate things in the present tense. Take the grief to your husband, a friend, a counsellor, or God.',
     actions: [
-      'Say the affectionate thing without appending anything about missing them or time going fast.',
-      'Name your grief out loud to another adult this month, so it has a destination that is not your child.',
+      'Say the affectionate thing. Add nothing about missing them or time going fast.',
+      'Name your grief to another adult this month. Give it somewhere to go.',
     ],
     warrant: {
       passages: ['Luke 2:51-52', 'Genesis 2:24'],
@@ -406,10 +414,10 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     pairedWith: 'hear.mother.emerging-adult',
     title: '"I respect the person you\'re becoming"',
     body:
-      'Respect is the rung the printed worksheet does not have — it appears only as "(respect)" circled by hand beside the HEAR rows, which is a fair record of how recently most fathers have had to think about it. It is a different currency from pride. Pride can be issued to a child; respect can only be extended to a peer, and extending it is a decision to change the relationship. What makes it credible is not the sentence but its consequences: a father who says he respects his son\'s judgement and then keeps managing his decisions has said nothing. Say it, then behave as though it were true, including when you think they are choosing wrong.',
+      'Pride can be issued to a child. Respect can only be extended to a peer, and extending it changes the relationship. The sentence is not what makes it credible. The consequences are. A father who says he respects his son\'s judgement and then keeps managing his decisions has said nothing. Say it, then behave as though it were true, including when you think they are choosing wrong.',
     actions: [
       'Say the sentence plainly, once, with no advice attached to it.',
-      'Identify one decision of theirs you have been quietly managing, and stop — then do not comment on the outcome.',
+      'Find one decision of theirs you have been managing. Stop. Do not comment on the outcome.',
     ],
     warrant: {
       passages: ['1 Peter 2:17', 'Romans 13:7'],
@@ -434,12 +442,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['emerging-adult'] },
     voice: 'mother',
     pairedWith: 'hear.father.emerging-adult',
-    title: 'Confidence spoken over an unfinished person',
+    title: 'Confidence over an unfinished life',
+    lede: 'At nineteen your child is visibly incomplete and knows it.',
     body:
-      'At nineteen your child is visibly incomplete and knows it — underemployed, uncertain, three months into a decision that is not working. The available maternal reflexes are reassurance that sounds like dismissal ("you\'ll be fine") and concern that sounds like a verdict ("I just worry about you"). The third option is harder and better: confidence stated about a process that is genuinely unfinished. "I have watched you work things out before and I expect you will work this out." It is not a prediction of the outcome. It is testimony about a person, offered by the witness with the longest record, and at this age you are the only one who can give it.',
+      'At nineteen your child is visibly incomplete and knows it. Underemployed, uncertain, three months into a decision that is not working. Two reflexes are available and both fail. "You will be fine" sounds like dismissal. "I just worry about you" sounds like a verdict. Try the third. "I have watched you work things out before and I expect you will work this out." That is testimony, from the witness with the longest record.',
     actions: [
-      'Replace "you\'ll be fine" with a specific memory of them handling something hard.',
-      'Ask "do you want help or do you want me to listen" — and then do only the one they named.',
+      'Swap "you will be fine" for a specific memory of them handling something hard.',
+      'Ask whether they want help or want you to listen. Then do only that.',
     ],
     warrant: {
       passages: ['Philippians 1:6', '1 Thessalonians 5:11'],
@@ -466,12 +475,13 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['young-adult'] },
     voice: 'father',
     pairedWith: 'hear.mother.young-adult',
-    title: '"I need your counsel on this"',
+    title: 'Ask for their counsel',
+    lede: 'The last rung reverses the relationship, and it cannot be faked.',
     body:
-      'The last rung reverses the direction of the relationship, and it cannot be faked. Asking your twenty-one-year-old for counsel on something that actually matters to you — a work decision, a conflict, a question about your own faith — and then visibly weighting their answer is the strongest available statement that the formation work is finished. It is also the moment the worksheet has been pointing at from age one: the final ceremony is called Recognize, and recognition means acknowledging what is already true rather than conferring something new. Fathers who cannot do this tend to keep a twenty-five-year-old in the position of a supervised teenager, which is the most common way a good relationship goes quietly wrong.',
+      'The last rung reverses the relationship and cannot be faked. Ask your twenty-one-year-old for counsel on something that actually matters to you. A work decision. A conflict. A question about your own faith. Then visibly weigh the answer. The final ceremony is called Recognize, and recognition acknowledges what is already true. Fathers who cannot do this keep a twenty-five-year-old in the position of a supervised teenager.',
     actions: [
-      'Bring them a real decision of yours, before you have made it, and tell them afterwards how their input changed it.',
-      'Mark the transition out loud at twenty-one rather than letting it happen by drift. Section 14 walks through the ceremony.',
+      'Bring them a decision before you make it. Tell them after how it changed things.',
+      'Mark the transition out loud at twenty-one rather than letting it happen by drift.',
     ],
     warrant: {
       passages: ['Proverbs 27:9', '3 John 4'],
@@ -496,11 +506,12 @@ export const DEPTH_HEAR_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: ['young-adult'] },
     voice: 'mother',
     pairedWith: 'hear.father.young-adult',
-    title: 'Saying "I love you" to an adult, still, and first',
+    title: 'Still say it, and say it first',
+    lede: 'At twenty-one this row goes quietly dormant, replaced by logistics.',
     body:
-      'The worksheet marks "I love you" across the entire grid, one to twenty-one, with no gap — and at twenty-one it is the row most likely to have quietly gone dormant, replaced by logistics, updates, and the low-grade negotiation of how often anyone visits. Keep saying it, and keep saying it first, because an adult child weighing whether to call is doing a fast calculation about what the call will cost them emotionally. A mother who reliably leads with affection rather than with the accumulated questions is the cheapest call they can make. That is not a small thing; over twenty years it is most of whether the relationship survives distance.',
+      'At twenty-one this one goes quietly dormant. Logistics replace it. Updates, and the low-grade negotiation about how often anyone visits. Keep saying it, and say it first. An adult child deciding whether to call is calculating what the call will cost them. A mother who leads with affection instead of the stored-up questions is the cheapest call they can make. Over twenty years that is most of whether the relationship survives distance.',
     actions: [
-      'Lead with affection before information, every time, especially when you have concerns queued up.',
+      'Lead with affection before information, especially when you have concerns queued.',
       'Let one call end with nothing asked for and nothing raised.',
     ],
     warrant: {
