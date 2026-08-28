@@ -19,11 +19,12 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...TEEN] },
     voice: 'shared',
     title: 'They are auditing you now',
+    lede: 'The hypocrisy detector is installed now, and calibrated harsh.',
     body:
-      'An adolescent watches with a new instrument: the hypocrisy detector, fully installed and calibrated harsh. What they need to see in these years is not polish but consistency — a faith that costs you something visible, apologies that still happen when you are wrong, a marriage still tended in front of them, integrity when cutting the corner would be cheaper. The single most faith-protective thing a teenager can observe is a parent whose private and public selves match.',
+      'The hypocrisy detector is installed now and calibrated harsh. They are not looking for polish. They are looking for consistency. A faith that costs you something they can see. Apologies that still happen when you are wrong. A marriage still tended in front of them. Integrity when the corner was cheaper. The most faith-protective thing a teenager watches is a parent whose private and public selves match.',
     actions: [
-      'Let them see the cost: the tithe line in the budget conversation, the hard honest call made when lying was easier.',
-      'When they catch an inconsistency — and they will — thank them, honestly, before explaining anything.',
+      'Let them see the cost. The tithe line in the budget. The honest call when lying was easier.',
+      'When they catch an inconsistency, thank them before you explain anything.',
     ],
     warrant: {
       passages: ['1 Timothy 4:12-16', 'Titus 2:7-8'],
@@ -49,13 +50,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'RECEIVE',
     scope: { kind: 'stage', stages: [...TEEN] },
     voice: 'shared',
-    title: 'What they need now: questions before answers, agency with anchors',
+    title: 'Questions before answers',
+    lede: 'The consultant asks before advising. Then waits.',
     body:
-      'The consultant asks before advising: "What do you think you should do?" — and waits. What a teenager needs to receive is expanding agency inside firm anchors: real choices with real consequences, honoured confidences, advice offered rather than imposed — and, held steady beneath all of it, the non-negotiables of household respect, safety, and truthfulness. The parent who keeps commanding what should now be consulted teaches the teen to route around them; the parent who abandons the anchors teaches them nothing is solid.',
+      '"What do you think you should do?" Then wait. A teenager needs widening agency inside firm anchors. Real choices with real consequences. Confidences kept. Advice offered rather than issued. Underneath all of it, respect, safety and truth stay non-negotiable. Keep commanding what should now be consulted and they learn to route around you. Drop the anchors and they learn nothing here is solid.',
     actions: [
       'Replace one directive per week with a question, asked honestly: "walk me through your thinking."',
-      'Name the anchors explicitly, once, calmly: what stays non-negotiable in this house and why — and hold them without theatrics.',
-      'When they choose badly inside a safe range, let the consequence arrive whole and skip the told-you-so entirely.',
+      'Name the anchors once, calmly. Then hold them without theatrics.',
+      'When they choose badly inside a safe range, let the consequence arrive whole.',
     ],
     warrant: {
       passages: ['Proverbs 20:5', 'Colossians 3:21'],
@@ -82,13 +84,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...TEEN] },
     voice: 'father',
     pairedWith: 'receive.teen.pornography.mother',
-    title: 'The pornography conversation — a father\'s brief',
+    title: 'Pornography: a father\'s brief',
+    lede: 'Assume exposure has already happened. First exposure now lands before the teen years.',
     body:
-      'Assume exposure has happened or will; average first exposure now lands before the teen years. The conversation is not one talk but a standing channel: what pornography is, why it lies about bodies and about love, what it trains the brain toward, and — critically — that stumbling brings them to you for help, not to hiding for shame. With sons, honesty about your own generation\'s battle earns the right to be heard. With daughters, do not assume this is not her fight; it increasingly is.',
+      'Assume it has already happened. Average first exposure now lands before the teen years. This is not one talk. It is a standing channel. What pornography is. Why it lies about bodies and about love. What it trains a brain toward. And that stumbling brings them to you rather than into hiding. With sons, honesty about your own generation earns you a hearing. With daughters, do not assume this is not her fight.',
     actions: [
-      'Open the channel this season with the shame-killer sentence: "If you ever see something you can\'t unsee, you can tell me, and I will not explode."',
-      'Put the practical guardrails in place together, framed as team defence, not surveillance.',
-      'Keep your own accountability visible enough that "we all guard our eyes" is a household fact, not a teen-only rule.',
+      'Say it once: "If you see something you cannot unsee, tell me. I will not explode."',
+      'Set the guardrails together. Team defence, not surveillance.',
+      'Keep your own accountability visible. This is a household rule, not a teen rule.',
     ],
     warrant: {
       passages: ['Job 31:1', 'Ephesians 5:3', '1 Corinthians 6:18-20'],
@@ -113,13 +116,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     scope: { kind: 'stage', stages: [...TEEN] },
     voice: 'mother',
     pairedWith: 'receive.teen.pornography.father',
-    title: 'The pornography conversation — a mother\'s brief',
+    title: 'Pornography: a mother\'s brief',
+    lede: 'Your calm, unshocked availability decides whether she asks or hides.',
     body:
-      'You need to know what your husband is carrying with your son — and you carry your own pieces: with a son, the dignity of women as a claim he hears from a woman he loves; with a daughter, the growing reality that pornography is her fight too, plus the adjacent battles — the images she is pressured to send, the way romance-shaped content disciples her expectations. A mother\'s calm, unshocked availability is the difference between a daughter who asks and one who concludes she is uniquely broken.',
+      'Know what your husband is carrying with your son. Then carry your own pieces. A son needs to hear the dignity of women from a woman he loves. A daughter needs to know this is her fight too, along with the images she gets pressured to send and the romance-shaped content teaching her what to expect. Your calm, unshocked availability decides whether she asks you or concludes she is uniquely broken.',
     actions: [
-      'Be explicitly askable: "Nothing you could see or be sent would make me love you less — and none of it should be handled alone."',
-      'With a daughter, cover the sending as well as the seeing: what a pressured request looks like and exactly what to do when it comes.',
-      'With a son, one sentence he will keep: "Every woman on a screen is somebody\'s daughter. Treat her like it."',
+      'Say it plainly. "Nothing you see or get sent would make me love you less."',
+      'With a daughter, cover the sending as well as the seeing. Name what to do.',
+      'Give a son one sentence to keep. "Every woman on a screen is somebody\'s daughter."',
     ],
     warrant: {
       passages: ['Titus 2:3-5', 'Ephesians 5:3'],
@@ -145,13 +149,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'EXPERIENCE',
     scope: { kind: 'stage', stages: [...TEEN] },
     voice: 'shared',
-    title: 'One-on-one time: the only row marked both ways',
+    title: 'The highest-leverage hour you have',
+    lede: 'One row on the worksheet carries both markers at once. This one. And it closes.',
     body:
-      'On the worksheet, special one-on-one times in the teen years is the only row carrying both markers at once — especially important AND a special opportunity window. Translation: this is the single highest-leverage practice of the decade, and it closes. The teen who will not talk at the table talks in the car; the one who shrugs at questions opens up over a shared task. From the roadmap\'s age-14 list: give them growing control of their schedule, let them into an adult decision, build real service, ask what kind of man or woman they intend to become — all of it lands best one-on-one.',
+      'The teen who will not talk at the table talks in the car. The one who shrugs at a question opens up over a shared task, while both of you look at something else. The highest-leverage hour of the decade, and the window closes. Give them growing control of their schedule. Let them inside one adult decision. Ask what kind of person they mean to become.',
     actions: [
-      'Fix the recurring one-on-one and defend it like employment: same rhythm, their choice of venue, phone in the glovebox.',
-      'Bring them inside one real adult decision this season — the car purchase, the budget trade-off — as a contributor, not an observer.',
-      'Once this year, ask it straight: "What kind of man — what kind of woman — are you trying to become?" Then listen longer than is comfortable.',
+      'Fix the recurring one-on-one and defend it. Their venue, your phone in the glovebox.',
+      'Bring them inside one real adult decision as a contributor, not an observer.',
+      'Ask it straight once this year. "What kind of person are you trying to become?"',
     ],
     warrant: {
       passages: ['Proverbs 27:17', 'Deuteronomy 6:7'],
@@ -210,13 +215,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: ['middle-adolescence', 'late-adolescence'] },
     voice: 'shared',
-    title: 'The age-fifteen life curriculum',
+    title: 'The age-fifteen curriculum',
+    lede: 'Cook a real meal. Run an account. Sit a real interview. State what respect means.',
     body:
-      'By around fifteen, taught and practised: cook several real meals. Run a bank account and understand what credit is and costs. Interview for an actual job. Navigate dating with a definition of respect they can state. Understand consent — clearly, in both directions. Recognise an unhealthy relationship from a list they helped build. Handle disagreement with an adult respectfully and without folding. Understand digital permanence before it teaches them personally. Manage their own schedule and feel the grade when they do not.',
+      'Taught and practised by fifteen. Cook several real meals. Run a bank account and know what credit costs. Sit a real job interview. State what respect means in a relationship. Understand consent clearly, in both directions. Spot an unhealthy relationship from a list they helped build. Disagree with an adult without folding. Understand digital permanence before it teaches them personally.',
     actions: [
-      'Hand over the kitchen one night a week — planning, cooking, and the budget for it.',
+      'Hand over the kitchen one night a week. Planning, cooking, and the budget.',
       'Run the mock interview before the real one; then require the real one.',
-      'Build the unhealthy-relationship list together — control, isolation, contempt, secrecy — so the reference exists before it is needed.',
+      'Build the list together. Control, isolation, contempt, secrecy. Before it is needed.',
     ],
     warrant: {
       passages: ['Luke 16:10', '2 Thessalonians 3:10', 'Proverbs 22:7'],
@@ -242,13 +248,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['early-adolescence', 'middle-adolescence'] },
     voice: 'shared',
-    title: 'The 13–15 layer: owning faith — and the doubt that comes with it',
+    title: 'Doubt is not the emergency',
+    lede: 'Unspoken doubt is. Every question has to be speakable at home.',
     body:
-      'Doubt is not the emergency; unspoken doubt is. In these years the inherited faith gets stress-tested — suffering, hypocrisy, sexuality, science, the friend whose family believes otherwise — and the family\'s single most important policy is that every question is speakable at home. Move from teaching to discussing: their arguments get engaged, not managed. Personal disciplines shift to their ownership — their Bible, their prayer life, invited rather than enforced. The goal of the band: a faith they are handling with their own hands, roughly, honestly, in your presence.',
+      'Unspoken doubt is the emergency. In these years the inherited faith gets stress-tested. Suffering. Hypocrisy. Sexuality. Science. The friend whose family believes something else. Your one essential policy is that every question is speakable here. Move from teaching to discussing, and engage their arguments rather than managing them. Their Bible, their prayer life, invited rather than enforced. Aim at a faith they are handling with their own hands, roughly, in front of you.',
     actions: [
-      'Declare the policy in words: "No question about God is off the table in this house, and none of them scares me." Then prove it on the first hard one.',
-      'When a doubt lands, resist resolving it same-day. "That\'s a real question — let\'s chase it properly" beats a tidy answer they can smell the fear on.',
-      'Shift devotions from led to shared: they pick, they ask, they push back.',
+      'Say it. "No question about God is off the table here." Then prove it on the first hard one.',
+      'Do not resolve a doubt same-day. "That is a real question. Let us chase it properly."',
+      'Shift devotions from led to shared. They pick, they ask, they push back.',
     ],
     warrant: {
       passages: ['Jude 1:22', 'Mark 9:24'],
@@ -272,12 +279,13 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'BELIEVE',
     scope: { kind: 'stage', stages: ['late-adolescence'] },
     voice: 'shared',
-    title: 'The 16–18 layer: faith that runs without you',
+    title: 'Faith that runs without you',
+    lede: 'Does it still run when nobody at home is watching?',
     body:
-      'The test of this band is transfer: does the faith run when nobody at home is watching? Ownership looks like their own church involvement chosen over sleep, ethical calls made away from you, money given from their own earnings, a worldview they can state and defend without your vocabulary. Begin explicitly preparing the launch: how to find a church in a college town, how to keep faith alive in a hostile room, what they will do the first Sunday nobody wakes them. The parent\'s role by eighteen: consultant on a faith that is now theirs.',
+      'Does it run when nobody at home is watching? Ownership looks specific. Church chosen over sleep. An ethical call made away from you. Money given from their own earnings. A worldview they can state without borrowing your vocabulary. Start preparing the launch out loud. How to find a church in a new town. How to hold faith in a hostile room. What they do the first Sunday nobody wakes them.',
     actions: [
-      'Have them research and visit one church entirely without you this year — their evaluation, their write-up, your questions after.',
-      'Ask the transfer question directly at seventeen: "When you leave, what of this do you take because it is yours?" Take the answer seriously, including the gaps.',
+      'Have them visit one church entirely without you this year. Their evaluation, your questions after.',
+      'Ask at seventeen: "What of this do you take because it is yours?" Take the gaps seriously.',
       'Move giving to their income, their decision, their record.',
     ],
     warrant: {
@@ -304,12 +312,13 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'BECOME',
     scope: { kind: 'stage', stages: [...TEEN] },
     voice: 'shared',
-    title: 'The question of the decade: can they govern themselves?',
+    title: 'Can they govern themselves?',
+    lede: 'Every decision of these years serves that one question.',
     body:
-      'Every decision of the consultant years serves one question — at eighteen, can this young adult responsibly govern their own life? Money, work, food, time, relationships, faith, failure. Which reframes the parent\'s job: each year, something you currently run must become something they run, on schedule, whether or not the first handoff goes well. The teen who reaches eighteen having governed pieces of their life for years walks out the door; the one who reaches it fully managed gets governed by whoever shouts next — a roommate, a boss, an algorithm.',
+      'At eighteen, can this young adult run their own life? Money, work, food, time, relationships, faith, failure. That reframes your job. Every year, something you currently run has to become something they run, on schedule, whether or not the first handover goes well. A teen who has governed pieces of their life for years walks out the door. One who arrives fully managed gets governed by whoever shouts next.',
     actions: [
-      'Keep a literal transfer list with dates: alarm, laundry, schedule, money, deadlines — what moved to them this year, what moves next.',
-      'When a transferred domain wobbles, consult; do not repossess. Repossession teaches that failure returns them to childhood.',
+      'Keep a transfer list with dates. What moved to them this year, what moves next.',
+      'When a transferred domain wobbles, consult. Do not repossess it.',
     ],
     warrant: {
       passages: ['1 Corinthians 13:11', 'Galatians 6:5'],
@@ -334,13 +343,14 @@ export const EXPANSION_ADOLESCENCE_UNITS: readonly Unit[] = [
     category: 'LEARN',
     scope: { kind: 'stage', stages: ['early-adolescence'] },
     voice: 'shared',
-    title: 'The eleven-to-thirteen bridge curriculum',
+    title: 'The eleven-to-thirteen bridge',
+    lede: 'Real domains, really theirs. The pattern for the whole decade sets here.',
     body:
-      'Between the age-ten foundations and the age-fifteen syllabus sits the bridge: run their own morning — alarm, breakfast, out the door — without a parent as engine. Manage a phone if they have one, under a family agreement they helped write. Keep track of school deadlines with their own system and feel the miss. Handle the first real social cruelty — theirs or aimed at them — with words and with you in the loop. Cook two meals. Manage a small clothing or activity budget across a season. The pattern of the whole decade sets here: real domains, really theirs.',
+      'Run their own morning. Alarm, breakfast, out the door, with no parent as engine. Manage a phone under an agreement they helped write. Track their own deadlines and feel the miss. Handle the first real social cruelty, theirs or aimed at them, with you in the loop. Cook two meals. Run a small seasonal budget. The pattern for the whole decade sets here. Real domains, really theirs.',
     actions: [
-      'Retire from the morning-engine role this semester: they wake, they prep, they leave — you observe and debrief only.',
-      'Write the phone/device agreement together before or with the first phone; revisit it each birthday.',
-      'Hand over one seasonal budget — school clothes, an activity — planned with you once, then run by them.',
+      'Retire as the morning engine this term. They wake, prep and leave. You debrief.',
+      'Write the device agreement together before the first phone. Revisit it each birthday.',
+      'Hand over one seasonal budget. Planned with you once, then run by them.',
     ],
     warrant: {
       passages: ['Luke 16:10', 'Lamentations 3:27'],
