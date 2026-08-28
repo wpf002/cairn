@@ -2,7 +2,18 @@ import { Alert } from 'react-native';
 import { buildToday } from '@cairn/dashboard';
 import { allUnits, ledeFor } from '@cairn/substrate';
 import { firstAvailableVerse } from '@cairn/canon';
-import { AddCard, Action, Card, CardTitle, ChildCard, PrayerCard, ScriptureCard, Screen, SectionLabel } from '../components/ui';
+import {
+  AddCard,
+  Action,
+  Card,
+  CardTitle,
+  ChildCard,
+  PrayerCard,
+  ScriptureCard,
+  Screen,
+  SectionLabel,
+  VerseLine,
+} from '../components/ui';
 import { useFamily } from '../state/family';
 import { colors } from '../theme';
 
@@ -46,6 +57,10 @@ export function TodayScreen({
       .concat(today.parentFocus?.unit.warrant?.passages ?? []),
   );
 
+  const parentVerse = today.parentFocus?.unit.warrant
+    ? firstAvailableVerse(today.parentFocus.unit.warrant.passages)
+    : null;
+
   return (
     <Screen>
       {verse ? (
@@ -69,6 +84,7 @@ export function TodayScreen({
             progress={block.progress}
             action={block.action ?? undefined}
             tint={pregnancy ? colors.violet : colors.teal}
+            verse={block.focus?.unit.warrant ? firstAvailableVerse(block.focus.unit.warrant.passages) : null}
             onPress={pregnancy ? onOpenPregnancy : () => onOpenChild(block.id)}
           />
         );
@@ -91,6 +107,9 @@ export function TodayScreen({
             <CardTitle>{today.parentFocus.unit.title}</CardTitle>
             {today.parentFocus.unit.actions?.[0] ? (
               <Action color={colors.violet}>{today.parentFocus.unit.actions[0]}</Action>
+            ) : null}
+            {parentVerse ? (
+              <VerseLine reference={parentVerse.reference} text={parentVerse.text} tint={colors.violet} />
             ) : null}
           </Card>
         </>

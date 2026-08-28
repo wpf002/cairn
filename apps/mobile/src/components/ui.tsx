@@ -194,6 +194,7 @@ export function ChildCard({
   progress,
   action,
   tint,
+  verse,
   onPress,
 }: {
   name: string;
@@ -203,6 +204,8 @@ export function ChildCard({
   progress: number;
   action?: string;
   tint: string;
+  /** The passage the day's action answers to. */
+  verse?: { reference: string; text: string } | null;
   onPress: () => void;
 }) {
   return (
@@ -235,6 +238,7 @@ export function ChildCard({
             {action}
           </Text>
         ) : null}
+        {verse ? <VerseLine reference={verse.reference} text={verse.text} tint={tint} /> : null}
       </View>
     </Pressable>
   );
@@ -326,6 +330,27 @@ export function Expandable({
       >
         <Text style={[styles.expandToggle, color ? { color } : null]}>{open ? closeLabel : `${openLabel} ›`}</Text>
       </Pressable>
+    </View>
+  );
+}
+
+/**
+ * The scripture standing behind a piece of advice, shown on the card itself.
+ *
+ * Every normative unit carries a warrant, and the warrant was previously
+ * visible only after expanding the card. If the claim is that this app's
+ * guidance is answerable to Scripture, the passage belongs where the guidance
+ * is, not one tap away.
+ *
+ * Descriptive units deliberately have no verse here. Invariant 8 forbids
+ * attaching Scripture to a developmental fact — Psalm 139 is not a claim about
+ * the auditory cortex — so those cards show their medical source instead.
+ */
+export function VerseLine({ reference, text, tint }: { reference: string; text: string; tint?: string }) {
+  return (
+    <View style={[styles.verseLine, tint ? { borderLeftColor: tint } : null]}>
+      <Text style={styles.verseText}>{text}</Text>
+      <Text style={[styles.verseRefInline, tint ? { color: tint } : null]}>{reference.toUpperCase()}</Text>
     </View>
   );
 }
@@ -464,6 +489,15 @@ const styles = StyleSheet.create({
 
   expandBody: { marginTop: spacing.sm },
   expandToggle: { ...type.meta, color: colors.indigo, marginTop: spacing.sm, fontWeight: '700' },
+
+  verseLine: {
+    marginTop: spacing.md,
+    paddingLeft: spacing.md,
+    borderLeftWidth: 2,
+    borderLeftColor: colors.indigo,
+  },
+  verseText: { fontFamily: 'Georgia', fontSize: 15, lineHeight: 24, color: colors.inkSoft },
+  verseRefInline: { fontSize: 10.5, fontWeight: '800', letterSpacing: 1.1, color: colors.indigo, marginTop: 5 },
 
   divider: { height: 1, backgroundColor: colors.line, marginVertical: spacing.md },
 

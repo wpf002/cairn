@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { buildChildDashboard } from '@cairn/dashboard';
 import { allUnits, ledeFor, readingMinutes } from '@cairn/substrate';
 import type { Unit } from '@cairn/substrate';
+import { firstAvailableVerse } from '@cairn/canon';
 import {
   Action,
   Card,
@@ -14,6 +15,7 @@ import {
   Screen,
   SectionLabel,
   Source,
+  VerseLine,
 } from '../components/ui';
 import { useFamily } from '../state/family';
 import { categoryColor, colors, spacing, type } from '../theme';
@@ -123,18 +125,21 @@ export function ChildScreen({ childId }: { childId: string }) {
 /** One unit: headline, one sentence, and the rest behind a tap. */
 function UnitBlock({ unit, tint }: { unit: Unit; tint?: string }) {
   const minutes = readingMinutes(unit.body);
+  const verse = unit.warrant ? firstAvailableVerse(unit.warrant.passages) : null;
   return (
     <View style={styles.unit}>
       <CardTitle>{unit.title}</CardTitle>
-      <Expandable
-        summary={<Lede>{ledeFor(unit)}</Lede>}
-        openLabel={`Read more · ${minutes} min`}
-        color={tint}
-      >
+      <Lede>{ledeFor(unit)}</Lede>
+      {unit.actions?.[0] ? <Action color={tint}>{unit.actions[0]}</Action> : null}
+
+      {/* The passage the advice answers to, on the card rather than behind it. */}
+      {verse ? <VerseLine reference={verse.reference} text={verse.text} tint={tint} /> : null}
+      {/* Descriptive units carry evidence instead. Invariant 8: no verse here. */}
+      {unit.evidence?.length ? <Source>Source: {unit.evidence.map((e) => e.org).join(', ')}</Source> : null}
+
+      <Expandable summary={null} openLabel={`Read more · ${minutes} min`} color={tint}>
         <Text style={type.body}>{unit.body}</Text>
-        {unit.actions?.[0] ? <Action color={tint}>{unit.actions[0]}</Action> : null}
-        {unit.warrant ? <Source>{unit.warrant.passages.join(' · ')}</Source> : null}
-        {unit.evidence?.length ? <Source>Source: {unit.evidence.map((e) => e.org).join(', ')}</Source> : null}
+        {unit.warrant ? <Source>How this passage is misused: {unit.warrant.misuse}</Source> : null}
       </Expandable>
     </View>
   );
